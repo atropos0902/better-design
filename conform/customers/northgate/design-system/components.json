@@ -1,0 +1,10 @@
+[
+  { "name": "Button", "part": "control", "summary": "An action. Primary for the one main action on a screen.", "usage": "h-control px-control rounded-control text-body font-medium bg-action-primary hover:bg-action-primary-hover text-on-action" },
+  { "name": "Secondary button", "part": "control", "summary": "Every action that isn't the main one.", "usage": "h-control px-control rounded-control text-body font-medium bg-action-secondary hover:bg-action-secondary-hover text-primary border border-strong" },
+  { "name": "Danger button", "part": "control", "summary": "Revoke, delete, disable. Never for a main action that can be undone.", "usage": "h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action" },
+  { "name": "Text field", "part": "control", "summary": "Single-line input with a visible label.", "usage": "h-control px-control rounded-control text-body bg-surface-raised text-primary border border-strong" },
+  { "name": "Table", "part": "row", "summary": "Rows take row height from density. Header cells are captions.", "usage": "tbody tr: h-row border-b border-default; th: text-caption font-medium text-muted px-medium; td: text-body px-medium" },
+  { "name": "Card", "part": "card", "summary": "A titled group on the page. Use section with a heading.", "usage": "p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium" },
+  { "name": "Dialog", "part": "dialog", "summary": "A decision that stops the page.", "usage": "p-card rounded-card bg-surface-raised shadow-overlay" },
+  { "name": "Status label", "part": "status", "summary": "State of a record. Always has text, colour is never the only signal.", "usage": "text-caption font-medium text-ok | text-warn | text-critical rounded-control px-small py-tight" }
+]

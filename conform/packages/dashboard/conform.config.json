@@ -1,0 +1,12 @@
+{
+  "repo": "conform/dashboard",
+  "bundle": ".conform/bundle.json",
+  "keys": ".conform/keys.json",
+  "styling": "tailwind",
+  "themeCss": ".conform/theme.css",
+  "css": [],
+  "screens": [
+    { "id": "overview", "module": "src/overview.screen.tsx" },
+    { "id": "empty", "module": "src/empty.screen.tsx" }
+  ]
+}

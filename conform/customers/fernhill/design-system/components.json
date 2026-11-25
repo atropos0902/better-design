@@ -1,0 +1,4 @@
+[
+  { "name": "Button", "part": "field", "summary": "An action.", "usage": "height: var(--fh-global-field-height); padding-inline: var(--fh-semantic-pad-field); border-radius: var(--fh-global-radius-soft); background-color: var(--fh-semantic-bg-brand); color: var(--fh-semantic-fg-on-brand)" },
+  { "name": "Panel", "part": "panel", "summary": "Groups related fields.", "usage": "padding: var(--fh-semantic-pad-panel); border: 1px solid var(--fh-semantic-edge); border-radius: var(--fh-global-radius-soft)" }
+]

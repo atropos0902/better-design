@@ -1,0 +1,74 @@
+{
+  "half": "heldout",
+  "pullRequests": {
+    "planted": 75,
+    "caught": 75,
+    "clean": 20,
+    "cleanBlocked": 0,
+    "missed": [],
+    "extra": [
+      {
+        "pr": "h-014",
+        "clean": false,
+        "rule": "token-redefined",
+        "path": "stylesheet",
+        "prop": "--ng-space-small",
+        "state": "rest",
+        "detail": "6px"
+      },
+      {
+        "pr": "h-014",
+        "clean": false,
+        "rule": "token-redefined",
+        "path": "stylesheet",
+        "prop": "--ng-space-small",
+        "state": "rest",
+        "detail": "6px"
+      }
+    ],
+    "errors": []
+  },
+  "traces": {
+    "total": 150,
+    "right": 147,
+    "unresolved": 2,
+    "wrong": 1,
+    "notRight": [
+      {
+        "id": "t-107",
+        "expect": {
+          "kind": "token",
+          "token": "control.height"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "calc() mixes values"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "t-110",
+        "expect": {
+          "kind": "token",
+          "token": "radius.control"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "calc() mixes values"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "t-133",
+        "expect": {
+          "kind": "token",
+          "token": "border.strong"
+        },
+        "got": {
+          "kind": "neutral"
+        },
+        "outcome": "wrong"
+      }
+    ]
+  }
+}

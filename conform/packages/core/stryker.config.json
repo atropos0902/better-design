@@ -1,0 +1,27 @@
+{
+  "testRunner": "vitest",
+  "plugins": [
+    "@stryker-mutator/vitest-runner"
+  ],
+  "vitest": {
+    "configFile": "vitest.config.ts"
+  },
+  "mutate": [
+    "src/**/*.ts",
+    "!src/index.ts"
+  ],
+  "reporters": [
+    "clear-text",
+    "json"
+  ],
+  "jsonReporter": {
+    "fileName": "reports/mutation.json"
+  },
+  "concurrency": 3,
+  "tempDirName": ".stryker-tmp",
+  "thresholds": {
+    "high": 95,
+    "low": 90,
+    "break": 90
+  }
+}

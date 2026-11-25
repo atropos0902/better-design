@@ -1,0 +1,26 @@
+# Goes in each customer repository. Protect it with an organization ruleset.
+name: conform
+on: pull_request
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+  id-token: write
+jobs:
+  review:
+    # Forks run without a write token and aren't enforced.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: [self-hosted, conform]
+    steps:
+      - uses: actions/checkout@v6
+        with: { path: base, ref: "${{ github.event.pull_request.base.sha }}", persist-credentials: false }
+      - uses: actions/checkout@v6
+        with: { path: head, ref: "${{ github.event.pull_request.head.sha }}", persist-credentials: false }
+      - env:
+          CONFORM_SERVICE_URL: ${{ vars.CONFORM_SERVICE_URL }}
+          CONFORM_HASH_KEY: ${{ secrets.CONFORM_HASH_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          CONFORM_TOKEN=$(curl -sf -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=conform" | jq -r .value)
+          export CONFORM_TOKEN
+          conform-check review --base base --head head --pr ${{ github.event.pull_request.number }} --sha ${{ github.event.pull_request.head.sha }}

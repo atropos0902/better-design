@@ -1,0 +1,39 @@
+{
+  "id": "h-029",
+  "repo": "rollout-gate",
+  "title": "Golden signals on gate detail",
+  "body": "Three small cards above the gate so you can decide without opening Grafana.",
+  "files": {
+    "src/screens/gate.tsx": "export default function Gate() {\n  return (\n    <main className=\"bg-surface-page p-8 flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-[24px] font-bold text-primary\">Gate detail</h1>\n      <div data-testid=\"metric-grid\" className=\"grid grid-cols-3 gap-6\">\n        <article data-testid=\"metric-latency\" className=\"px-card py-4 rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-tight\">\n          <h2 className=\"text-heading font-bold text-primary\">Latency</h2>\n          <p className=\"text-body text-primary\">182 ms</p>\n        </article>\n        <article data-testid=\"metric-errors\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-overlay flex flex-col gap-tight\">\n          <h2 className=\"text-heading font-bold text-primary\">Errors</h2>\n          <p className=\"text-body text-critical\">0.4%</p>\n        </article>\n        <article data-testid=\"metric-traffic\" className=\"p-card rounded-lg bg-surface-raised border border-default shadow-raised flex flex-col gap-tight\">\n          <h2 className=\"text-heading font-bold text-primary\">Traffic</h2>\n          <p className=\"text-body text-primary\">3.1k rps</p>\n        </article>\n      </div>\n      <section data-testid=\"detail\" className=\"p-6 rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-4\">\n        <h2 className=\"text-heading font-bold text-primary\">feed-api</h2>\n        <p className=\"text-sm text-slate-500\">Service: feed-api</p>\n        <p className=\"text-sm text-slate-500\">Error rate: 0.4%</p>\n        <p className=\"text-sm text-slate-500\">Owner: Feed</p>\n        <div className=\"flex items-end gap-small\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-primary hover:bg-action-primary-hover text-on-action\">Promote</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-10 px-4 rounded-md text-sm font-medium bg-white text-slate-900 border border-slate-500\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Roll back</button>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+  },
+  "plants": [
+    {
+      "screen": "gate",
+      "testid": "metric-grid",
+      "prop": "gap",
+      "kind": "literal",
+      "note": "gap-6"
+    },
+    {
+      "screen": "gate",
+      "testid": "metric-latency",
+      "prop": "padding-block",
+      "kind": "literal",
+      "note": "py-4"
+    },
+    {
+      "screen": "gate",
+      "testid": "metric-errors",
+      "prop": "box-shadow",
+      "kind": "wrong-token",
+      "note": "elevation.overlay on a card"
+    },
+    {
+      "screen": "gate",
+      "testid": "metric-traffic",
+      "prop": "border-radius",
+      "kind": "literal",
+      "note": "rounded-lg"
+    }
+  ]
+}

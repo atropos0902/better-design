@@ -1,0 +1,10 @@
+{
+  "name": "@conform/experiment",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@conform/core": "0.1.0",
+    "@conform/checker": "0.1.0"
+  }
+}

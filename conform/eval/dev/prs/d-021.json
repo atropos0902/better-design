@@ -1,0 +1,25 @@
+{
+ "id": "d-021",
+ "repo": "key-vault",
+ "title": "Change Keys",
+ "body": "",
+ "files": {
+  "src/screens/keys.tsx": "export default function Keys() {\n  return (\n    <main className=\"bg-surface-page p-section flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-[24px] font-bold text-primary\">Keys</h1>\n      <section data-testid=\"list\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium\">\n        <h2 className=\"text-heading font-bold text-primary\">All keys</h2>\n        <table className=\"w-full\">\n          <thead>\n            <tr><th className=\"text-xs font-medium text-slate-600 px-4 text-left\">Key</th><th className=\"text-xs font-medium text-slate-600 px-4 text-left\">Use</th><th className=\"text-xs font-medium text-slate-600 px-4 text-left\">Status</th></tr>\n          </thead>\n          <tbody>\n            <tr className=\"h-row border-b border-default\">\n              <td className=\"text-body px-medium text-primary\">sign-2</td>\n              <td className=\"text-body px-medium text-primary\">Signing</td>\n              <td className=\"text-body px-medium text-primary\"><span data-status=\"ok\" className=\"text-caption font-medium rounded px-small py-tight text-ok\">Healthy</span></td>\n            </tr>\n            <tr className=\"h-row border-b border-default\">\n              <td className=\"text-body px-medium text-primary\">wrap-1</td>\n              <td className=\"text-body px-medium text-primary\">Wrapping</td>\n              <td className=\"text-body px-medium text-primary\"><span data-status=\"warn\" className=\"text-caption font-medium rounded px-small py-tight text-warn\">Needs attention</span></td>\n            </tr>\n          </tbody>\n        </table>\n        <div className=\"flex items-end gap-2\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-10 px-4 rounded-md text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white\">Create key</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-9 px-control rounded-control text-body font-medium bg-action-secondary text-primary border border-strong\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Schedule deletion</button>\n        </div>\n        <div className=\"flex flex-col gap-small\">\n          <button type=\"button\" data-testid=\"new-0\" className=\"h-10 px-control rounded-control text-body font-medium bg-action-secondary hover:bg-action-secondary-hover text-primary border border-strong\">Action</button>\n          <button type=\"button\" data-testid=\"new-1\" className=\"h-row px-control rounded-control text-body font-medium bg-action-secondary hover:bg-action-secondary-hover text-primary border border-strong\">Action</button>\n          <div data-testid=\"ok-0\" className=\"bg-[var(--ng-surface-sunken)] p-small rounded-control\">Box</div>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+ },
+ "plants": [
+  {
+   "screen": "keys",
+   "testid": "new-0",
+   "prop": "height",
+   "kind": "literal",
+   "note": "h-10"
+  },
+  {
+   "screen": "keys",
+   "testid": "new-1",
+   "prop": "height",
+   "kind": "wrong-token",
+   "note": "row height on a control"
+  }
+ ]
+}

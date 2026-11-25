@@ -1,0 +1,291 @@
+{
+ "bundle": {
+  "id": "fernhill",
+  "version": "1.0.0",
+  "themes": [
+   "hillside",
+   "orchard"
+  ],
+  "tokens": [
+   {
+    "name": "global.radius.soft",
+    "type": "dimension",
+    "cssVar": "--fh-global-radius-soft",
+    "values": {
+     "hillside": "8px",
+     "orchard": "2px"
+    }
+   },
+   {
+    "name": "global.font.size.text",
+    "type": "dimension",
+    "cssVar": "--fh-global-font-size-text",
+    "values": {
+     "hillside": "16px",
+     "orchard": "16px"
+    }
+   },
+   {
+    "name": "global.font.size.head",
+    "type": "dimension",
+    "cssVar": "--fh-global-font-size-head",
+    "values": {
+     "hillside": "28px",
+     "orchard": "28px"
+    }
+   },
+   {
+    "name": "global.font.weight.normal",
+    "type": "fontWeight",
+    "cssVar": "--fh-global-font-weight-normal",
+    "values": {
+     "hillside": "400",
+     "orchard": "400"
+    }
+   },
+   {
+    "name": "global.font.weight.strong",
+    "type": "fontWeight",
+    "cssVar": "--fh-global-font-weight-strong",
+    "values": {
+     "hillside": "700",
+     "orchard": "700"
+    }
+   },
+   {
+    "name": "global.field.height",
+    "type": "dimension",
+    "cssVar": "--fh-global-field-height",
+    "values": {
+     "hillside": "44px",
+     "orchard": "44px"
+    }
+   },
+   {
+    "name": "semantic.fg.default",
+    "type": "color",
+    "cssVar": "--fh-semantic-fg-default",
+    "values": {
+     "hillside": "#1b1b1f",
+     "orchard": "#1b1b1f"
+    }
+   },
+   {
+    "name": "semantic.fg.soft",
+    "type": "color",
+    "cssVar": "--fh-semantic-fg-soft",
+    "values": {
+     "hillside": "#55555e",
+     "orchard": "#55555e"
+    }
+   },
+   {
+    "name": "semantic.fg.on-brand",
+    "type": "color",
+    "cssVar": "--fh-semantic-fg-on-brand",
+    "values": {
+     "hillside": "#ffffff",
+     "orchard": "#ffffff"
+    }
+   },
+   {
+    "name": "semantic.bg.default",
+    "type": "color",
+    "cssVar": "--fh-semantic-bg-default",
+    "values": {
+     "hillside": "#ffffff",
+     "orchard": "#ffffff"
+    }
+   },
+   {
+    "name": "semantic.bg.brand",
+    "type": "color",
+    "cssVar": "--fh-semantic-bg-brand",
+    "values": {
+     "hillside": "#5a2ca0",
+     "orchard": "#1f6b45"
+    }
+   },
+   {
+    "name": "semantic.bg.brand-hover",
+    "type": "color",
+    "cssVar": "--fh-semantic-bg-brand-hover",
+    "values": {
+     "hillside": "#432078",
+     "orchard": "#144a2f"
+    }
+   },
+   {
+    "name": "semantic.edge",
+    "type": "color",
+    "cssVar": "--fh-semantic-edge",
+    "values": {
+     "hillside": "#c9c9d1",
+     "orchard": "#c9c9d1"
+    }
+   },
+   {
+    "name": "semantic.gap.sm",
+    "type": "dimension",
+    "cssVar": "--fh-semantic-gap-sm",
+    "values": {
+     "hillside": "8px",
+     "orchard": "8px"
+    }
+   },
+   {
+    "name": "semantic.gap.md",
+    "type": "dimension",
+    "cssVar": "--fh-semantic-gap-md",
+    "values": {
+     "hillside": "16px",
+     "orchard": "16px"
+    }
+   },
+   {
+    "name": "semantic.pad.field",
+    "type": "dimension",
+    "cssVar": "--fh-semantic-pad-field",
+    "values": {
+     "hillside": "12px",
+     "orchard": "12px"
+    }
+   },
+   {
+    "name": "semantic.pad.panel",
+    "type": "dimension",
+    "cssVar": "--fh-semantic-pad-panel",
+    "values": {
+     "hillside": "16px",
+     "orchard": "16px"
+    }
+   }
+  ],
+  "contract": {
+   "root": {
+    "color": "semantic.fg.default",
+    "background-color": "semantic.bg.default",
+    "font-size": "global.font.size.text"
+   },
+   "parts": [
+    {
+     "part": "field",
+     "selector": "button, select, textarea, input:not([type=checkbox]):not([type=radio])",
+     "required": [
+      "height"
+     ],
+     "props": {
+      "height": [
+       "global.field.height"
+      ],
+      "padding-inline": [
+       "semantic.pad.field"
+      ],
+      "border-radius": [
+       "global.radius.soft"
+      ],
+      "background-color": [
+       "semantic.bg.*"
+      ],
+      "color": [
+       "semantic.fg.*"
+      ],
+      "border-color": [
+       "semantic.edge"
+      ],
+      "font-size": [
+       "global.font.size.text"
+      ]
+     }
+    },
+    {
+     "part": "title",
+     "selector": "h1",
+     "props": {
+      "font-size": [
+       "global.font.size.head"
+      ],
+      "font-weight": [
+       "global.font.weight.strong"
+      ]
+     }
+    },
+    {
+     "part": "panel",
+     "selector": "section",
+     "props": {
+      "padding-inline": [
+       "semantic.pad.panel"
+      ],
+      "padding-block": [
+       "semantic.pad.panel"
+      ],
+      "border-radius": [
+       "global.radius.soft"
+      ],
+      "background-color": [
+       "semantic.bg.default"
+      ],
+      "border-color": [
+       "semantic.edge"
+      ],
+      "gap": [
+       "semantic.gap.*"
+      ]
+     }
+    }
+   ],
+   "any": {
+    "color": [
+     "semantic.fg.*"
+    ],
+    "background-color": [
+     "semantic.bg.*"
+    ],
+    "border-color": [
+     "semantic.edge"
+    ],
+    "border-radius": [
+     "global.radius.*"
+    ],
+    "font-size": [
+     "global.font.size.*"
+    ],
+    "font-weight": [
+     "global.font.weight.*"
+    ],
+    "gap": [
+     "semantic.gap.*"
+    ],
+    "padding-inline": [
+     "semantic.pad.*"
+    ],
+    "padding-block": [
+     "semantic.pad.*"
+    ],
+    "margin-inline": [
+     "semantic.gap.*"
+    ],
+    "margin-block": [
+     "semantic.gap.*"
+    ]
+   }
+  },
+  "components": [
+   {
+    "name": "Button",
+    "part": "field",
+    "summary": "An action.",
+    "usage": "height: var(--fh-global-field-height); padding-inline: var(--fh-semantic-pad-field); border-radius: var(--fh-global-radius-soft); background-color: var(--fh-semantic-bg-brand); color: var(--fh-semantic-fg-on-brand)"
+   },
+   {
+    "name": "Panel",
+    "part": "panel",
+    "summary": "Groups related fields.",
+    "usage": "padding: var(--fh-semantic-pad-panel); border: 1px solid var(--fh-semantic-edge); border-radius: var(--fh-global-radius-soft)"
+   }
+  ]
+ },
+ "keyId": "dev-1",
+ "signature": "grsBeMbDvotmwegpa3UxiAIQaYhGWuPYrj3joQ1NwGAja3WfItdwDb3aVhnYn1ggyCsC2PxuZonIEQF8h5jLCg=="
+}

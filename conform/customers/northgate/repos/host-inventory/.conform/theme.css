@@ -1,0 +1,57 @@
+@theme inline {
+  --color-*: initial;
+  --spacing-row: var(--ng-row-height);
+  --spacing-tight: var(--ng-space-tight);
+  --spacing-small: var(--ng-space-small);
+  --spacing-medium: var(--ng-space-medium);
+  --spacing-large: var(--ng-space-large);
+  --spacing-section: var(--ng-space-section);
+  --spacing-card: var(--ng-card-padding);
+  --color-surface-page: var(--ng-surface-page);
+  --color-surface-raised: var(--ng-surface-raised);
+  --color-surface-sunken: var(--ng-surface-sunken);
+  --color-action-primary: var(--ng-action-primary);
+  --color-action-primary-hover: var(--ng-action-primary-hover);
+  --color-action-danger: var(--ng-action-danger);
+  --color-action-danger-hover: var(--ng-action-danger-hover);
+  --color-action-secondary: var(--ng-action-secondary);
+  --color-action-secondary-hover: var(--ng-action-secondary-hover);
+  --text-color-primary: var(--ng-text-primary);
+  --text-color-muted: var(--ng-text-muted);
+  --text-color-on-action: var(--ng-text-on-action);
+  --text-color-link: var(--ng-text-link);
+  --text-color-ok: var(--ng-status-ok);
+  --text-color-warn: var(--ng-status-warn);
+  --text-color-critical: var(--ng-status-critical);
+  --border-color-default: var(--ng-border-default);
+  --border-color-strong: var(--ng-border-strong);
+  --border-color-ok: var(--ng-status-ok);
+  --border-color-warn: var(--ng-status-warn);
+  --border-color-critical: var(--ng-status-critical);
+  --radius-control: var(--ng-radius-control);
+  --radius-card: var(--ng-radius-card);
+  --text-caption: var(--ng-type-caption);
+  --text-body: var(--ng-type-body);
+  --text-heading: var(--ng-type-heading);
+  --text-title: var(--ng-type-title);
+  --font-weight-regular: var(--ng-weight-regular);
+  --font-weight-medium: var(--ng-weight-medium);
+  --font-weight-bold: var(--ng-weight-bold);
+  --shadow-raised: var(--ng-elevation-raised);
+  --shadow-overlay: var(--ng-elevation-overlay);
+}
+@theme {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-red-600: #dc2626;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-900: #0f172a;
+  --color-green-700: #15803d;
+}
+@utility h-control { height: var(--ng-control-height); }
+@utility px-control { padding-inline: var(--ng-control-padding); }

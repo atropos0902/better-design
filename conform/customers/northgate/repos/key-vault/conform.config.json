@@ -1,0 +1,18 @@
+{
+  "repo": "northgate/key-vault",
+  "bundle": ".conform/bundle.json",
+  "keys": ".conform/keys.json",
+  "styling": "tailwind",
+  "themeCss": ".conform/theme.css",
+  "css": [],
+  "screens": [
+    {
+      "id": "keys",
+      "module": "src/screens/keys.tsx"
+    },
+    {
+      "id": "rotate",
+      "module": "src/screens/rotate.tsx"
+    }
+  ]
+}

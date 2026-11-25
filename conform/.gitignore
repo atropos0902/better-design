@@ -1,0 +1,9 @@
+node_modules
+packages/*/dist
+.next
+.open-next
+.wrangler
+.stryker-tmp
+reports
+*.key.json
+.env*

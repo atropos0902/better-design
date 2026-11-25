@@ -1,0 +1,18 @@
+{
+  "id": "h-035",
+  "repo": "rollout-gate",
+  "title": "Let the Open gate label wrap",
+  "body": "German translation is two lines long, a fixed height cut it off.",
+  "files": {
+    "src/screens/gates.tsx": "export default function Gates() {\n  return (\n    <main className=\"bg-surface-page p-section flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-title font-bold text-primary\">Rollout gates</h1>\n      <section data-testid=\"list\" className=\"p-6 rounded-lg bg-white border border-slate-200 shadow flex flex-col gap-4\">\n        <h2 className=\"text-heading font-medium text-primary\">All gates</h2>\n        <table className=\"w-full\">\n          <thead>\n            <tr><th className=\"text-caption font-bold text-muted px-medium text-left\">Service</th><th className=\"text-caption font-bold text-muted px-medium text-left\">Stage</th><th className=\"text-caption font-bold text-muted px-medium text-left\">Status</th></tr>\n          </thead>\n          <tbody>\n            <tr className=\"h-12 border-b border-default\">\n              <td className=\"text-body px-4 text-primary\">search-api</td>\n              <td className=\"text-body px-4 text-primary\">Canary</td>\n              <td className=\"text-body px-4 text-primary\"><span data-status=\"ok\" className=\"text-xs font-medium rounded px-2 py-1 text-ok\">Healthy</span></td>\n            </tr>\n            <tr className=\"h-12 border-b border-default\">\n              <td className=\"text-body px-4 text-primary\">feed-api</td>\n              <td className=\"text-body px-4 text-primary\">Region 1</td>\n              <td className=\"text-body px-4 text-primary\"><span data-status=\"warn\" className=\"text-xs font-medium rounded px-2 py-1 text-warn\">Needs attention</span></td>\n            </tr>\n          </tbody>\n        </table>\n        <div className=\"flex items-end gap-small\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"min-h-[var(--ng-control-height)] px-control rounded-control text-body font-medium bg-action-primary hover:bg-action-primary-hover text-on-action\">Open gate</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-secondary hover:bg-action-secondary-hover text-primary border border-strong\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Close gate</button>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+  },
+  "plants": [
+    {
+      "screen": "gates",
+      "testid": "main-action",
+      "prop": "height",
+      "kind": "missing",
+      "note": "min-height instead of the required height"
+    }
+  ]
+}

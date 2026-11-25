@@ -1,0 +1,12 @@
+{
+  "id": "h-046",
+  "repo": "access-review",
+  "title": "Move the decide screen into its own folder",
+  "body": "Prep for splitting the review flow. Also caps the reading width.",
+  "files": {
+    "conform.config.json": "{\n  \"repo\": \"northgate/access-review\",\n  \"bundle\": \".conform/bundle.json\",\n  \"keys\": \".conform/keys.json\",\n  \"styling\": \"tailwind\",\n  \"themeCss\": \".conform/theme.css\",\n  \"css\": [],\n  \"screens\": [\n    {\n      \"id\": \"campaigns\",\n      \"module\": \"src/screens/campaigns.tsx\"\n    },\n    {\n      \"id\": \"decide\",\n      \"module\": \"src/screens/review/decide.tsx\"\n    }\n  ]\n}\n",
+    "src/screens/decide.tsx": null,
+    "src/screens/review/decide.tsx": "export default function Decide() {\n  return (\n    <main className=\"bg-surface-page p-section flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-title font-bold text-primary\">Review a grant</h1>\n      <section data-testid=\"detail\" className=\"w-full max-w-3xl mx-auto p-6 rounded-lg bg-white border border-slate-200 shadow flex flex-col gap-4\">\n        <h2 className=\"text-lg font-bold text-slate-900\">prod-read</h2>\n        <p className=\"text-body text-muted\">Grant: prod-read</p>\n        <p className=\"text-body text-muted\">Reason: On-call</p>\n        <p className=\"text-body text-muted\">Approver: Lead</p>\n        <div className=\"flex items-end gap-[10px]\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-10 px-control rounded-control text-body font-medium bg-action-primary hover:bg-action-primary-hover text-on-action\">Keep access</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-9 px-control rounded-control text-body font-medium bg-action-secondary text-primary border border-strong\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Revoke access</button>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+  },
+  "plants": []
+}

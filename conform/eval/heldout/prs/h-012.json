@@ -1,0 +1,25 @@
+{
+  "id": "h-012",
+  "repo": "firewall-rules",
+  "title": "Search and zone filter for rules",
+  "body": "Adds a toolbar over the rules table.",
+  "files": {
+    "src/screens/rules.tsx": "export default function Rules() {\n  return (\n    <main className=\"bg-surface-page p-section flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-title font-bold text-primary\">Firewall rules</h1>\n      <section data-testid=\"list\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium\">\n        <h2 className=\"text-heading font-bold text-primary\">All rules</h2>\n        <div className=\"flex items-end gap-small\">\n          <div className=\"flex flex-col gap-tight grow\">\n            <label htmlFor=\"rule-q\" className=\"text-caption font-medium text-muted\">Search rules</label>\n            <input id=\"rule-q\" type=\"search\" data-testid=\"rule-search\" defaultValue=\"allow\" style={{ height: 40 }} className=\"px-control rounded-control text-body bg-surface-raised text-primary border border-strong\" />\n          </div>\n          <select data-testid=\"zone-filter\" defaultValue=\"edge\" className=\"h-control px-control rounded-control text-body bg-surface-raised text-primary border border-strong\">\n            <option value=\"edge\">edge</option>\n            <option value=\"core\">core</option>\n            <option value=\"dmz\">dmz</option>\n          </select>\n        </div>\n        <table className=\"w-full\">\n          <thead>\n            <tr><th className=\"text-caption font-medium text-muted px-medium text-left\">Rule</th><th className=\"text-caption font-medium text-muted px-medium text-left\">Zone</th><th className=\"text-caption font-medium text-muted px-medium text-left\">Status</th></tr>\n          </thead>\n          <tbody>\n            <tr className=\"h-12 border-b border-slate-200\">\n              <td className=\"text-body px-medium text-primary\">allow-https</td>\n              <td className=\"text-body px-medium text-primary\">edge</td>\n              <td className=\"text-body px-medium text-primary\"><span data-status=\"ok\" className=\"text-xs font-medium rounded px-2 py-1 text-ok\">Healthy</span></td>\n            </tr>\n            <tr className=\"h-12 border-b border-slate-200\">\n              <td className=\"text-body px-medium text-primary\">deny-smb</td>\n              <td className=\"text-body px-medium text-primary\">core</td>\n              <td className=\"text-body px-medium text-primary\"><span data-status=\"ok\" className=\"text-xs font-medium rounded px-2 py-1 text-ok\">Healthy</span></td>\n            </tr>\n          </tbody>\n        </table>\n        <div className=\"flex items-end gap-small\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-control px-4 rounded-control text-body font-medium bg-action-primary hover:bg-blue-700 text-on-action\">Add rule</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-10 px-4 rounded-md text-sm font-medium bg-white text-slate-900 border border-slate-500\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Disable rule</button>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+  },
+  "plants": [
+    {
+      "screen": "rules",
+      "testid": "rule-search",
+      "prop": "height",
+      "kind": "literal",
+      "note": "inline height: 40"
+    },
+    {
+      "screen": "rules",
+      "testid": "zone-filter",
+      "prop": "select-name",
+      "kind": "accessibility",
+      "note": "select has no accessible name"
+    }
+  ]
+}

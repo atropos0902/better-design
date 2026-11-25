@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "u-001",
+    "css": ":root { --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1); }\n.tile { box-shadow: var(--tile-shadow, var(--ng-elevation-raised)); }\n.board { --tile-shadow: var(--shadow-md); }",
+    "html": "<div class=\"board\"><div class=\"tile\" id=\"target\">Tile</div></div>",
+    "prop": "box-shadow",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-002",
+    "css": "@layer theme { :root { --radius-md: 0.375rem; } }\n@layer utilities { .rounded-md { border-radius: var(--radius-md); } }",
+    "html": "<button class=\"rounded-md\" id=\"target\">Apply</button>",
+    "prop": "border-radius",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-003",
+    "css": ".console { color-scheme: dark; }\n.console pre { background-color: light-dark(var(--ng-surface-raised), var(--ng-text-primary)); }",
+    "html": "<div class=\"console\"><pre id=\"target\">$ run</pre></div>",
+    "prop": "background-color",
+    "expect": {
+      "kind": "token",
+      "token": "text.primary"
+    }
+  },
+  {
+    "id": "u-004",
+    "css": ":root { --muted-foreground: oklch(0.45 0.02 260); }\n@layer utilities { .text-muted-foreground { color: var(--muted-foreground); } }",
+    "html": "<p class=\"text-muted-foreground\" id=\"target\">No results</p>",
+    "prop": "color",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-005",
+    "css": ".select { height: max(24px, var(--ng-control-height)); }",
+    "html": "<select class=\"select\" id=\"target\"><option>All</option></select>",
+    "prop": "height",
+    "expect": {
+      "kind": "token",
+      "token": "control.height"
+    }
+  },
+  {
+    "id": "u-006",
+    "css": ".cell-text { font-size: 0.875rem; }",
+    "html": "<div class=\"cell-text\" id=\"target\">Text</div>",
+    "prop": "font-size",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-007",
+    "css": ":root { --shadow-popover: var(--ng-elevation-overlay); }\n.popover { --popover-shadow: var(--shadow-popover); box-shadow: var(--popover-shadow); }",
+    "html": "<div class=\"popover\" id=\"target\">Menu</div>",
+    "prop": "box-shadow",
+    "expect": {
+      "kind": "token",
+      "token": "elevation.overlay"
+    }
+  },
+  {
+    "id": "u-008",
+    "css": ".btn-compact { height: calc(var(--ng-control-height) * 0.8); }",
+    "html": "<button class=\"btn-compact\" id=\"target\">Go</button>",
+    "prop": "height",
+    "expect": {
+      "kind": "token",
+      "token": "control.height"
+    }
+  },
+  {
+    "id": "u-009",
+    "css": ".menu button { font-weight: 500; }\n.menu button:where(.quiet, #x) { font-weight: 300; }\n.menu button.quiet { font-weight: var(--ng-weight-regular); }",
+    "html": "<div class=\"menu\"><button class=\"quiet\" id=\"target\">Rename</button></div>",
+    "prop": "font-weight",
+    "expect": {
+      "kind": "token",
+      "token": "weight.regular"
+    }
+  },
+  {
+    "id": "u-010",
+    "css": "@layer theme { :root { --color-card: var(--ng-surface-raised); } }\n@layer utilities { .bg-card { background-color: var(--color-card); } .p-6 { padding: 1.5rem; } }",
+    "html": "<section class=\"bg-card p-6\" id=\"target\">Card</section>",
+    "prop": "background-color",
+    "expect": {
+      "kind": "token",
+      "token": "surface.raised"
+    }
+  },
+  {
+    "id": "u-011",
+    "css": ".stack { display: flex; flex-direction: column; gap: var(--stack-gap, 12px); }",
+    "html": "<div class=\"stack\" id=\"target\" style=\"--stack-gap: var(--ng-space-section)\"><i></i><i></i></div>",
+    "prop": "row-gap",
+    "expect": {
+      "kind": "token",
+      "token": "space.section"
+    }
+  },
+  {
+    "id": "u-012",
+    "css": ".modal { border-radius: max(12px, var(--ng-radius-control)); }",
+    "html": "<div class=\"modal\" id=\"target\">Modal</div>",
+    "prop": "border-radius",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-013",
+    "css": ".hero { padding-block: clamp(12px, 5vw, var(--ng-space-section)); }",
+    "html": "<header class=\"hero\" id=\"target\">Overview</header>",
+    "prop": "padding-top",
+    "expect": {
+      "kind": "token",
+      "token": "space.section"
+    }
+  },
+  {
+    "id": "u-014",
+    "css": "@property --dot { syntax: \"<color>\"; inherits: true; initial-value: transparent; }\n[data-state=\"healthy\"] { --dot: var(--ng-status-ok); }\n.dot { display: inline-block; width: 8px; height: 8px; background-color: var(--dot); }",
+    "html": "<li data-state=\"healthy\"><span class=\"dot\" id=\"target\"></span> api</li>",
+    "prop": "background-color",
+    "expect": {
+      "kind": "token",
+      "token": "status.ok"
+    }
+  },
+  {
+    "id": "u-015",
+    "css": ".tile { padding: var(--ng-card-padding); }\n@media (max-width: 640px) { .tile { padding: 12px; } }\n@media print { .tile { padding: 0; } }",
+    "html": "<article class=\"tile\" id=\"target\">Uptime</article>",
+    "prop": "padding-top",
+    "expect": {
+      "kind": "token",
+      "token": "card.padding"
+    }
+  },
+  {
+    "id": "u-016",
+    "css": ".banner { font-size: 20px; padding-top: 1.5em; }",
+    "html": "<div class=\"banner\" id=\"target\">Maintenance tonight</div>",
+    "prop": "padding-top",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-017",
+    "css": ".sheet { background: var(--ng-surface-raised); }\naside.sheet { background: oklch(1 0 0); }",
+    "html": "<aside class=\"sheet\" id=\"target\">Help</aside>",
+    "prop": "background-color",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-018",
+    "css": "@property --inset { syntax: \"<length>\"; inherits: false; initial-value: 12px; }\n.sheet { --inset: var(--ng-space-large); }\n.sheet-row { padding-left: var(--inset); }",
+    "html": "<div class=\"sheet\"><div class=\"sheet-row\" id=\"target\">Row</div></div>",
+    "prop": "padding-left",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-019",
+    "css": ".tab { font-weight: var(--ng-weight-medium); font: 500 14px/20px Inter, sans-serif; }",
+    "html": "<button class=\"tab\" id=\"target\">Runs</button>",
+    "prop": "font-weight",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-020",
+    "css": ".ribbon { writing-mode: vertical-rl; padding-block: 4px var(--ng-space-medium); padding-inline: 10px; }",
+    "html": "<div class=\"ribbon\" id=\"target\">New</div>",
+    "prop": "padding-left",
+    "expect": {
+      "kind": "token",
+      "token": "space.medium"
+    }
+  },
+  {
+    "id": "u-021",
+    "css": ".page-title { font: 600 var(--ng-type-title)/1.2 system-ui, sans-serif; }",
+    "html": "<h1 class=\"page-title\" id=\"target\">Queue</h1>",
+    "prop": "font-size",
+    "expect": {
+      "kind": "token",
+      "token": "type.title"
+    }
+  },
+  {
+    "id": "u-022",
+    "css": ".lead { font-size: calc(var(--ng-type-body) * 1.25); }",
+    "html": "<p class=\"lead\" id=\"target\">Lead</p>",
+    "prop": "font-size",
+    "expect": {
+      "kind": "token",
+      "token": "type.body"
+    }
+  },
+  {
+    "id": "u-023",
+    "css": ".form .input.input { height: 2.5rem; }\n.form .input { height: var(--ng-control-height); }",
+    "html": "<div class=\"form\"><input class=\"input\" id=\"target\"></div>",
+    "prop": "height",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-024",
+    "css": ".spinner { border: 2px solid; border-color: var(--ng-border-strong) transparent transparent; border-radius: 50%; }",
+    "html": "<span class=\"spinner\" id=\"target\"></span>",
+    "prop": "border-color",
+    "expect": {
+      "kind": "token",
+      "token": "border.strong"
+    }
+  },
+  {
+    "id": "u-025",
+    "css": ".main { padding-top: 20px; padding-top: var(--page-gutter); }",
+    "html": "<main class=\"main\" id=\"target\">Main</main>",
+    "prop": "padding-top",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-026",
+    "css": ".badge { padding: var(--ng-space-tight) var(--ng-space-small); }",
+    "html": "<span class=\"badge\" id=\"target\">Ok</span>",
+    "prop": "padding-top",
+    "expect": {
+      "kind": "token",
+      "token": "space.tight"
+    }
+  },
+  {
+    "id": "u-027",
+    "css": ".tabs { display: flex; gap: 0 var(--ng-space-medium); }",
+    "html": "<div class=\"tabs\" id=\"target\"><i></i></div>",
+    "prop": "row-gap",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-028",
+    "css": "@layer lib, app;\n@layer lib { .link { font-weight: var(--ng-weight-medium); } }\n@layer app { .link { font-weight: 700; } .sidebar .link { font-weight: revert-layer; } }",
+    "html": "<div class=\"sidebar\"><a class=\"link\" id=\"target\" href=\"#\">Teams</a></div>",
+    "prop": "font-weight",
+    "expect": {
+      "kind": "token",
+      "token": "weight.medium"
+    }
+  },
+  {
+    "id": "u-029",
+    "css": ".metric { font-size: clamp(16px, 3vw, var(--ng-type-title)); }",
+    "html": "<strong class=\"metric\" id=\"target\">98%</strong>",
+    "prop": "font-size",
+    "expect": {
+      "kind": "token",
+      "token": "type.title"
+    }
+  },
+  {
+    "id": "u-030",
+    "css": ".card { box-shadow: var(--ng-elevation-raised); }\n@media (min-width: 1024px) { .card.flat { box-shadow: none; } }",
+    "html": "<div class=\"card flat\" id=\"target\">Card</div>",
+    "prop": "box-shadow",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-031",
+    "css": ".filters { display: flex; flex-wrap: wrap; gap: 1rem 2rem; }",
+    "html": "<div class=\"filters\" id=\"target\"><i></i></div>",
+    "prop": "row-gap",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-032",
+    "css": ".meta { color: #666; }\n@supports (color: oklch(0 0 0)) { .meta { color: var(--ng-text-muted); } }\n@supports not (color: oklch(0 0 0)) { .meta { color: #777; } }",
+    "html": "<span class=\"meta\" id=\"target\">2h ago</span>",
+    "prop": "color",
+    "expect": {
+      "kind": "token",
+      "token": "text.muted"
+    }
+  },
+  {
+    "id": "u-033",
+    "css": ".page { --py: 18px; }\n.stack { --py: var(--py, 10px); padding-top: var(--py, var(--ng-space-large)); }",
+    "html": "<div class=\"page\"><div class=\"stack\" id=\"target\">Stack</div></div>",
+    "prop": "padding-top",
+    "expect": {
+      "kind": "token",
+      "token": "space.large"
+    }
+  },
+  {
+    "id": "u-034",
+    "css": ".raised { box-shadow: var(--ng-elevation-raised); }\n.plain-list .raised { box-shadow: unset; }",
+    "html": "<div class=\"plain-list\"><div class=\"raised\" id=\"target\">Row</div></div>",
+    "prop": "box-shadow",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-035",
+    "css": ".text { font-size: var(--ng-type-body); }\n.text--small { --size: 13px; font-size: var(--size, var(--ng-type-caption)); }",
+    "html": "<p class=\"text text--small\" id=\"target\">Fine print</p>",
+    "prop": "font-size",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-036",
+    "css": ".menu-host:has(> [aria-expanded=\"true\"]) .menu { box-shadow: var(--ng-elevation-overlay); }\n.menu-host .menu { box-shadow: var(--ng-elevation-raised); }",
+    "html": "<div class=\"menu-host\"><button aria-expanded=\"true\">Open</button><div class=\"menu\" id=\"target\">Items</div></div>",
+    "prop": "box-shadow",
+    "expect": {
+      "kind": "token",
+      "token": "elevation.overlay"
+    }
+  },
+  {
+    "id": "u-037",
+    "css": ".tab-v { writing-mode: vertical-rl; border-start-start-radius: 4px; border-end-start-radius: var(--ng-radius-card); }",
+    "html": "<div class=\"tab-v\" id=\"target\">Logs</div>",
+    "prop": "border-radius",
+    "expect": {
+      "kind": "token",
+      "token": "radius.card"
+    }
+  },
+  {
+    "id": "u-038",
+    "css": ".well { color-scheme: light; background-color: light-dark(var(--ng-surface-sunken), #232933); }",
+    "html": "<div class=\"well\" id=\"target\">Well</div>",
+    "prop": "background-color",
+    "expect": {
+      "kind": "token",
+      "token": "surface.sunken"
+    }
+  },
+  {
+    "id": "u-039",
+    "css": "@layer app { .total { font-weight: var(--ng-weight-bold); } }\n@layer utilities { .total { font-weight: 700; } }",
+    "html": "<span class=\"total\" id=\"target\">1,204</span>",
+    "prop": "font-weight",
+    "expect": {
+      "kind": "token",
+      "token": "weight.bold"
+    }
+  },
+  {
+    "id": "u-040",
+    "css": ":root { --spacing: 0.25rem; }\n@layer utilities { .pl-4 { padding-left: calc(var(--spacing) * 4); } }",
+    "html": "<div class=\"pl-4\" id=\"target\">Filters</div>",
+    "prop": "padding-left",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-041",
+    "css": ".sr-number { color: transparent; }",
+    "html": "<span class=\"sr-number\" id=\"target\">7</span>",
+    "prop": "color",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-042",
+    "css": ".card { border: 1px solid var(--ng-border-default); }\n.card.is-selected { outline: 2px solid var(--ng-action-primary); }",
+    "html": "<article class=\"card is-selected\" id=\"target\">Card</article>",
+    "prop": "border-color",
+    "expect": {
+      "kind": "token",
+      "token": "border.default"
+    }
+  },
+  {
+    "id": "u-043",
+    "css": ".pill { font-weight: clamp(100, var(--ng-weight-medium), 900); }",
+    "html": "<span class=\"pill\" id=\"target\">Live</span>",
+    "prop": "font-weight",
+    "expect": {
+      "kind": "token",
+      "token": "weight.medium"
+    }
+  },
+  {
+    "id": "u-044",
+    "css": ".grid-card { padding-top: var(--ng-space-large); }\n@supports (display: grid) { .grid-card { padding-top: 1.25rem; } }",
+    "html": "<div class=\"grid-card\" id=\"target\">Card</div>",
+    "prop": "padding-top",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-045",
+    "css": ".shell { height: 300px; } .fill { height: 100%; }",
+    "html": "<div class=\"shell\"><div class=\"fill\" id=\"target\"></div></div>",
+    "prop": "height",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-046",
+    "css": ".tile { border-radius: min(var(--ng-radius-card), 16px); }",
+    "html": "<div class=\"tile\" id=\"target\">Tile</div>",
+    "prop": "border-radius",
+    "expect": {
+      "kind": "token",
+      "token": "radius.card"
+    }
+  },
+  {
+    "id": "u-047",
+    "css": ".note { height: var(--ng-row-height); line-height: 24px; }\n.note.grow { height: auto; }",
+    "html": "<div class=\"note grow\" id=\"target\">Text</div>",
+    "prop": "height",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-048",
+    "css": ".addon { direction: rtl; border-radius: 0; border-start-end-radius: var(--ng-radius-control); border-end-end-radius: var(--ng-radius-control); }",
+    "html": "<span class=\"addon\" id=\"target\">USD</span>",
+    "prop": "border-radius",
+    "expect": {
+      "kind": "token",
+      "token": "radius.control"
+    }
+  },
+  {
+    "id": "u-049",
+    "css": ".caption { color: var(--ng-text-muted); }\n.card .caption { color: #515b6b; }",
+    "html": "<div class=\"card\"><p class=\"caption\" id=\"target\">Updated</p></div>",
+    "prop": "color",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-050",
+    "css": ".btn { --btn-h: var(--ng-control-height); height: var(--btn-h); }\n.btn-sm { --btn-h: 28px; }\n.toolbar .btn { --btn-h: var(--ng-row-height); }",
+    "html": "<div class=\"toolbar\"><button class=\"btn btn-sm\" id=\"target\">Undo</button></div>",
+    "prop": "height",
+    "expect": {
+      "kind": "token",
+      "token": "row.height"
+    }
+  },
+  {
+    "id": "u-051",
+    "css": "@layer components { .cell { padding-left: var(--ng-space-small); } }\n@layer utilities { .cell { padding-left: 20px; } .cell.is-dense { padding-left: revert-layer; } }",
+    "html": "<div class=\"cell is-dense\" id=\"target\">12</div>",
+    "prop": "padding-left",
+    "expect": {
+      "kind": "token",
+      "token": "space.small"
+    }
+  },
+  {
+    "id": "u-052",
+    "css": ".field { padding-left: var(--ng-space-medium); }",
+    "html": "<div class=\"field\" id=\"target\" style=\"padding-left: 16px\">Name</div>",
+    "prop": "padding-left",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-053",
+    "css": "@property --chip-bg { syntax: \"<color>\"; inherits: false; initial-value: #eceef2; }\n.chip { --chip-bg: var(--ng-space-small); background-color: var(--chip-bg); }",
+    "html": "<span class=\"chip\" id=\"target\">Beta</span>",
+    "prop": "background-color",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-054",
+    "css": ".callout { padding-top: max(var(--ng-space-small), 20px); }",
+    "html": "<div class=\"callout\" id=\"target\">Note</div>",
+    "prop": "padding-top",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-055",
+    "css": ".wrap { container-type: inline-size; width: 600px; }\n@container (min-width: 500px) { .card { padding-top: var(--ng-card-padding); } }\n@container (min-width: 700px) { .card { padding-top: 40px; } }",
+    "html": "<div class=\"wrap\"><article class=\"card\" id=\"target\">Card</article></div>",
+    "prop": "padding-top",
+    "expect": {
+      "kind": "token",
+      "token": "card.padding"
+    }
+  },
+  {
+    "id": "u-056",
+    "css": "th { font-weight: var(--ng-weight-medium); }\nth.plain { font-weight: normal; }",
+    "html": "<table><thead><tr><th class=\"plain\" id=\"target\">Note</th></tr></thead></table>",
+    "prop": "font-weight",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-057",
+    "css": ".board { display: grid; gap: 1rem; }\n@media (width >= 1024px) { .board { gap: var(--ng-space-section); } }\n@media (width >= 1440px) { .board { gap: 48px; } }",
+    "html": "<div class=\"board\" id=\"target\"><i></i></div>",
+    "prop": "row-gap",
+    "expect": {
+      "kind": "token",
+      "token": "space.section"
+    }
+  },
+  {
+    "id": "u-058",
+    "css": ".icon { display: inline-block; width: var(--icon-size, var(--ng-space-medium)); height: var(--icon-size, var(--ng-space-medium)); }\n.icon-lg { --icon-size: var(--ng-space-large); }",
+    "html": "<span class=\"icon icon-lg\" id=\"target\"></span>",
+    "prop": "height",
+    "expect": {
+      "kind": "token",
+      "token": "space.large"
+    }
+  },
+  {
+    "id": "u-059",
+    "css": ".action { display: inline-flex; align-items: center; block-size: var(--ng-control-height); }",
+    "html": "<button class=\"action\" id=\"target\">Export</button>",
+    "prop": "height",
+    "expect": {
+      "kind": "token",
+      "token": "control.height"
+    }
+  },
+  {
+    "id": "u-060",
+    "css": ".seg > * { border-radius: 0; }\n.seg > :first-child { border-radius: var(--ng-radius-control) 0 0 var(--ng-radius-control); }\n.seg > :last-child { border-radius: 0 var(--ng-radius-control) var(--ng-radius-control) 0; }",
+    "html": "<div class=\"seg\"><button id=\"target\">Day</button><button>Week</button></div>",
+    "prop": "border-radius",
+    "expect": {
+      "kind": "token",
+      "token": "radius.control"
+    }
+  },
+  {
+    "id": "u-061",
+    "css": "[role=\"tab\"][aria-selected=\"true\"] { background-color: var(--ng-action-secondary-hover); }\n.tab { background-color: #fafafa; }",
+    "html": "<div role=\"tablist\"><button class=\"tab\" role=\"tab\" aria-selected=\"true\" id=\"target\">Open</button></div>",
+    "prop": "background-color",
+    "expect": {
+      "kind": "token",
+      "token": "action.secondary-hover"
+    }
+  },
+  {
+    "id": "u-062",
+    "css": ".form-grid { display: grid; gap: var(--ng-space-small) var(--ng-space-large); }",
+    "html": "<div class=\"form-grid\" id=\"target\"><i></i><i></i></div>",
+    "prop": "row-gap",
+    "expect": {
+      "kind": "token",
+      "token": "space.small"
+    }
+  },
+  {
+    "id": "u-063",
+    "css": "@layer components { .btn { padding-inline: var(--ng-control-padding) !important; } }\n.btn { padding-inline: 12px !important; }",
+    "html": "<button class=\"btn\" id=\"target\">Retry</button>",
+    "prop": "padding-left",
+    "expect": {
+      "kind": "token",
+      "token": "control.padding"
+    }
+  },
+  {
+    "id": "u-064",
+    "css": ":root { --text-secondary: var(--ng-text-muted); --helper-color: var(--text-secondary); }\n.helper { color: var(--helper-color); }",
+    "html": "<p class=\"helper\" id=\"target\">Optional</p>",
+    "prop": "color",
+    "expect": {
+      "kind": "token",
+      "token": "text.muted"
+    }
+  },
+  {
+    "id": "u-065",
+    "css": "@layer theme { :root { --font-weight-medium: 500; } }\n@layer utilities { .font-medium { --tw-font-weight: var(--font-weight-medium); font-weight: var(--font-weight-medium); } }",
+    "html": "<span class=\"font-medium\" id=\"target\">Ada</span>",
+    "prop": "font-weight",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-066",
+    "css": ".data-table { border-collapse: collapse; }\n.data-table tbody tr { height: var(--ng-row-height); }\n.data-table thead tr { height: 36px; }",
+    "html": "<table class=\"data-table\"><thead><tr><th>Host</th></tr></thead><tbody><tr id=\"target\"><td>db-1</td></tr></tbody></table>",
+    "prop": "height",
+    "expect": {
+      "kind": "token",
+      "token": "row.height"
+    }
+  },
+  {
+    "id": "u-067",
+    "css": ".gallery { display: grid; grid-gap: var(--ng-space-medium); }",
+    "html": "<div class=\"gallery\" id=\"target\"><i></i><i></i></div>",
+    "prop": "row-gap",
+    "expect": {
+      "kind": "token",
+      "token": "space.medium"
+    }
+  },
+  {
+    "id": "u-068",
+    "css": ".dropdown { box-shadow: var(--ng-elevation-overlay); }\n.dropdown.dropdown { box-shadow: 0 4px 12px rgba(16, 24, 40, 0.18); }",
+    "html": "<div class=\"dropdown\" id=\"target\">Menu</div>",
+    "prop": "box-shadow",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-069",
+    "css": ":is(#never, .page) .stack { gap: 12px; }\n.page .main .stack { display: grid; gap: var(--ng-space-medium); }",
+    "html": "<div class=\"page\"><div class=\"main\"><div class=\"stack\" id=\"target\"><i></i></div></div></div>",
+    "prop": "row-gap",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-070",
+    "css": ".input[aria-invalid=\"true\"] { border-color: var(--ng-status-critical); }\n.input { border: 1px solid #d0d5dd; }",
+    "html": "<input class=\"input\" aria-invalid=\"true\" id=\"target\">",
+    "prop": "border-color",
+    "expect": {
+      "kind": "token",
+      "token": "status.critical"
+    }
+  },
+  {
+    "id": "u-071",
+    "css": ".promo { font-size: 16px; }\n.promo h3 { font-size: 1.25em; }",
+    "html": "<div class=\"promo\"><h3 id=\"target\">Upgrade</h3></div>",
+    "prop": "font-size",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-072",
+    "css": ".value { color: var(--ng-text-primary); }",
+    "html": "<style>.value { color: #181d25; }</style><span class=\"value\" id=\"target\">99.9</span>",
+    "prop": "color",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-073",
+    "css": ".note { font-size: 100%; }",
+    "html": "<p class=\"note\" id=\"target\">Note</p>",
+    "prop": "font-size",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-074",
+    "css": ".icon-btn { background: var(--ng-action-secondary); }\n.toolbar .icon-btn { background: none; }",
+    "html": "<div class=\"toolbar\"><button class=\"icon-btn\" id=\"target\">X</button></div>",
+    "prop": "background-color",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-075",
+    "css": ".alert { --fg: var(--ng-status-critical); }\n.alert-title { --fg: #7a1214; color: var(--fg); }\n.alert .alert-title { --fg: unset; }",
+    "html": "<div class=\"alert\"><p class=\"alert-title\" id=\"target\">Outage</p></div>",
+    "prop": "color",
+    "expect": {
+      "kind": "token",
+      "token": "status.critical"
+    }
+  },
+  {
+    "id": "u-076",
+    "css": ".btn { padding-inline: var(--btn-px, var(--ng-control-padding)); }\n.btn-lg { --btn-px: 22px; }",
+    "html": "<button class=\"btn\" id=\"target\">Save</button>",
+    "prop": "padding-left",
+    "expect": {
+      "kind": "token",
+      "token": "control.padding"
+    }
+  },
+  {
+    "id": "u-077",
+    "css": ":root { --border: 214.3 31.8% 91.4%; }\n.separator { border: 1px solid hsl(var(--border)); }",
+    "html": "<div class=\"separator\" id=\"target\"></div>",
+    "prop": "border-color",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-078",
+    "css": ":root { --ng-space-xlarge: 40px; }\n.empty { padding-block: var(--ng-space-xlarge); }",
+    "html": "<div class=\"empty\" id=\"target\">Nothing here</div>",
+    "prop": "padding-top",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-079",
+    "css": ".select { appearance: none; background: var(--ng-surface-raised) url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E\") no-repeat right 8px center / 12px; }",
+    "html": "<select class=\"select\" id=\"target\"><option>Any</option></select>",
+    "prop": "background-color",
+    "expect": {
+      "kind": "token",
+      "token": "surface.raised"
+    }
+  },
+  {
+    "id": "u-080",
+    "css": ".matrix { display: grid; gap: var(--ng-space-small); grid-row-gap: 10px; }",
+    "html": "<div class=\"matrix\" id=\"target\"><i></i></div>",
+    "prop": "row-gap",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-081",
+    "css": ".avatar { width: 32px; height: 32px; border-radius: 50%; }",
+    "html": "<span class=\"avatar\" id=\"target\">JD</span>",
+    "prop": "border-radius",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-082",
+    "css": "dl dd { font-size: 15px; }\ndl dt + dd { font-size: var(--ng-type-caption); }",
+    "html": "<dl><dt>Region</dt><dd id=\"target\">eu-west</dd></dl>",
+    "prop": "font-size",
+    "expect": {
+      "kind": "token",
+      "token": "type.caption"
+    }
+  },
+  {
+    "id": "u-083",
+    "css": ":root { --unit: 8px; --gap-2: calc(var(--unit) * 2); }\n.cluster { display: flex; row-gap: var(--gap-2); }",
+    "html": "<div class=\"cluster\" id=\"target\"><i></i></div>",
+    "prop": "row-gap",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-084",
+    "css": "@scope (.inverse) { p { color: var(--ng-text-on-action); } }\n@scope (.page) { p { color: #222; } }",
+    "html": "<div class=\"page\"><div class=\"inverse\"><p id=\"target\">Text</p></div></div>",
+    "prop": "color",
+    "expect": {
+      "kind": "token",
+      "token": "text.on-action"
+    }
+  },
+  {
+    "id": "u-085",
+    "css": ":root { --spacing: var(--ng-space-tight); }\n@layer utilities { .px-4 { padding-inline: calc(var(--spacing) * 4); } .py-2 { padding-block: calc(var(--spacing) * 2); } }",
+    "html": "<div class=\"px-4 py-2\" id=\"target\">Filters</div>",
+    "prop": "padding-left",
+    "expect": {
+      "kind": "token",
+      "token": "space.tight"
+    }
+  },
+  {
+    "id": "u-086",
+    "css": ".pane { border: 1px solid #ccc; border-block-start-color: var(--ng-action-primary); }",
+    "html": "<div class=\"pane\" id=\"target\">Pane</div>",
+    "prop": "border-color",
+    "expect": {
+      "kind": "token",
+      "token": "action.primary"
+    }
+  },
+  {
+    "id": "u-087",
+    "css": ".panel { --pad: var(--ng-card-padding); }\n.panel-body { --pad: 12px; padding-left: var(--pad); }\n.panel .panel-body.match { --pad: inherit; }",
+    "html": "<section class=\"panel\"><div class=\"panel-body match\" id=\"target\">Body</div></section>",
+    "prop": "padding-left",
+    "expect": {
+      "kind": "token",
+      "token": "card.padding"
+    }
+  },
+  {
+    "id": "u-088",
+    "css": "@layer theme { :root { --spacing: 0.25rem; } }\n@layer utilities { .h-10 { height: calc(var(--spacing) * 10); } }",
+    "html": "<input class=\"h-10\" id=\"target\">",
+    "prop": "height",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-089",
+    "css": ".cell { border-radius: var(--ng-radius-control); }\n.group > .cell:not(:first-child) { border-radius: 0; }",
+    "html": "<div class=\"group\"><div class=\"cell\">A</div><div class=\"cell\" id=\"target\">B</div></div>",
+    "prop": "border-radius",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-090",
+    "css": ".col { container: col / inline-size; width: 480px; }\n.col-title { font-size: var(--ng-type-heading); }\n@container col (max-width: 300px) { .col-title { font-size: 15px; } }",
+    "html": "<div class=\"col\"><h3 class=\"col-title\" id=\"target\">Backlog</h3></div>",
+    "prop": "font-size",
+    "expect": {
+      "kind": "token",
+      "token": "type.heading"
+    }
+  },
+  {
+    "id": "u-091",
+    "css": ".inner { border-radius: calc(var(--ng-radius-card) * 0.6); }",
+    "html": "<div class=\"inner\" id=\"target\">Inner</div>",
+    "prop": "border-radius",
+    "expect": {
+      "kind": "token",
+      "token": "radius.card"
+    }
+  },
+  {
+    "id": "u-092",
+    "css": ".ghost { background-color: transparent !important; }\n#target.ghost { background-color: var(--ng-action-primary); }",
+    "html": "<button class=\"ghost\" id=\"target\" style=\"background-color: #fff\">Cancel</button>",
+    "prop": "background-color",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-093",
+    "css": ".toast { direction: rtl; padding-inline: var(--ng-space-small) var(--ng-space-large); }",
+    "html": "<div class=\"toast\" id=\"target\">Saved</div>",
+    "prop": "padding-left",
+    "expect": {
+      "kind": "token",
+      "token": "space.large"
+    }
+  },
+  {
+    "id": "u-094",
+    "css": "@property --fw { syntax: \"<number>\"; inherits: true; initial-value: 400; }\n.emph { --fw: var(--ng-weight-medium); }\n.emph span { font-weight: var(--fw); }",
+    "html": "<p class=\"emph\"><span id=\"target\">Due</span></p>",
+    "prop": "font-weight",
+    "expect": {
+      "kind": "token",
+      "token": "weight.medium"
+    }
+  },
+  {
+    "id": "u-095",
+    "css": ":root { --app-space-sm: var(--ng-space-small); }\n.chip { --chip-px: var(--app-space-sm); padding: 0 var(--chip-px); }",
+    "html": "<span class=\"chip\" id=\"target\">Open</span>",
+    "prop": "padding-left",
+    "expect": {
+      "kind": "token",
+      "token": "space.small"
+    }
+  },
+  {
+    "id": "u-096",
+    "css": ".btn { padding: var(--ng-space-small) var(--ng-control-padding); }\n.btn.btn-unstyled { all: unset; }",
+    "html": "<button class=\"btn btn-unstyled\" id=\"target\">Dismiss</button>",
+    "prop": "padding-top",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-097",
+    "css": ".nav a { padding-left: var(--ng-space-large); }\n:where(#app) .nav-link { padding-left: 20px; }",
+    "html": "<div id=\"app\"><nav class=\"nav\"><a class=\"nav-link\" id=\"target\" href=\"#\">Alerts</a></nav></div>",
+    "prop": "padding-left",
+    "expect": {
+      "kind": "token",
+      "token": "space.large"
+    }
+  },
+  {
+    "id": "u-098",
+    "css": ":root { --text-sm: var(--ng-type-body); }\n@layer utilities { .text-sm { font-size: var(--text-sm); line-height: 1.43; } }",
+    "html": "<p class=\"text-sm\" id=\"target\">Text</p>",
+    "prop": "font-size",
+    "expect": {
+      "kind": "token",
+      "token": "type.body"
+    }
+  },
+  {
+    "id": "u-099",
+    "css": ".list { --density: tight; }\n.row { height: var(--ng-row-height); }\n@container style(--density: tight) { .row { height: 32px; } }",
+    "html": "<div class=\"list\"><div class=\"row\" id=\"target\"></div></div>",
+    "prop": "height",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-100",
+    "css": ".badge[data-status=\"warn\"] { --tone: var(--ng-status-warn); }\n.badge[data-status=\"ok\"] { --tone: var(--ng-status-ok); }\n.badge { color: var(--tone, var(--ng-text-primary)); }",
+    "html": "<span class=\"badge\" data-status=\"warn\" id=\"target\">Degraded</span>",
+    "prop": "color",
+    "expect": {
+      "kind": "token",
+      "token": "status.warn"
+    }
+  },
+  {
+    "id": "u-101",
+    "css": ".frame { border: 1px solid #c5cbd5; }",
+    "html": "<div class=\"frame\" id=\"target\">Frame</div>",
+    "prop": "border-color",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-102",
+    "css": ".list { padding: var(--ng-space-medium); }\n.p-0 { padding: 0 !important; }",
+    "html": "<ul class=\"list p-0\" id=\"target\"><li>One</li></ul>",
+    "prop": "padding-left",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-103",
+    "css": ".item strong { font-weight: inherit; }",
+    "html": "<div class=\"item\"><strong id=\"target\">Text</strong></div>",
+    "prop": "font-weight",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-104",
+    "css": ".split { display: grid; gap: calc(var(--ng-space-section) / 2); }",
+    "html": "<div class=\"split\" id=\"target\"><i></i></div>",
+    "prop": "row-gap",
+    "expect": {
+      "kind": "token",
+      "token": "space.section"
+    }
+  },
+  {
+    "id": "u-105",
+    "css": ".spine { writing-mode: vertical-rl; inline-size: var(--ng-row-height); block-size: 120px; }",
+    "html": "<div class=\"spine\" id=\"target\"></div>",
+    "prop": "height",
+    "expect": {
+      "kind": "token",
+      "token": "row.height"
+    }
+  },
+  {
+    "id": "u-106",
+    "css": ".notice { border: 1px solid var(--ng-border-default); border-top: 3px solid hsl(40 100% 50%); }",
+    "html": "<div class=\"notice\" id=\"target\">Heads up</div>",
+    "prop": "border-color",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-107",
+    "css": ".card { border: 1px solid var(--ng-border-default); }\n.card.card--flat { border-color: rgb(0 0 0 / 0.08); }",
+    "html": "<div class=\"card card--flat\" id=\"target\">Card</div>",
+    "prop": "border-color",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-108",
+    "css": ".frame { width: 1000px; } .quote { padding-left: var(--ng-space-large); padding-left: 5%; }",
+    "html": "<div class=\"frame\"><blockquote class=\"quote\" id=\"target\">Text</blockquote></div>",
+    "prop": "padding-left",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-109",
+    "css": ".grid:not(#_) { display: grid; row-gap: var(--ng-space-small); }\n.page .main .grid { row-gap: 20px; }",
+    "html": "<div class=\"page\"><div class=\"main\"><div class=\"grid\" id=\"target\"><i></i></div></div></div>",
+    "prop": "row-gap",
+    "expect": {
+      "kind": "token",
+      "token": "space.small"
+    }
+  },
+  {
+    "id": "u-110",
+    "css": ".strip { background-color: var(--ng-surface-page); }",
+    "html": "<div class=\"strip\" id=\"target\" style=\"background-color: rgb(247 248 250)\">Strip</div>",
+    "prop": "background-color",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-111",
+    "css": ".field:has(.error) { padding-top: var(--ng-space-small); }\n.field { padding-top: 10px; }",
+    "html": "<div class=\"field\" id=\"target\"><input><p class=\"error\">Required</p></div>",
+    "prop": "padding-top",
+    "expect": {
+      "kind": "token",
+      "token": "space.small"
+    }
+  },
+  {
+    "id": "u-112",
+    "css": "@layer utilities { .shadow-card { --tw-shadow: var(--ng-elevation-raised); box-shadow: var(--tw-shadow); } }\n@layer components { .card { box-shadow: 0 4px 12px rgb(0 0 0 / 0.15); } }",
+    "html": "<div class=\"card shadow-card\" id=\"target\">Card</div>",
+    "prop": "box-shadow",
+    "expect": {
+      "kind": "token",
+      "token": "elevation.raised"
+    }
+  },
+  {
+    "id": "u-113",
+    "css": ".btn { --btn-bg: var(--ng-action-secondary); background: var(--btn-bg); }\n.btn-danger { --btn-bg: var(--ng-action-danger); }",
+    "html": "<button class=\"btn btn-danger\" id=\"target\">Delete</button>",
+    "prop": "background-color",
+    "expect": {
+      "kind": "token",
+      "token": "action.danger"
+    }
+  },
+  {
+    "id": "u-114",
+    "css": ".card { box-shadow: var(--ng-elevation-raised); border: 1px solid var(--ng-border-default); }",
+    "html": "<article class=\"card\" id=\"target\">Card</article>",
+    "prop": "box-shadow",
+    "expect": {
+      "kind": "token",
+      "token": "elevation.raised"
+    }
+  },
+  {
+    "id": "u-115",
+    "css": ".sticky { box-shadow: none; }\n@media (min-width: 60rem) and (prefers-reduced-motion: reduce) { .sticky { box-shadow: var(--ng-elevation-raised); } }",
+    "html": "<header class=\"sticky\" id=\"target\">Bar</header>",
+    "prop": "box-shadow",
+    "expect": {
+      "kind": "token",
+      "token": "elevation.raised"
+    }
+  },
+  {
+    "id": "u-116",
+    "css": ".sheet-head { border-radius: var(--ng-radius-card) var(--ng-radius-card) 0 0; }",
+    "html": "<div class=\"sheet-head\" id=\"target\">Head</div>",
+    "prop": "border-radius",
+    "expect": {
+      "kind": "token",
+      "token": "radius.card"
+    }
+  },
+  {
+    "id": "u-117",
+    "css": ".content a:not(.tag) { color: #0066cc; }\n.tag-ok { color: var(--ng-status-ok); }",
+    "html": "<div class=\"content\"><a class=\"tag tag-ok\" id=\"target\" href=\"#\">Passing</a></div>",
+    "prop": "color",
+    "expect": {
+      "kind": "token",
+      "token": "status.ok"
+    }
+  },
+  {
+    "id": "u-118",
+    "css": ".flag { writing-mode: vertical-rl; border: 1px solid #ddd; border-inline-start: 2px solid var(--ng-status-warn); }",
+    "html": "<div class=\"flag\" id=\"target\">Late</div>",
+    "prop": "border-color",
+    "expect": {
+      "kind": "token",
+      "token": "status.warn"
+    }
+  },
+  {
+    "id": "u-119",
+    "css": ".cta { background-color: #1e54b7; color: var(--ng-text-on-action); }",
+    "html": "<button class=\"cta\" id=\"target\">Create</button>",
+    "prop": "background-color",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-120",
+    "css": ".card { box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.12); }",
+    "html": "<div class=\"card\" id=\"target\">Card</div>",
+    "prop": "box-shadow",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-121",
+    "css": ":root { --border: var(--ng-border-default); }\n@layer base { * { border-color: var(--border); } }\n@layer utilities { .border { border-style: solid; border-width: 1px; } .rounded { border-radius: 4px; } }",
+    "html": "<div class=\"border rounded\" id=\"target\">Box</div>",
+    "prop": "border-color",
+    "expect": {
+      "kind": "token",
+      "token": "border.default"
+    }
+  },
+  {
+    "id": "u-122",
+    "css": ".label { --fs: var(--ng-type-caption) !important; font-size: var(--fs); }",
+    "html": "<label class=\"label\" id=\"target\" style=\"--fs: 15px\">Owner</label>",
+    "prop": "font-size",
+    "expect": {
+      "kind": "token",
+      "token": "type.caption"
+    }
+  },
+  {
+    "id": "u-123",
+    "css": ".card a { color: var(--ng-text-link); }\n.card a.card-title { color: inherit; }",
+    "html": "<div class=\"card\"><a class=\"card-title\" id=\"target\" href=\"#\">Checkout</a></div>",
+    "prop": "color",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-124",
+    "css": ".card { & .body { padding-top: var(--ng-space-medium); } }\n.body { padding-top: 20px; }",
+    "html": "<div class=\"card\"><div class=\"body\" id=\"target\">Text</div></div>",
+    "prop": "padding-top",
+    "expect": {
+      "kind": "token",
+      "token": "space.medium"
+    }
+  },
+  {
+    "id": "u-125",
+    "css": ":root { --font-heading-weight: var(--ng-weight-bold); }\n.section h2 { font-weight: var(--font-heading-weight); }",
+    "html": "<section class=\"section\"><h2 id=\"target\">Timeline</h2></section>",
+    "prop": "font-weight",
+    "expect": {
+      "kind": "token",
+      "token": "weight.bold"
+    }
+  },
+  {
+    "id": "u-126",
+    "css": ".prose :is(h2, h3) { font-size: var(--ng-type-heading); }\nh2 { font-size: 22px; }",
+    "html": "<div class=\"prose\"><h2 id=\"target\">Impact</h2></div>",
+    "prop": "font-size",
+    "expect": {
+      "kind": "token",
+      "token": "type.heading"
+    }
+  },
+  {
+    "id": "u-127",
+    "css": ".grid-table { & td { border-top: 1px solid #eee; }\n  & tbody { > tr { > td.total { border-top-color: var(--ng-border-default); } } } }",
+    "html": "<table class=\"grid-table\"><tbody><tr><td class=\"total\" id=\"target\">42</td></tr></tbody></table>",
+    "prop": "border-color",
+    "expect": {
+      "kind": "token",
+      "token": "border.default"
+    }
+  },
+  {
+    "id": "u-128",
+    "css": ".heading { font-weight: 600; }",
+    "html": "<h3 class=\"heading\" id=\"target\">Details</h3>",
+    "prop": "font-weight",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-129",
+    "css": ".th { font: var(--ng-weight-medium) var(--ng-type-caption)/1.4 sans-serif; }",
+    "html": "<div class=\"th\" id=\"target\">Host</div>",
+    "prop": "font-weight",
+    "expect": {
+      "kind": "token",
+      "token": "weight.medium"
+    }
+  },
+  {
+    "id": "u-130",
+    "css": ":root { --row-h: var(--ng-row-hieght, 44px); }\n.line { height: var(--row-h); }",
+    "html": "<div class=\"line\" id=\"target\"></div>",
+    "prop": "height",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-131",
+    "css": ".bubble { border-radius: var(--ng-radius-card); border-top-left-radius: 8px; }",
+    "html": "<div class=\"bubble\" id=\"target\">Hi</div>",
+    "prop": "border-radius",
+    "expect": {
+      "kind": "literal"
+    }
+  },
+  {
+    "id": "u-132",
+    "css": "[role=\"dialog\"]:not([hidden]) { box-shadow: var(--ng-elevation-overlay); }\n.surface { box-shadow: 0 2px 4px rgb(0 0 0 / 0.1); }",
+    "html": "<div role=\"dialog\" class=\"surface\" id=\"target\">Confirm</div>",
+    "prop": "box-shadow",
+    "expect": {
+      "kind": "token",
+      "token": "elevation.overlay"
+    }
+  },
+  {
+    "id": "u-133",
+    "css": ".btn { border: 1px solid var(--ng-border-strong); }\n.btn-text { border-color: transparent; }",
+    "html": "<button class=\"btn btn-text\" id=\"target\">Skip</button>",
+    "prop": "border-color",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-134",
+    "css": ".stack { --dense: initial; --gap-dense: var(--dense) 4px; display: grid; row-gap: var(--gap-dense, var(--ng-space-large)); }",
+    "html": "<div class=\"stack\" id=\"target\"><i></i></div>",
+    "prop": "row-gap",
+    "expect": {
+      "kind": "token",
+      "token": "space.large"
+    }
+  },
+  {
+    "id": "u-135",
+    "css": ".rail { writing-mode: vertical-lr; padding-block: 10px; padding-inline-start: var(--ng-space-large); }",
+    "html": "<div class=\"rail\" id=\"target\">Rail</div>",
+    "prop": "padding-top",
+    "expect": {
+      "kind": "token",
+      "token": "space.large"
+    }
+  },
+  {
+    "id": "u-136",
+    "css": ".plain { display: grid; gap: var(--ng-space-medium); }\n.plain.joined { row-gap: normal; }",
+    "html": "<div class=\"plain joined\" id=\"target\"><i></i></div>",
+    "prop": "row-gap",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-137",
+    "css": ".drawer { box-shadow: none; }",
+    "html": "<aside class=\"drawer\" id=\"target\" style=\"box-shadow: var(--ng-elevation-overlay)\">Drawer</aside>",
+    "prop": "box-shadow",
+    "expect": {
+      "kind": "token",
+      "token": "elevation.overlay"
+    }
+  },
+  {
+    "id": "u-138",
+    "css": ".topbar { height: min(var(--ng-row-height), 100vh); }",
+    "html": "<div class=\"topbar\" id=\"target\"></div>",
+    "prop": "height",
+    "expect": {
+      "kind": "token",
+      "token": "row.height"
+    }
+  },
+  {
+    "id": "u-139",
+    "css": ":root { --radius: var(--ng-radius-card); --radius-lg: var(--radius); }\n@layer utilities { .rounded-lg { border-radius: var(--radius-lg); } }",
+    "html": "<div class=\"rounded-lg\" id=\"target\">Panel</div>",
+    "prop": "border-radius",
+    "expect": {
+      "kind": "token",
+      "token": "radius.card"
+    }
+  },
+  {
+    "id": "u-140",
+    "css": ".row { font-size: var(--ng-type-heading); }\n.row button { font: inherit; }",
+    "html": "<div class=\"row\"><button id=\"target\">Edit</button></div>",
+    "prop": "font-size",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-141",
+    "css": ".caret { border: 5px solid var(--ng-border-strong); border-top-color: transparent; }",
+    "html": "<span class=\"caret\" id=\"target\"></span>",
+    "prop": "border-color",
+    "expect": {
+      "kind": "neutral"
+    }
+  },
+  {
+    "id": "u-142",
+    "css": ":root { --accent: var(--ng-action-primary); --btn-bg: var(--accent); }\n.danger-zone { --accent: var(--ng-action-danger); }\n.btn { background: var(--btn-bg); }",
+    "html": "<div class=\"danger-zone\"><button class=\"btn\" id=\"target\">Archive</button></div>",
+    "prop": "background-color",
+    "expect": {
+      "kind": "token",
+      "token": "action.primary"
+    }
+  },
+  {
+    "id": "u-143",
+    "css": "@layer utilities, components;\n@layer utilities { .gap-1 { row-gap: var(--ng-space-tight); } }\n@layer components { .meta-list { display: grid; row-gap: 20px; } }",
+    "html": "<div class=\"meta-list gap-1\" id=\"target\"><i></i></div>",
+    "prop": "row-gap",
+    "expect": {
+      "kind": "token",
+      "token": "space.tight"
+    }
+  },
+  {
+    "id": "u-144",
+    "css": ".chip { --chip-fg: #444; color: var(--chip-fg, var(--ng-text-primary)); }\n.chip.plain { --chip-fg: initial; }",
+    "html": "<span class=\"chip plain\" id=\"target\">Team</span>",
+    "prop": "color",
+    "expect": {
+      "kind": "token",
+      "token": "text.primary"
+    }
+  },
+  {
+    "id": "u-145",
+    "css": ".panel { box-shadow: var(--panel-shadow, var(--ng-elevation-raised)); }\n.panel > .panel-nested { --panel-shadow: none; }",
+    "html": "<div class=\"panel\" id=\"target\"><div class=\"panel-nested\">x</div></div>",
+    "prop": "box-shadow",
+    "expect": {
+      "kind": "token",
+      "token": "elevation.raised"
+    }
+  },
+  {
+    "id": "u-146",
+    "css": ".crumb { color: var(--ng-text-lnk, var(--ng-text-link, #1e54b7)); }",
+    "html": "<a class=\"crumb\" id=\"target\" href=\"#\">Home</a>",
+    "prop": "color",
+    "expect": {
+      "kind": "token",
+      "token": "text.link"
+    }
+  },
+  {
+    "id": "u-147",
+    "css": ".steps li { font-weight: 450; }\n.steps li:nth-last-child(2) { font-weight: var(--ng-weight-bold); }",
+    "html": "<ol class=\"steps\"><li>One</li><li id=\"target\">Two</li><li>Three</li></ol>",
+    "prop": "font-weight",
+    "expect": {
+      "kind": "token",
+      "token": "weight.bold"
+    }
+  },
+  {
+    "id": "u-148",
+    "css": "@layer components.base, components.theme;\n@layer components { @layer theme { .tagline { border-radius: var(--ng-radius-control); } } @layer base { .tagline { border-radius: 3px; } } }",
+    "html": "<span class=\"tagline\" id=\"target\">v2</span>",
+    "prop": "border-radius",
+    "expect": {
+      "kind": "token",
+      "token": "radius.control"
+    }
+  },
+  {
+    "id": "u-149",
+    "css": ".theme-a { --line: var(--ng-border-default); }\n.theme-b { --line: var(--ng-border-strong); }\n.box { border: 1px solid var(--line); }",
+    "html": "<div class=\"theme-a\"><div class=\"theme-b\"><div><div class=\"box\" id=\"target\">Box</div></div></div></div>",
+    "prop": "border-color",
+    "expect": {
+      "kind": "token",
+      "token": "border.strong"
+    }
+  },
+  {
+    "id": "u-150",
+    "css": ".text-link { color: var(--ng-text-link) !important; }",
+    "html": "<a class=\"text-link\" id=\"target\" href=\"#\" style=\"color: #333\">Runbook</a>",
+    "prop": "color",
+    "expect": {
+      "kind": "token",
+      "token": "text.link"
+    }
+  }
+]

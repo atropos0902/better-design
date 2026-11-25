@@ -1,0 +1,7 @@
+{
+  "control": { "$type": "dimension", "height": { "$value": { "value": 32, "unit": "px" } }, "padding": { "$value": { "value": 12, "unit": "px" } } },
+  "row": { "$type": "dimension", "height": { "$value": { "value": 32, "unit": "px" } } },
+  "space": { "$type": "dimension", "medium": { "$value": { "value": 12, "unit": "px" } }, "large": { "$value": { "value": 16, "unit": "px" } }, "section": { "$value": { "value": 24, "unit": "px" } } },
+  "card": { "$type": "dimension", "padding": { "$value": { "value": 16, "unit": "px" } } },
+  "type": { "$type": "dimension", "body": { "$value": { "value": 13, "unit": "px" } }, "heading": { "$value": { "value": 16, "unit": "px" } }, "title": { "$value": { "value": 20, "unit": "px" } } }
+}

@@ -1,0 +1,40 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with: { node-version: 24.15.0, cache: npm }
+      - run: npm ci
+      - run: npx playwright-core install --with-deps chromium-headless-shell
+      - run: npm run db
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run mutation
+      - run: node eval/run.ts dev
+      - run: npm run build -w @conform/service
+      - run: npm run build:worker -w @conform/dashboard
+  review-own-dashboard:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with: { path: head }
+      - uses: actions/checkout@v6
+        with: { path: base, ref: "${{ github.event.pull_request.base.sha }}" }
+      - uses: actions/setup-node@v6
+        with: { node-version: 24.15.0 }
+      # The reviewer is built from base, so a pull request can't change how it is judged.
+      - run: npm ci && npx playwright-core install --with-deps chromium-headless-shell
+        working-directory: base
+      - run: |
+          node base/packages/checker/src/cli.ts review --base base/packages/dashboard --head head/packages/dashboard --out review.md > review.json
+          cat review.md >> "$GITHUB_STEP_SUMMARY"
+          node -e 'process.exit(JSON.parse(require("fs").readFileSync("review.json")).blocking ? 1 : 0)'

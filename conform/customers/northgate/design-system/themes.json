@@ -1,0 +1,6 @@
+{
+  "comfortable-light": ["base"],
+  "comfortable-dark": ["base", "dark"],
+  "compact-light": ["base", "compact"],
+  "compact-dark": ["base", "compact", "dark"]
+}

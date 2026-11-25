@@ -1,0 +1,25 @@
+{
+  "name": "@conform/checker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "bin": {
+    "conform-check": "./src/cli.ts"
+  },
+  "dependencies": {
+    "@conform/core": "0.1.0",
+    "@tailwindcss/node": "4.2.4",
+    "@tailwindcss/oxide": "4.2.4",
+    "axe-core": "4.11.4",
+    "esbuild": "0.28.0",
+    "playwright-core": "1.59.1",
+    "postcss": "8.5.14",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "tailwindcss": "4.2.4",
+    "zod": "4.4.3"
+  }
+}

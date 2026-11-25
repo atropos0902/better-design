@@ -1,0 +1,16 @@
+# Postgres for the tests, with the migration applied. Data is lost when it stops.
+services:
+  postgres:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "127.0.0.1:55432:5432"
+    tmpfs:
+      - /var/lib/postgresql
+    volumes:
+      - ../packages/service/migrations:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "psql -U postgres -tc 'select 1 from repos limit 1' >/dev/null"]
+      interval: 1s
+      retries: 30

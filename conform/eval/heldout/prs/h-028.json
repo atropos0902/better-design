@@ -1,0 +1,32 @@
+{
+  "id": "h-028",
+  "repo": "patch-status",
+  "title": "List kernel and curl patches",
+  "body": "Two more packages from the November advisory.",
+  "files": {
+    "src/screens/patches.tsx": "export default function Patches() {\n  return (\n    <main className=\"bg-slate-100 p-8 flex flex-col gap-6 min-h-screen\">\n      <h1 className=\"text-title font-bold text-primary\">Patch status</h1>\n      <section data-testid=\"list\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium\">\n        <h2 className=\"text-heading font-bold text-primary\">All patchs</h2>\n        <table className=\"w-full\">\n          <thead>\n            <tr><th className=\"text-xs font-medium text-slate-600 px-4 text-left\">Package</th><th className=\"text-xs font-medium text-slate-600 px-4 text-left\">Hosts</th><th className=\"text-xs font-medium text-slate-600 px-4 text-left\">Status</th></tr>\n          </thead>\n          <tbody>\n            <tr className=\"h-12 border-b border-default\">\n              <td className=\"text-body px-medium text-primary\">openssl</td>\n              <td className=\"text-body px-medium text-primary\">412</td>\n              <td className=\"text-body px-medium text-primary\"><span data-status=\"warn\" className=\"text-caption font-medium rounded-control px-small py-tight text-warn\">Needs attention</span></td>\n            </tr>\n            <tr className=\"h-12 border-b border-default\">\n              <td className=\"text-body px-medium text-primary\">glibc</td>\n              <td className=\"text-body px-medium text-primary\">88</td>\n              <td className=\"text-body px-medium text-primary\"><span data-status=\"critical\" className=\"text-caption font-medium rounded-control px-small py-tight text-critical\">Failing</span></td>\n            </tr>\n            <tr data-testid=\"row-kernel\" className=\"h-12 border-b border-default\">\n              <td className=\"text-body px-medium text-primary\">kernel</td>\n              <td data-testid=\"kernel-hosts\" className=\"text-sm px-medium text-primary\">1,204</td>\n              <td className=\"text-body px-medium text-primary\"><span data-status=\"critical\" className=\"text-caption font-medium rounded-control px-small py-tight text-critical\">Failing</span></td>\n            </tr>\n            <tr data-testid=\"row-curl\" className=\"h-12 border-b border-default\">\n              <td className=\"text-body px-medium text-primary\">curl</td>\n              <td className=\"text-body px-medium text-primary\">37</td>\n              <td className=\"text-body px-medium text-primary\"><span data-status=\"ok\" className=\"text-caption font-medium rounded-control px-small py-tight text-ok\">Healthy</span></td>\n            </tr>\n          </tbody>\n        </table>\n        <div className=\"flex items-end gap-small\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-10 px-4 rounded-md text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white\">Start rollout</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-9 px-control rounded-control text-body font-medium bg-action-secondary text-primary border border-strong\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Pause rollout</button>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+  },
+  "plants": [
+    {
+      "screen": "patches",
+      "testid": "row-kernel",
+      "prop": "height",
+      "kind": "literal",
+      "note": "h-12, copied from the older rows"
+    },
+    {
+      "screen": "patches",
+      "testid": "row-curl",
+      "prop": "height",
+      "kind": "literal",
+      "note": "h-12, copied from the older rows"
+    },
+    {
+      "screen": "patches",
+      "testid": "kernel-hosts",
+      "prop": "font-size",
+      "kind": "literal",
+      "note": "text-sm"
+    }
+  ]
+}

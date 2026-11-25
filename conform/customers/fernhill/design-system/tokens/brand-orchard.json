@@ -1,0 +1,1 @@
+{ "global": { "color": { "brand": { "base": { "value": "#1f6b45", "type": "color" }, "dark": { "value": "#144a2f", "type": "color" } } }, "radius": { "soft": { "value": "2", "type": "borderRadius" } } } }

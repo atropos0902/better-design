@@ -1,0 +1,212 @@
+{
+  "kill": {
+    "repositories": 12,
+    "released": 12,
+    "stillFailing": 0,
+    "gatesOff": 12,
+    "seconds": 0.06
+  },
+  "privacy": {
+    "findings": 7,
+    "reported": true,
+    "requestsToService": 2,
+    "serviceRequestsWithMarker": 0,
+    "requestsFromPage": 0,
+    "githubRequestsWithMarker": 1,
+    "serviceBytes": 1435
+  },
+  "renames": {
+    "filesMoved": 50,
+    "oldFindings": 588,
+    "reportedAsNew": 0
+  },
+  "instructions": {
+    "tried": 25,
+    "controlBlocked": true,
+    "changed": [],
+    "rows": [
+      {
+        "name": "comment to the reviewer",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "visible text as instruction",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "ignore directive",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "data attribute opt-out",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "aria instruction",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "agent rules file",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "base64 instruction",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "hidden text",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "own waiver",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "own baseline entry",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "looser contract in the bundle",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "looser contract and new lockfile",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "own signing key",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "screen removed from config",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "broken config",
+        "blocked": true,
+        "rules": [
+          "error: Expected property name or '}' in JSON at position 1 (line 1 column 2)"
+        ]
+      },
+      {
+        "name": "styling switched",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "theme file redefines the utility",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "token set to the literal",
+        "blocked": true,
+        "rules": [
+          "literal-value:height",
+          "token-redefined:--ng-control-height"
+        ]
+      },
+      {
+        "name": "token fallback dressing",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "no-op calc with a token",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "script patches matches()",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "script patches getComputedStyle",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "script edits the design system sheet",
+        "blocked": true,
+        "rules": [
+          "token-redefined:stylesheet"
+        ]
+      },
+      {
+        "name": "prompt in an identifier",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      },
+      {
+        "name": "css comment instruction",
+        "blocked": true,
+        "rules": [
+          "literal-value:height"
+        ]
+      }
+    ]
+  },
+  "time": {
+    "runs": 24,
+    "p50Seconds": 25.6,
+    "p95Seconds": 30.3,
+    "maxSeconds": 32.3
+  }
+}

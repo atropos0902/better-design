@@ -1,0 +1,23 @@
+{
+  "name": "conform-mcp",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "conform-mcp": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "postcss": "8.5.14",
+    "tailwindcss": "4.2.4",
+    "typescript": "6.0.3",
+    "zod": "4.4.3"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "prepublishOnly": "npm run build"
+  }
+}

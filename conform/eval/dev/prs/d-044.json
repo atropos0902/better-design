@@ -1,0 +1,10 @@
+{
+ "id": "d-044",
+ "repo": "firewall-rules",
+ "title": "Change Change request",
+ "body": "",
+ "files": {
+  "src/screens/change.tsx": "export default function Change() {\n  return (\n    <main className=\"bg-surface-page p-section flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-2xl font-bold text-slate-900\">Change request</h1>\n      <section data-testid=\"detail\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium\">\n        <h2 className=\"text-heading font-medium text-primary\">allow-dns</h2>\n        <p className=\"text-sm text-muted\">Rule: allow-dns</p>\n        <p className=\"text-sm text-muted\">Requester: Net</p>\n        <p className=\"text-sm text-muted\">Window: Sunday</p>\n        <div className=\"flex items-end gap-small\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-10 px-4 rounded-md text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white\">Approve</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-10 px-4 rounded-md text-sm font-medium bg-white text-slate-900 border border-slate-500\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Reject</button>\n        </div>\n        <div className=\"flex flex-col gap-small\">\n          <div data-testid=\"ok-0\" className=\"flex gap-small p-0 m-auto w-1/2 bg-transparent\"><span>One</span></div>\n          <div data-testid=\"ok-1\" className=\"bg-[var(--ng-surface-sunken)] p-small rounded-control\">Box</div>\n          <div data-testid=\"ok-2\" style={{ \"--pad\": \"var(--ng-space-small)\", padding: \"var(--pad)\" } as React.CSSProperties}>Box</div>\n          <span data-testid=\"ok-3\" data-status=\"warn\" className=\"text-caption font-medium rounded-control px-small py-tight text-warn\">Late</span>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+ },
+ "plants": []
+}

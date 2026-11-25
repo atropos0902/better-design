@@ -1,0 +1,117 @@
+[
+  {
+    "repo": "access-review",
+    "decisions": 136,
+    "binding": 59.6,
+    "value": 88.2,
+    "unresolved": 0,
+    "literal-value": 51,
+    "wrong-token": 4,
+    "accessibility": 4
+  },
+  {
+    "repo": "alert-triage",
+    "decisions": 207,
+    "binding": 66.2,
+    "value": 91.3,
+    "unresolved": 0,
+    "literal-value": 66,
+    "wrong-token": 4,
+    "accessibility": 8
+  },
+  {
+    "repo": "audit-search",
+    "decisions": 162,
+    "binding": 85.2,
+    "value": 99.4,
+    "unresolved": 0,
+    "literal-value": 20,
+    "wrong-token": 4
+  },
+  {
+    "repo": "cert-rotation",
+    "decisions": 161,
+    "binding": 82,
+    "value": 97.5,
+    "unresolved": 0,
+    "literal-value": 28,
+    "wrong-token": 1,
+    "accessibility": 1
+  },
+  {
+    "repo": "firewall-rules",
+    "decisions": 113,
+    "binding": 69,
+    "value": 92,
+    "unresolved": 0,
+    "literal-value": 34,
+    "wrong-token": 1,
+    "accessibility": 1
+  },
+  {
+    "repo": "host-inventory",
+    "decisions": 136,
+    "binding": 58.1,
+    "value": 94.1,
+    "unresolved": 0,
+    "literal-value": 52,
+    "wrong-token": 5,
+    "accessibility": 3
+  },
+  {
+    "repo": "incident-log",
+    "decisions": 161,
+    "binding": 68.9,
+    "value": 91.9,
+    "unresolved": 0,
+    "literal-value": 50,
+    "accessibility": 4
+  },
+  {
+    "repo": "key-vault",
+    "decisions": 160,
+    "binding": 80.6,
+    "value": 94.4,
+    "unresolved": 0,
+    "literal-value": 31,
+    "accessibility": 1
+  },
+  {
+    "repo": "patch-status",
+    "decisions": 135,
+    "binding": 71.9,
+    "value": 89.6,
+    "unresolved": 0,
+    "literal-value": 38,
+    "accessibility": 3
+  },
+  {
+    "repo": "rollout-gate",
+    "decisions": 137,
+    "binding": 66.4,
+    "value": 94.9,
+    "unresolved": 0,
+    "literal-value": 42,
+    "wrong-token": 4,
+    "accessibility": 5
+  },
+  {
+    "repo": "scan-scheduler",
+    "decisions": 161,
+    "binding": 47.2,
+    "value": 90.7,
+    "unresolved": 0,
+    "literal-value": 80,
+    "wrong-token": 5,
+    "accessibility": 2
+  },
+  {
+    "repo": "secrets-broker",
+    "decisions": 163,
+    "binding": 77.9,
+    "value": 95.1,
+    "unresolved": 0,
+    "literal-value": 32,
+    "wrong-token": 4
+  }
+]

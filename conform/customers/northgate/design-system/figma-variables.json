@@ -1,0 +1,13 @@
+{
+  "meta": { "variableCollections": { "c1": { "name": "Northgate", "modes": [{ "modeId": "m1", "name": "comfortable-light" }, { "modeId": "m2", "name": "compact-light" }] } },
+    "variables": {
+      "v1": { "name": "control/height", "resolvedType": "FLOAT", "valuesByMode": { "m1": 40, "m2": 36 } },
+      "v2": { "name": "control/padding", "resolvedType": "FLOAT", "valuesByMode": { "m1": 16, "m2": 12 } },
+      "v3": { "name": "row/height", "resolvedType": "FLOAT", "valuesByMode": { "m1": 48, "m2": 32 } },
+      "v4": { "name": "space/medium", "resolvedType": "FLOAT", "valuesByMode": { "m1": 16, "m2": 12 } },
+      "v5": { "name": "radius/card", "resolvedType": "FLOAT", "valuesByMode": { "m1": 12, "m2": 12 } },
+      "v6": { "name": "type/body", "resolvedType": "FLOAT", "valuesByMode": { "m1": 14, "m2": 13 } },
+      "v7": { "name": "action/primary", "resolvedType": "COLOR", "valuesByMode": { "m1": { "r": 0.118, "g": 0.329, "b": 0.718, "a": 1 }, "m2": { "r": 0.118, "g": 0.329, "b": 0.718, "a": 1 } } },
+      "v8": { "name": "text/muted", "resolvedType": "COLOR", "valuesByMode": { "m1": { "r": 0.369, "g": 0.408, "b": 0.471, "a": 1 }, "m2": { "r": 0.369, "g": 0.408, "b": 0.471, "a": 1 } } },
+      "v9": { "name": "status/info", "resolvedType": "COLOR", "valuesByMode": { "m1": { "r": 0.1, "g": 0.4, "b": 0.6, "a": 1 }, "m2": { "r": 0.1, "g": 0.4, "b": 0.6, "a": 1 } } }
+    } } }

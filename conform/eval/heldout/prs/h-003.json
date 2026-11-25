@@ -1,0 +1,18 @@
+{
+  "id": "h-003",
+  "repo": "incident-log",
+  "title": "Denser incidents card",
+  "body": "More rows on screen during a major incident.",
+  "files": {
+    "src/screens/incidents.tsx": "export default function Incidents() {\n  return (\n    <main className=\"bg-slate-100 p-8 flex flex-col gap-6 min-h-screen\">\n      <h1 className=\"text-[24px] font-bold text-primary\">Incidents</h1>\n      <section data-testid=\"list\" className=\"[--ng-space-medium:10px] p-6 rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-4\">\n        <h2 className=\"text-lg font-bold text-slate-900\">All incidents</h2>\n        <table className=\"w-full\">\n          <thead>\n            <tr><th className=\"text-caption font-medium text-muted px-medium text-left\">Incident</th><th className=\"text-caption font-medium text-muted px-medium text-left\">Lead</th><th className=\"text-caption font-medium text-muted px-medium text-left\">Status</th></tr>\n          </thead>\n          <tbody>\n            <tr className=\"h-12 border-b border-slate-200\">\n              <td className=\"text-body px-4 text-primary\">Login outage</td>\n              <td className=\"text-body px-4 text-primary\">SRE</td>\n              <td className=\"text-body px-4 text-primary\"><span data-status=\"critical\" className=\"text-caption font-medium rounded px-small py-tight text-critical\">Failing</span></td>\n            </tr>\n            <tr className=\"h-12 border-b border-slate-200\">\n              <td className=\"text-body px-4 text-primary\">Slow search</td>\n              <td className=\"text-body px-4 text-primary\">Search</td>\n              <td className=\"text-body px-4 text-primary\"><span data-status=\"warn\" className=\"text-caption font-medium rounded px-small py-tight text-warn\">Needs attention</span></td>\n            </tr>\n          </tbody>\n        </table>\n        <div className=\"flex items-end gap-[10px]\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-primary hover:bg-action-primary-hover text-on-action\">Open incident</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-secondary hover:bg-action-secondary-hover text-primary border border-strong\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-red-600 text-on-action\">Delete draft</button>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+  },
+  "plants": [
+    {
+      "screen": "incidents",
+      "testid": "list",
+      "prop": "--ng-space-medium",
+      "kind": "redefined",
+      "note": "arbitrary property class overrides the design system variable"
+    }
+  ]
+}

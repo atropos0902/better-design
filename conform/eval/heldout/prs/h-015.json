@@ -1,0 +1,32 @@
+{
+  "id": "h-015",
+  "repo": "host-inventory",
+  "title": "Tags card on host detail",
+  "body": "Read only for now.",
+  "files": {
+    "src/screens/host.tsx": "export default function Host() {\n  return (\n    <main className=\"bg-surface-page p-section flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-title font-bold text-primary\">Host detail</h1>\n      <section data-testid=\"detail\" className=\"p-6 rounded-lg bg-white border border-slate-200 shadow flex flex-col gap-4\">\n        <h2 className=\"text-heading font-medium text-primary\">web-001</h2>\n        <p className=\"text-sm text-muted\">Host: web-001</p>\n        <p className=\"text-sm text-muted\">Kernel: 6.8</p>\n        <p className=\"text-sm text-muted\">Owner: Web</p>\n        <div className=\"flex items-end gap-small\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-10 px-control rounded-control text-body font-medium bg-action-primary hover:bg-action-primary-hover text-on-action\">Drain host</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-secondary hover:bg-action-secondary-hover text-primary border border-strong\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Retire host</button>\n        </div>\n      </section>\n      <section data-testid=\"tags\" className=\"p-large rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium\">\n        <h2 className=\"text-heading font-bold text-primary\">Tags</h2>\n        <div className=\"flex flex-wrap gap-small\">\n          <span data-testid=\"tag-prod\" className=\"px-small py-tight rounded-full text-caption text-primary bg-surface-sunken\">prod</span>\n          <span data-testid=\"tag-web\" className=\"px-small py-tight rounded-control text-caption text-primary bg-surface-sunken\">web</span>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+  },
+  "plants": [
+    {
+      "screen": "host",
+      "testid": "tags",
+      "prop": "padding-inline",
+      "kind": "wrong-token",
+      "note": "cards take card.padding, space.large has the same value"
+    },
+    {
+      "screen": "host",
+      "testid": "tags",
+      "prop": "padding-block",
+      "kind": "wrong-token",
+      "note": "cards take card.padding, space.large has the same value"
+    },
+    {
+      "screen": "host",
+      "testid": "tag-prod",
+      "prop": "border-radius",
+      "kind": "literal",
+      "note": "rounded-full"
+    }
+  ]
+}

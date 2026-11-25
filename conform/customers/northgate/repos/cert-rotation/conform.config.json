@@ -1,0 +1,18 @@
+{
+  "repo": "northgate/cert-rotation",
+  "bundle": ".conform/bundle.json",
+  "keys": ".conform/keys.json",
+  "styling": "tailwind",
+  "themeCss": ".conform/theme.css",
+  "css": [],
+  "screens": [
+    {
+      "id": "certs",
+      "module": "src/screens/certs.tsx"
+    },
+    {
+      "id": "policy",
+      "module": "src/screens/policy.tsx"
+    }
+  ]
+}

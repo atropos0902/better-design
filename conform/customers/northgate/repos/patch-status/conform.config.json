@@ -1,0 +1,18 @@
+{
+  "repo": "northgate/patch-status",
+  "bundle": ".conform/bundle.json",
+  "keys": ".conform/keys.json",
+  "styling": "tailwind",
+  "themeCss": ".conform/theme.css",
+  "css": [],
+  "screens": [
+    {
+      "id": "patches",
+      "module": "src/screens/patches.tsx"
+    },
+    {
+      "id": "wave",
+      "module": "src/screens/wave.tsx"
+    }
+  ]
+}

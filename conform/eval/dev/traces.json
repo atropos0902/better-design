@@ -1,0 +1,1457 @@
+[
+ {
+  "id": "d-t-001",
+  "css": ".a{padding-left:var(--ng-space-small)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "d-t-002",
+  "css": ":root{--x:var(--ng-space-small);--y:var(--x)}.a{padding:var(--y)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "d-t-003",
+  "css": ".a{color:var(--nope,var(--ng-text-primary))}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.primary"
+  }
+ },
+ {
+  "id": "d-t-004",
+  "css": "@layer components{#target{color:var(--ng-text-primary)}}@layer utilities{.a{color:var(--ng-status-ok)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.ok"
+  }
+ },
+ {
+  "id": "d-t-005",
+  "css": ".a{color:var(--ng-text-primary)!important}",
+  "html": "<p id=\"target\" class=\"a\" style=\"color:var(--ng-status-ok)\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.primary"
+  }
+ },
+ {
+  "id": "d-t-006",
+  "css": ".a{padding-left:calc(var(--ng-space-small) * 2)}@media (max-width:600px){.a{padding-left:var(--ng-space-medium)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "d-t-007",
+  "css": ".a{padding-left:8px}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-008",
+  "css": ".w{--x:4px}:root{--x:var(--ng-space-small)}.a{padding-left:var(--x)}",
+  "html": "<div class=\"w\"><p id=\"target\" class=\"a\">text</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-009",
+  "css": ".a{border:1px solid var(--ng-text-primary)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "text.primary"
+  }
+ },
+ {
+  "id": "d-t-010",
+  "css": ".a{padding-left:0}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "d-t-011",
+  "css": ".a{padding-left:var(--ng-space-medium)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.medium"
+  }
+ },
+ {
+  "id": "d-t-012",
+  "css": ":root{--x:var(--ng-space-medium);--y:var(--x)}.a{padding:var(--y)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "space.medium"
+  }
+ },
+ {
+  "id": "d-t-013",
+  "css": ".a{color:var(--nope,var(--ng-text-muted))}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.muted"
+  }
+ },
+ {
+  "id": "d-t-014",
+  "css": "@layer components{#target{color:var(--ng-text-muted)}}@layer utilities{.a{color:var(--ng-status-critical)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.critical"
+  }
+ },
+ {
+  "id": "d-t-015",
+  "css": ".a{color:var(--ng-text-muted)!important}",
+  "html": "<p id=\"target\" class=\"a\" style=\"color:var(--ng-status-critical)\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.muted"
+  }
+ },
+ {
+  "id": "d-t-016",
+  "css": ".a{padding-left:calc(var(--ng-space-medium) * 2)}@media (max-width:600px){.a{padding-left:var(--ng-card-padding)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.medium"
+  }
+ },
+ {
+  "id": "d-t-017",
+  "css": ".a{padding-left:9px}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-018",
+  "css": ".w{--x:5px}:root{--x:var(--ng-space-medium)}.a{padding-left:var(--x)}",
+  "html": "<div class=\"w\"><p id=\"target\" class=\"a\">text</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-019",
+  "css": ".a{border:1px solid var(--ng-text-muted)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "text.muted"
+  }
+ },
+ {
+  "id": "d-t-020",
+  "css": ".a{padding-left:0px}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "d-t-021",
+  "css": ".a{padding-left:var(--ng-card-padding)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "card.padding"
+  }
+ },
+ {
+  "id": "d-t-022",
+  "css": ":root{--x:var(--ng-card-padding);--y:var(--x)}.a{padding:var(--y)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "card.padding"
+  }
+ },
+ {
+  "id": "d-t-023",
+  "css": ".a{color:var(--nope,var(--ng-status-ok))}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.ok"
+  }
+ },
+ {
+  "id": "d-t-024",
+  "css": "@layer components{#target{color:var(--ng-status-ok)}}@layer utilities{.a{color:var(--ng-text-link)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.link"
+  }
+ },
+ {
+  "id": "d-t-025",
+  "css": ".a{color:var(--ng-status-ok)!important}",
+  "html": "<p id=\"target\" class=\"a\" style=\"color:var(--ng-text-link)\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.ok"
+  }
+ },
+ {
+  "id": "d-t-026",
+  "css": ".a{padding-left:calc(var(--ng-card-padding) * 2)}@media (max-width:600px){.a{padding-left:var(--ng-control-padding)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "card.padding"
+  }
+ },
+ {
+  "id": "d-t-027",
+  "css": ".a{padding-left:10px}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-028",
+  "css": ".w{--x:6px}:root{--x:var(--ng-card-padding)}.a{padding-left:var(--x)}",
+  "html": "<div class=\"w\"><p id=\"target\" class=\"a\">text</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-029",
+  "css": ".a{border:1px solid var(--ng-status-ok)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "status.ok"
+  }
+ },
+ {
+  "id": "d-t-030",
+  "css": ".a{padding-left:10%}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "d-t-031",
+  "css": ".a{padding-left:var(--ng-control-padding)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "control.padding"
+  }
+ },
+ {
+  "id": "d-t-032",
+  "css": ":root{--x:var(--ng-control-padding);--y:var(--x)}.a{padding:var(--y)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "control.padding"
+  }
+ },
+ {
+  "id": "d-t-033",
+  "css": ".a{color:var(--nope,var(--ng-status-critical))}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.critical"
+  }
+ },
+ {
+  "id": "d-t-034",
+  "css": "@layer components{#target{color:var(--ng-status-critical)}}@layer utilities{.a{color:var(--ng-text-primary)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.primary"
+  }
+ },
+ {
+  "id": "d-t-035",
+  "css": ".a{color:var(--ng-status-critical)!important}",
+  "html": "<p id=\"target\" class=\"a\" style=\"color:var(--ng-text-primary)\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.critical"
+  }
+ },
+ {
+  "id": "d-t-036",
+  "css": ".a{padding-left:calc(var(--ng-control-padding) * 2)}@media (max-width:600px){.a{padding-left:var(--ng-space-large)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "control.padding"
+  }
+ },
+ {
+  "id": "d-t-037",
+  "css": ".a{padding-left:11px}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-038",
+  "css": ".w{--x:7px}:root{--x:var(--ng-control-padding)}.a{padding-left:var(--x)}",
+  "html": "<div class=\"w\"><p id=\"target\" class=\"a\">text</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-039",
+  "css": ".a{border:1px solid var(--ng-status-critical)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "status.critical"
+  }
+ },
+ {
+  "id": "d-t-040",
+  "css": ".a{padding-left:inherit}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "d-t-041",
+  "css": ".a{padding-left:var(--ng-space-large)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.large"
+  }
+ },
+ {
+  "id": "d-t-042",
+  "css": ":root{--x:var(--ng-space-large);--y:var(--x)}.a{padding:var(--y)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "space.large"
+  }
+ },
+ {
+  "id": "d-t-043",
+  "css": ".a{color:var(--nope,var(--ng-text-link))}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.link"
+  }
+ },
+ {
+  "id": "d-t-044",
+  "css": "@layer components{#target{color:var(--ng-text-link)}}@layer utilities{.a{color:var(--ng-text-muted)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.muted"
+  }
+ },
+ {
+  "id": "d-t-045",
+  "css": ".a{color:var(--ng-text-link)!important}",
+  "html": "<p id=\"target\" class=\"a\" style=\"color:var(--ng-text-muted)\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.link"
+  }
+ },
+ {
+  "id": "d-t-046",
+  "css": ".a{padding-left:calc(var(--ng-space-large) * 2)}@media (max-width:600px){.a{padding-left:var(--ng-space-small)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.large"
+  }
+ },
+ {
+  "id": "d-t-047",
+  "css": ".a{padding-left:12px}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-048",
+  "css": ".w{--x:8px}:root{--x:var(--ng-space-large)}.a{padding-left:var(--x)}",
+  "html": "<div class=\"w\"><p id=\"target\" class=\"a\">text</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-049",
+  "css": ".a{border:1px solid var(--ng-text-link)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "text.link"
+  }
+ },
+ {
+  "id": "d-t-050",
+  "css": ".a{padding-left:unset}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "d-t-051",
+  "css": ".a{padding-left:var(--ng-space-small)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "d-t-052",
+  "css": ":root{--x:var(--ng-space-small);--y:var(--x)}.a{padding:var(--y)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "d-t-053",
+  "css": ".a{color:var(--nope,var(--ng-text-primary))}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.primary"
+  }
+ },
+ {
+  "id": "d-t-054",
+  "css": "@layer components{#target{color:var(--ng-text-primary)}}@layer utilities{.a{color:var(--ng-status-ok)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.ok"
+  }
+ },
+ {
+  "id": "d-t-055",
+  "css": ".a{color:var(--ng-text-primary)!important}",
+  "html": "<p id=\"target\" class=\"a\" style=\"color:var(--ng-status-ok)\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.primary"
+  }
+ },
+ {
+  "id": "d-t-056",
+  "css": ".a{padding-left:calc(var(--ng-space-small) * 2)}@media (max-width:600px){.a{padding-left:var(--ng-space-medium)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "d-t-057",
+  "css": ".a{padding-left:13px}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-058",
+  "css": ".w{--x:9px}:root{--x:var(--ng-space-small)}.a{padding-left:var(--x)}",
+  "html": "<div class=\"w\"><p id=\"target\" class=\"a\">text</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-059",
+  "css": ".a{border:1px solid var(--ng-text-primary)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "text.primary"
+  }
+ },
+ {
+  "id": "d-t-060",
+  "css": ".a{padding-left:0}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "d-t-061",
+  "css": ".a{padding-left:var(--ng-space-medium)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.medium"
+  }
+ },
+ {
+  "id": "d-t-062",
+  "css": ":root{--x:var(--ng-space-medium);--y:var(--x)}.a{padding:var(--y)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "space.medium"
+  }
+ },
+ {
+  "id": "d-t-063",
+  "css": ".a{color:var(--nope,var(--ng-text-muted))}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.muted"
+  }
+ },
+ {
+  "id": "d-t-064",
+  "css": "@layer components{#target{color:var(--ng-text-muted)}}@layer utilities{.a{color:var(--ng-status-critical)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.critical"
+  }
+ },
+ {
+  "id": "d-t-065",
+  "css": ".a{color:var(--ng-text-muted)!important}",
+  "html": "<p id=\"target\" class=\"a\" style=\"color:var(--ng-status-critical)\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.muted"
+  }
+ },
+ {
+  "id": "d-t-066",
+  "css": ".a{padding-left:calc(var(--ng-space-medium) * 2)}@media (max-width:600px){.a{padding-left:var(--ng-card-padding)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.medium"
+  }
+ },
+ {
+  "id": "d-t-067",
+  "css": ".a{padding-left:14px}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-068",
+  "css": ".w{--x:10px}:root{--x:var(--ng-space-medium)}.a{padding-left:var(--x)}",
+  "html": "<div class=\"w\"><p id=\"target\" class=\"a\">text</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-069",
+  "css": ".a{border:1px solid var(--ng-text-muted)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "text.muted"
+  }
+ },
+ {
+  "id": "d-t-070",
+  "css": ".a{padding-left:0px}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "d-t-071",
+  "css": ".a{padding-left:var(--ng-card-padding)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "card.padding"
+  }
+ },
+ {
+  "id": "d-t-072",
+  "css": ":root{--x:var(--ng-card-padding);--y:var(--x)}.a{padding:var(--y)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "card.padding"
+  }
+ },
+ {
+  "id": "d-t-073",
+  "css": ".a{color:var(--nope,var(--ng-status-ok))}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.ok"
+  }
+ },
+ {
+  "id": "d-t-074",
+  "css": "@layer components{#target{color:var(--ng-status-ok)}}@layer utilities{.a{color:var(--ng-text-link)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.link"
+  }
+ },
+ {
+  "id": "d-t-075",
+  "css": ".a{color:var(--ng-status-ok)!important}",
+  "html": "<p id=\"target\" class=\"a\" style=\"color:var(--ng-text-link)\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.ok"
+  }
+ },
+ {
+  "id": "d-t-076",
+  "css": ".a{padding-left:calc(var(--ng-card-padding) * 2)}@media (max-width:600px){.a{padding-left:var(--ng-control-padding)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "card.padding"
+  }
+ },
+ {
+  "id": "d-t-077",
+  "css": ".a{padding-left:15px}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-078",
+  "css": ".w{--x:11px}:root{--x:var(--ng-card-padding)}.a{padding-left:var(--x)}",
+  "html": "<div class=\"w\"><p id=\"target\" class=\"a\">text</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-079",
+  "css": ".a{border:1px solid var(--ng-status-ok)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "status.ok"
+  }
+ },
+ {
+  "id": "d-t-080",
+  "css": ".a{padding-left:10%}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "d-t-081",
+  "css": ".a{padding-left:var(--ng-control-padding)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "control.padding"
+  }
+ },
+ {
+  "id": "d-t-082",
+  "css": ":root{--x:var(--ng-control-padding);--y:var(--x)}.a{padding:var(--y)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "control.padding"
+  }
+ },
+ {
+  "id": "d-t-083",
+  "css": ".a{color:var(--nope,var(--ng-status-critical))}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.critical"
+  }
+ },
+ {
+  "id": "d-t-084",
+  "css": "@layer components{#target{color:var(--ng-status-critical)}}@layer utilities{.a{color:var(--ng-text-primary)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.primary"
+  }
+ },
+ {
+  "id": "d-t-085",
+  "css": ".a{color:var(--ng-status-critical)!important}",
+  "html": "<p id=\"target\" class=\"a\" style=\"color:var(--ng-text-primary)\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.critical"
+  }
+ },
+ {
+  "id": "d-t-086",
+  "css": ".a{padding-left:calc(var(--ng-control-padding) * 2)}@media (max-width:600px){.a{padding-left:var(--ng-space-large)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "control.padding"
+  }
+ },
+ {
+  "id": "d-t-087",
+  "css": ".a{padding-left:16px}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-088",
+  "css": ".w{--x:12px}:root{--x:var(--ng-control-padding)}.a{padding-left:var(--x)}",
+  "html": "<div class=\"w\"><p id=\"target\" class=\"a\">text</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-089",
+  "css": ".a{border:1px solid var(--ng-status-critical)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "status.critical"
+  }
+ },
+ {
+  "id": "d-t-090",
+  "css": ".a{padding-left:inherit}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "d-t-091",
+  "css": ".a{padding-left:var(--ng-space-large)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.large"
+  }
+ },
+ {
+  "id": "d-t-092",
+  "css": ":root{--x:var(--ng-space-large);--y:var(--x)}.a{padding:var(--y)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "space.large"
+  }
+ },
+ {
+  "id": "d-t-093",
+  "css": ".a{color:var(--nope,var(--ng-text-link))}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.link"
+  }
+ },
+ {
+  "id": "d-t-094",
+  "css": "@layer components{#target{color:var(--ng-text-link)}}@layer utilities{.a{color:var(--ng-text-muted)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.muted"
+  }
+ },
+ {
+  "id": "d-t-095",
+  "css": ".a{color:var(--ng-text-link)!important}",
+  "html": "<p id=\"target\" class=\"a\" style=\"color:var(--ng-text-muted)\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.link"
+  }
+ },
+ {
+  "id": "d-t-096",
+  "css": ".a{padding-left:calc(var(--ng-space-large) * 2)}@media (max-width:600px){.a{padding-left:var(--ng-space-small)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.large"
+  }
+ },
+ {
+  "id": "d-t-097",
+  "css": ".a{padding-left:17px}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-098",
+  "css": ".w{--x:13px}:root{--x:var(--ng-space-large)}.a{padding-left:var(--x)}",
+  "html": "<div class=\"w\"><p id=\"target\" class=\"a\">text</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-099",
+  "css": ".a{border:1px solid var(--ng-text-link)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "text.link"
+  }
+ },
+ {
+  "id": "d-t-100",
+  "css": ".a{padding-left:unset}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "d-t-101",
+  "css": ".a{padding-left:var(--ng-space-small)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "d-t-102",
+  "css": ":root{--x:var(--ng-space-small);--y:var(--x)}.a{padding:var(--y)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "d-t-103",
+  "css": ".a{color:var(--nope,var(--ng-text-primary))}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.primary"
+  }
+ },
+ {
+  "id": "d-t-104",
+  "css": "@layer components{#target{color:var(--ng-text-primary)}}@layer utilities{.a{color:var(--ng-status-ok)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.ok"
+  }
+ },
+ {
+  "id": "d-t-105",
+  "css": ".a{color:var(--ng-text-primary)!important}",
+  "html": "<p id=\"target\" class=\"a\" style=\"color:var(--ng-status-ok)\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.primary"
+  }
+ },
+ {
+  "id": "d-t-106",
+  "css": ".a{padding-left:calc(var(--ng-space-small) * 2)}@media (max-width:600px){.a{padding-left:var(--ng-space-medium)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "d-t-107",
+  "css": ".a{padding-left:18px}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-108",
+  "css": ".w{--x:14px}:root{--x:var(--ng-space-small)}.a{padding-left:var(--x)}",
+  "html": "<div class=\"w\"><p id=\"target\" class=\"a\">text</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-109",
+  "css": ".a{border:1px solid var(--ng-text-primary)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "text.primary"
+  }
+ },
+ {
+  "id": "d-t-110",
+  "css": ".a{padding-left:0}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "d-t-111",
+  "css": ".a{padding-left:var(--ng-space-medium)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.medium"
+  }
+ },
+ {
+  "id": "d-t-112",
+  "css": ":root{--x:var(--ng-space-medium);--y:var(--x)}.a{padding:var(--y)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "space.medium"
+  }
+ },
+ {
+  "id": "d-t-113",
+  "css": ".a{color:var(--nope,var(--ng-text-muted))}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.muted"
+  }
+ },
+ {
+  "id": "d-t-114",
+  "css": "@layer components{#target{color:var(--ng-text-muted)}}@layer utilities{.a{color:var(--ng-status-critical)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.critical"
+  }
+ },
+ {
+  "id": "d-t-115",
+  "css": ".a{color:var(--ng-text-muted)!important}",
+  "html": "<p id=\"target\" class=\"a\" style=\"color:var(--ng-status-critical)\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.muted"
+  }
+ },
+ {
+  "id": "d-t-116",
+  "css": ".a{padding-left:calc(var(--ng-space-medium) * 2)}@media (max-width:600px){.a{padding-left:var(--ng-card-padding)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.medium"
+  }
+ },
+ {
+  "id": "d-t-117",
+  "css": ".a{padding-left:19px}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-118",
+  "css": ".w{--x:15px}:root{--x:var(--ng-space-medium)}.a{padding-left:var(--x)}",
+  "html": "<div class=\"w\"><p id=\"target\" class=\"a\">text</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-119",
+  "css": ".a{border:1px solid var(--ng-text-muted)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "text.muted"
+  }
+ },
+ {
+  "id": "d-t-120",
+  "css": ".a{padding-left:0px}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "d-t-121",
+  "css": ".a{padding-left:var(--ng-card-padding)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "card.padding"
+  }
+ },
+ {
+  "id": "d-t-122",
+  "css": ":root{--x:var(--ng-card-padding);--y:var(--x)}.a{padding:var(--y)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "card.padding"
+  }
+ },
+ {
+  "id": "d-t-123",
+  "css": ".a{color:var(--nope,var(--ng-status-ok))}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.ok"
+  }
+ },
+ {
+  "id": "d-t-124",
+  "css": "@layer components{#target{color:var(--ng-status-ok)}}@layer utilities{.a{color:var(--ng-text-link)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.link"
+  }
+ },
+ {
+  "id": "d-t-125",
+  "css": ".a{color:var(--ng-status-ok)!important}",
+  "html": "<p id=\"target\" class=\"a\" style=\"color:var(--ng-text-link)\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.ok"
+  }
+ },
+ {
+  "id": "d-t-126",
+  "css": ".a{padding-left:calc(var(--ng-card-padding) * 2)}@media (max-width:600px){.a{padding-left:var(--ng-control-padding)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "card.padding"
+  }
+ },
+ {
+  "id": "d-t-127",
+  "css": ".a{padding-left:20px}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-128",
+  "css": ".w{--x:16px}:root{--x:var(--ng-card-padding)}.a{padding-left:var(--x)}",
+  "html": "<div class=\"w\"><p id=\"target\" class=\"a\">text</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-129",
+  "css": ".a{border:1px solid var(--ng-status-ok)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "status.ok"
+  }
+ },
+ {
+  "id": "d-t-130",
+  "css": ".a{padding-left:10%}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "d-t-131",
+  "css": ".a{padding-left:var(--ng-control-padding)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "control.padding"
+  }
+ },
+ {
+  "id": "d-t-132",
+  "css": ":root{--x:var(--ng-control-padding);--y:var(--x)}.a{padding:var(--y)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "control.padding"
+  }
+ },
+ {
+  "id": "d-t-133",
+  "css": ".a{color:var(--nope,var(--ng-status-critical))}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.critical"
+  }
+ },
+ {
+  "id": "d-t-134",
+  "css": "@layer components{#target{color:var(--ng-status-critical)}}@layer utilities{.a{color:var(--ng-text-primary)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.primary"
+  }
+ },
+ {
+  "id": "d-t-135",
+  "css": ".a{color:var(--ng-status-critical)!important}",
+  "html": "<p id=\"target\" class=\"a\" style=\"color:var(--ng-text-primary)\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.critical"
+  }
+ },
+ {
+  "id": "d-t-136",
+  "css": ".a{padding-left:calc(var(--ng-control-padding) * 2)}@media (max-width:600px){.a{padding-left:var(--ng-space-large)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "control.padding"
+  }
+ },
+ {
+  "id": "d-t-137",
+  "css": ".a{padding-left:21px}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-138",
+  "css": ".w{--x:17px}:root{--x:var(--ng-control-padding)}.a{padding-left:var(--x)}",
+  "html": "<div class=\"w\"><p id=\"target\" class=\"a\">text</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-139",
+  "css": ".a{border:1px solid var(--ng-status-critical)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "status.critical"
+  }
+ },
+ {
+  "id": "d-t-140",
+  "css": ".a{padding-left:inherit}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "d-t-141",
+  "css": ".a{padding-left:var(--ng-space-large)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.large"
+  }
+ },
+ {
+  "id": "d-t-142",
+  "css": ":root{--x:var(--ng-space-large);--y:var(--x)}.a{padding:var(--y)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "space.large"
+  }
+ },
+ {
+  "id": "d-t-143",
+  "css": ".a{color:var(--nope,var(--ng-text-link))}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.link"
+  }
+ },
+ {
+  "id": "d-t-144",
+  "css": "@layer components{#target{color:var(--ng-text-link)}}@layer utilities{.a{color:var(--ng-text-muted)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.muted"
+  }
+ },
+ {
+  "id": "d-t-145",
+  "css": ".a{color:var(--ng-text-link)!important}",
+  "html": "<p id=\"target\" class=\"a\" style=\"color:var(--ng-text-muted)\">text</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.link"
+  }
+ },
+ {
+  "id": "d-t-146",
+  "css": ".a{padding-left:calc(var(--ng-space-large) * 2)}@media (max-width:600px){.a{padding-left:var(--ng-space-small)}}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.large"
+  }
+ },
+ {
+  "id": "d-t-147",
+  "css": ".a{padding-left:22px}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-148",
+  "css": ".w{--x:18px}:root{--x:var(--ng-space-large)}.a{padding-left:var(--x)}",
+  "html": "<div class=\"w\"><p id=\"target\" class=\"a\">text</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "d-t-149",
+  "css": ".a{border:1px solid var(--ng-text-link)}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "text.link"
+  }
+ },
+ {
+  "id": "d-t-150",
+  "css": ".a{padding-left:unset}",
+  "html": "<p id=\"target\" class=\"a\">text</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ }
+]

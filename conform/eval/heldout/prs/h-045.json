@@ -1,0 +1,32 @@
+{
+  "id": "h-045",
+  "repo": "patch-status",
+  "title": "Warn when a wave is degraded",
+  "body": "Banner at the top of the wave screen with a dismiss button.",
+  "files": {
+    "src/screens/wave.tsx": "export default function Wave() {\n  return (\n    <main className=\"bg-surface-page p-section flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-title font-bold text-primary\">Rollout wave</h1>\n      <div data-status=\"warn\" data-testid=\"wave-banner\" className=\"flex items-center justify-between gap-medium px-medium py-tight rounded-card border border-warn text-caption font-medium text-warn bg-surface-raised\">\n        3 hosts in this wave have not reported since 04:10.\n        <button type=\"button\" data-testid=\"banner-dismiss\" className=\"h-control px-control rounded-control text-body font-medium bg-transparent text-muted\">Dismiss</button>\n      </div>\n      <section data-testid=\"detail\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium\">\n        <h2 className=\"text-heading font-bold text-primary\">2</h2>\n        <p className=\"text-sm text-slate-500\">Wave: 2</p>\n        <p className=\"text-sm text-slate-500\">Hosts: 120</p>\n        <p className=\"text-sm text-slate-500\">Health: Good</p>\n        <div className=\"flex items-end gap-small\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-10 px-4 rounded-md text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white\">Advance wave</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-9 px-control rounded-control text-body font-medium bg-action-secondary text-primary border border-strong\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-red-600 text-on-action\">Roll back</button>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+  },
+  "plants": [
+    {
+      "screen": "wave",
+      "testid": "wave-banner",
+      "prop": "padding-inline",
+      "kind": "wrong-token",
+      "note": "data-status makes this a status label, only space.small is allowed inline"
+    },
+    {
+      "screen": "wave",
+      "testid": "wave-banner",
+      "prop": "border-radius",
+      "kind": "wrong-token",
+      "note": "status labels take radius.control"
+    },
+    {
+      "screen": "wave",
+      "testid": "banner-dismiss",
+      "prop": "color",
+      "kind": "wrong-token",
+      "note": "text.muted is not a control colour"
+    }
+  ]
+}

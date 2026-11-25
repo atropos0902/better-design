@@ -1,0 +1,33 @@
+{
+  "id": "h-018",
+  "repo": "rollout-gate",
+  "title": "Add a freeze windows screen",
+  "body": "New screen listing the windows in which gates stay closed.",
+  "files": {
+    "conform.config.json": "{\n  \"repo\": \"northgate/rollout-gate\",\n  \"bundle\": \".conform/bundle.json\",\n  \"keys\": \".conform/keys.json\",\n  \"styling\": \"tailwind\",\n  \"themeCss\": \".conform/theme.css\",\n  \"css\": [],\n  \"screens\": [\n    {\n      \"id\": \"gates\",\n      \"module\": \"src/screens/gates.tsx\"\n    },\n    {\n      \"id\": \"gate\",\n      \"module\": \"src/screens/gate.tsx\"\n    },\n    {\n      \"id\": \"freezes\",\n      \"module\": \"src/screens/freezes.tsx\"\n    }\n  ]\n}\n",
+    "src/screens/freezes.tsx": "const windows = [\n  { name: \"Year end\", from: \"18 Dec\", to: \"4 Jan\" },\n  { name: \"Audit week\", from: \"9 Mar\", to: \"13 Mar\" },\n];\n\nexport default function Freezes() {\n  return (\n    <main className=\"bg-surface-page p-section flex flex-col gap-large min-h-screen\">\n      <h1 data-testid=\"freeze-title\" className=\"text-title font-semibold text-muted\">Freeze windows</h1>\n      <section data-testid=\"freeze-list\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-card\">\n        <h2 className=\"text-heading font-bold text-primary\">Upcoming</h2>\n        <table className=\"w-full\">\n          <thead>\n            <tr>\n              <th className=\"text-caption font-medium text-muted px-medium text-left\">Window</th>\n              <th className=\"text-caption font-medium text-muted px-medium text-left\">From</th>\n              <th className=\"text-caption font-medium text-muted px-medium text-left\">To</th>\n            </tr>\n          </thead>\n          <tbody>\n            {windows.map((w) => (\n              <tr key={w.name} className=\"h-row border-b border-default\">\n                <td className=\"text-body px-medium text-primary\">{w.name}</td>\n                <td className=\"text-body px-medium text-primary\">{w.from}</td>\n                <td className=\"text-body px-medium text-primary\">{w.to}</td>\n              </tr>\n            ))}\n          </tbody>\n        </table>\n        <div className=\"flex gap-small\">\n          <button type=\"button\" data-testid=\"freeze-add\" className=\"h-control px-control rounded-control text-body font-medium bg-action-primary hover:bg-action-primary-hover text-on-action\">Add window</button>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+  },
+  "plants": [
+    {
+      "screen": "freezes",
+      "testid": "freeze-title",
+      "prop": "font-weight",
+      "kind": "literal",
+      "note": "font-semibold is Tailwind 600, not weight.bold"
+    },
+    {
+      "screen": "freezes",
+      "testid": "freeze-title",
+      "prop": "color",
+      "kind": "wrong-token",
+      "note": "page titles take text.primary"
+    },
+    {
+      "screen": "freezes",
+      "testid": "freeze-list",
+      "prop": "gap",
+      "kind": "wrong-token",
+      "note": "gap-card, gaps take space.*"
+    }
+  ]
+}

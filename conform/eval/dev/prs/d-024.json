@@ -1,0 +1,32 @@
+{
+ "id": "d-024",
+ "repo": "rollout-gate",
+ "title": "Change Gate detail",
+ "body": "",
+ "files": {
+  "src/screens/gate.tsx": "export default function Gate() {\n  return (\n    <main className=\"bg-surface-page p-8 flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-[24px] font-bold text-primary\">Gate detail</h1>\n      <section data-testid=\"detail\" className=\"p-6 rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-4\">\n        <h2 className=\"text-heading font-bold text-primary\">feed-api</h2>\n        <p className=\"text-sm text-slate-500\">Service: feed-api</p>\n        <p className=\"text-sm text-slate-500\">Error rate: 0.4%</p>\n        <p className=\"text-sm text-slate-500\">Owner: Feed</p>\n        <div className=\"flex items-end gap-small\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-primary hover:bg-action-primary-hover text-on-action\">Promote</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-10 px-4 rounded-md text-sm font-medium bg-white text-slate-900 border border-slate-500\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Roll back</button>\n        </div>\n        <div className=\"flex flex-col gap-small\">\n          <button type=\"button\" data-testid=\"new-0\" className=\"h-control px-control rounded-control text-[14px] font-medium bg-action-secondary hover:bg-action-secondary-hover text-primary border border-strong\">Action</button>\n          <button type=\"button\" data-testid=\"new-1\" className=\"h-control px-control rounded-control text-body font-bold bg-action-secondary hover:bg-action-secondary-hover text-primary border border-strong\">Action</button>\n          <button type=\"button\" data-testid=\"new-2\" className=\"h-control px-control rounded-control text-body font-medium bg-surface-sunken hover:bg-action-secondary-hover text-primary border border-strong\">Action</button>\n          <div data-testid=\"ok-0\" className=\"pl-small pr-medium border border-default max-w-prose\">Box</div>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+ },
+ "plants": [
+  {
+   "screen": "gate",
+   "testid": "new-0",
+   "prop": "font-size",
+   "kind": "literal",
+   "note": "14px"
+  },
+  {
+   "screen": "gate",
+   "testid": "new-1",
+   "prop": "font-weight",
+   "kind": "wrong-token",
+   "note": "bold control"
+  },
+  {
+   "screen": "gate",
+   "testid": "new-2",
+   "prop": "background-color",
+   "kind": "wrong-token",
+   "note": "sunken control"
+  }
+ ]
+}

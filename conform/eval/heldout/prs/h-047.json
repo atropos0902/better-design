@@ -1,0 +1,10 @@
+{
+  "id": "h-047",
+  "repo": "host-inventory",
+  "title": "Host detail: use the card tokens and show health",
+  "body": "Cleans up the card while adding the health label.",
+  "files": {
+    "src/screens/host.tsx": "export default function Host() {\n  return (\n    <main className=\"bg-surface-page p-section flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-title font-bold text-primary\">Host detail</h1>\n      <section data-testid=\"detail\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium\">\n        <h2 className=\"text-heading font-bold text-primary\">web-001</h2>\n        <p role=\"status\" data-testid=\"health\" className=\"self-start text-caption font-medium rounded-control px-small py-tight text-ok border border-ok\">Reporting, last seen 2 minutes ago</p>\n        <p className=\"text-sm text-muted\">Host: web-001</p>\n        <p className=\"text-sm text-muted\">Kernel: 6.8</p>\n        <p className=\"text-sm text-muted\">Owner: Web</p>\n        <div className=\"flex items-end gap-small\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-primary hover:bg-action-primary-hover text-on-action\">Drain host</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-secondary hover:bg-action-secondary-hover text-primary border border-strong\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Retire host</button>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+  },
+  "plants": []
+}

@@ -1,0 +1,33 @@
+{
+  "id": "h-039",
+  "repo": "key-vault",
+  "title": "Key usage meter",
+  "body": "Adds quota usage under the keys table with a refresh button.",
+  "files": {
+    "src/components/usage-meter.tsx": "type Props = { used: number; limit: number };\n\nexport function UsageMeter({ used, limit }: Props) {\n  const pct = Math.round((used / limit) * 100);\n  return (\n    <section data-testid=\"usage\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium\">\n      <div className=\"flex items-center justify-between gap-small\">\n        <h2 className=\"text-heading font-bold text-primary\">Usage</h2>\n        <button type=\"button\" data-testid=\"usage-refresh\" className=\"h-control px-control rounded-control text-body font-medium bg-action-secondary hover:bg-action-secondary-hover text-primary border border-strong\">\n          <svg aria-hidden=\"true\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\"><path d=\"M2 8a6 6 0 1 0 2-4.5M2 2v3h3\" /></svg>\n        </button>\n      </div>\n      <p data-testid=\"usage-value\" className=\"text-lg text-primary\">{used} of {limit} keys</p>\n      <div role=\"progressbar\" aria-label=\"Keys used\" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100} className=\"w-full h-2 rounded-control bg-surface-sunken\">\n        <div data-testid=\"usage-fill\" style={{ width: pct + \"%\" }} className=\"h-full rounded-control bg-action-primary\" />\n      </div>\n    </section>\n  );\n}\n",
+    "src/screens/keys.tsx": "import { UsageMeter } from \"../components/usage-meter\";\n\nexport default function Keys() {\n  return (\n    <main className=\"bg-surface-page p-section flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-[24px] font-bold text-primary\">Keys</h1>\n      <section data-testid=\"list\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium\">\n        <h2 className=\"text-heading font-bold text-primary\">All keys</h2>\n        <table className=\"w-full\">\n          <thead>\n            <tr><th className=\"text-xs font-medium text-slate-600 px-4 text-left\">Key</th><th className=\"text-xs font-medium text-slate-600 px-4 text-left\">Use</th><th className=\"text-xs font-medium text-slate-600 px-4 text-left\">Status</th></tr>\n          </thead>\n          <tbody>\n            <tr className=\"h-row border-b border-default\">\n              <td className=\"text-body px-medium text-primary\">sign-2</td>\n              <td className=\"text-body px-medium text-primary\">Signing</td>\n              <td className=\"text-body px-medium text-primary\"><span data-status=\"ok\" className=\"text-caption font-medium rounded px-small py-tight text-ok\">Healthy</span></td>\n            </tr>\n            <tr className=\"h-row border-b border-default\">\n              <td className=\"text-body px-medium text-primary\">wrap-1</td>\n              <td className=\"text-body px-medium text-primary\">Wrapping</td>\n              <td className=\"text-body px-medium text-primary\"><span data-status=\"warn\" className=\"text-caption font-medium rounded px-small py-tight text-warn\">Needs attention</span></td>\n            </tr>\n          </tbody>\n        </table>\n        <div className=\"flex items-end gap-2\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-10 px-4 rounded-md text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white\">Create key</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-9 px-control rounded-control text-body font-medium bg-action-secondary text-primary border border-strong\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Schedule deletion</button>\n        </div>\n      </section>\n      <UsageMeter used={34} limit={50} />\n    </main>\n  );\n}\n"
+  },
+  "plants": [
+    {
+      "screen": "keys",
+      "testid": "usage-refresh",
+      "prop": "button-name",
+      "kind": "accessibility",
+      "note": "icon only button with no name"
+    },
+    {
+      "screen": "keys",
+      "testid": "usage-value",
+      "prop": "font-size",
+      "kind": "literal",
+      "note": "text-lg"
+    },
+    {
+      "screen": "keys",
+      "testid": "usage-fill",
+      "prop": "background-color",
+      "kind": "wrong-token",
+      "note": "action.primary on an element that is not a control"
+    }
+  ]
+}

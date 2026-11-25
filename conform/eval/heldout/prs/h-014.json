@@ -1,0 +1,27 @@
+{
+  "id": "h-014",
+  "repo": "alert-triage",
+  "title": "Alert timeline",
+  "body": "Adds the event timeline. Layout is in a stylesheet because the marker needs a pseudo element.",
+  "files": {
+    "conform.config.json": "{\n  \"repo\": \"northgate/alert-triage\",\n  \"bundle\": \".conform/bundle.json\",\n  \"keys\": \".conform/keys.json\",\n  \"styling\": \"tailwind\",\n  \"themeCss\": \".conform/theme.css\",\n  \"css\": [\n    \"src/styles/timeline.css\"\n  ],\n  \"screens\": [\n    {\n      \"id\": \"queue\",\n      \"module\": \"src/screens/queue.tsx\"\n    },\n    {\n      \"id\": \"alert\",\n      \"module\": \"src/screens/alert.tsx\"\n    },\n    {\n      \"id\": \"rule\",\n      \"module\": \"src/screens/rule.tsx\"\n    }\n  ]\n}\n",
+    "src/styles/timeline.css": ".timeline {\n  --ng-space-small: 6px;\n  display: flex;\n  flex-direction: column;\n  gap: var(--ng-space-tight);\n}\n\n.timeline-latest {\n  position: relative;\n  padding-inline: 12px;\n}\n\n.timeline-latest::before {\n  content: \"\";\n  position: absolute;\n  inset-block: 0;\n  inset-inline-start: 0;\n  width: 2px;\n  background-color: var(--ng-surface-sunken);\n}\n",
+    "src/screens/alert.tsx": "export default function Alert() {\n  return (\n    <main className=\"bg-surface-page p-section flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-[24px] font-bold text-primary\">Alert detail</h1>\n      <section data-testid=\"detail\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium\">\n        <h2 className=\"text-lg font-bold text-slate-900\">Impossible travel</h2>\n        <p className=\"text-sm text-slate-500\">Alert: Impossible travel</p>\n        <p className=\"text-sm text-slate-500\">Entity: user-118</p>\n        <p className=\"text-sm text-slate-500\">Severity: High</p>\n        <ol data-testid=\"timeline\" className=\"timeline\">\n          <li data-testid=\"entry-latest\" className=\"timeline-latest text-body text-primary\">14:02 Login from Lagos</li>\n          <li data-testid=\"entry-prior\" className=\"px-small text-body text-muted\">13:48 Login from Oslo</li>\n        </ol>\n        <div className=\"flex items-end gap-2\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-control px-4 rounded-control text-body font-medium bg-action-primary hover:bg-blue-700 text-on-action\">Escalate</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-9 px-control rounded-control text-body font-medium bg-action-secondary text-primary border border-strong\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-red-600 text-on-action\">Close alert</button>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+  },
+  "plants": [
+    {
+      "screen": "alert",
+      "testid": "timeline",
+      "prop": "--ng-space-small",
+      "kind": "redefined",
+      "note": "a class in the new stylesheet sets the design system variable"
+    },
+    {
+      "screen": "alert",
+      "testid": "entry-latest",
+      "prop": "padding-inline",
+      "kind": "literal",
+      "note": "12px in the stylesheet"
+    }
+  ]
+}

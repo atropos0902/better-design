@@ -1,0 +1,18 @@
+{
+  "repo": "northgate/incident-log",
+  "bundle": ".conform/bundle.json",
+  "keys": ".conform/keys.json",
+  "styling": "tailwind",
+  "themeCss": ".conform/theme.css",
+  "css": [],
+  "screens": [
+    {
+      "id": "incidents",
+      "module": "src/screens/incidents.tsx"
+    },
+    {
+      "id": "update",
+      "module": "src/screens/update.tsx"
+    }
+  ]
+}

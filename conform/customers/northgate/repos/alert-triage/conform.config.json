@@ -1,0 +1,22 @@
+{
+  "repo": "northgate/alert-triage",
+  "bundle": ".conform/bundle.json",
+  "keys": ".conform/keys.json",
+  "styling": "tailwind",
+  "themeCss": ".conform/theme.css",
+  "css": [],
+  "screens": [
+    {
+      "id": "queue",
+      "module": "src/screens/queue.tsx"
+    },
+    {
+      "id": "alert",
+      "module": "src/screens/alert.tsx"
+    },
+    {
+      "id": "rule",
+      "module": "src/screens/rule.tsx"
+    }
+  ]
+}

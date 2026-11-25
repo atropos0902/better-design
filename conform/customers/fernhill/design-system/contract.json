@@ -1,0 +1,9 @@
+{
+  "root": { "color": "semantic.fg.default", "background-color": "semantic.bg.default", "font-size": "global.font.size.text" },
+  "parts": [
+    { "part": "field", "selector": "button, select, textarea, input:not([type=checkbox]):not([type=radio])", "required": ["height"], "props": { "height": ["global.field.height"], "padding-inline": ["semantic.pad.field"], "border-radius": ["global.radius.soft"], "background-color": ["semantic.bg.*"], "color": ["semantic.fg.*"], "border-color": ["semantic.edge"], "font-size": ["global.font.size.text"] } },
+    { "part": "title", "selector": "h1", "props": { "font-size": ["global.font.size.head"], "font-weight": ["global.font.weight.strong"] } },
+    { "part": "panel", "selector": "section", "props": { "padding-inline": ["semantic.pad.panel"], "padding-block": ["semantic.pad.panel"], "border-radius": ["global.radius.soft"], "background-color": ["semantic.bg.default"], "border-color": ["semantic.edge"], "gap": ["semantic.gap.*"] } }
+  ],
+  "any": { "color": ["semantic.fg.*"], "background-color": ["semantic.bg.*"], "border-color": ["semantic.edge"], "border-radius": ["global.radius.*"], "font-size": ["global.font.size.*"], "font-weight": ["global.font.weight.*"], "gap": ["semantic.gap.*"], "padding-inline": ["semantic.pad.*"], "padding-block": ["semantic.pad.*"], "margin-inline": ["semantic.gap.*"], "margin-block": ["semantic.gap.*"] }
+}

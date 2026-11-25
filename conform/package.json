@@ -1,0 +1,36 @@
+{
+  "name": "conform",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@stryker-mutator/core": "9.6.1",
+    "@stryker-mutator/vitest-runner": "9.6.1",
+    "@types/node": "25.6.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "typescript": "6.0.3",
+    "vitest": "4.1.5",
+    "zod": "4.4.3",
+    "esbuild": "0.28.0",
+    "jose": "6.2.3",
+    "postgres": "3.4.9",
+    "playwright-core": "1.59.1"
+  },
+  "scripts": {
+    "typecheck": "tsc -p . && tsc -p packages/service && tsc -p packages/dashboard",
+    "test": "npm run build -w conform-mcp && vitest run --root packages/core && vitest run --root packages/checker && vitest run --root packages/mcp && vitest run --root packages/experiment && npm test -w @conform/service",
+    "mutation": "npm run mutation -w @conform/core",
+    "eval:dev": "node eval/run.ts dev",
+    "measure": "node eval/measure.ts",
+    "e2e": "npm run build -w @conform/dashboard && node eval/e2e.ts",
+    "db": "docker compose -f deploy/compose.test.yaml up -d --wait"
+  }
+}

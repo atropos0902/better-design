@@ -1,0 +1,32 @@
+{
+ "id": "d-028",
+ "repo": "secrets-broker",
+ "title": "Change Issue a lease",
+ "body": "",
+ "files": {
+  "src/screens/issue.tsx": "export default function Issue() {\n  return (\n    <main className=\"bg-surface-page p-section flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-title font-bold text-primary\">Issue a lease</h1>\n      <section data-testid=\"form\" className=\"p-6 rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-4\">\n        <h2 className=\"text-heading font-medium text-primary\">Lease settings</h2>\n        <form className=\"flex flex-col gap-small\">\n          <label htmlFor=\"f0\" className=\"text-caption font-medium text-muted\">Secret</label>\n          <input id=\"f0\" data-testid=\"field-0\" defaultValue=\"db/reports\" className=\"h-10 px-3 rounded-md text-sm bg-white text-slate-900 border border-slate-500\" />\n          <label htmlFor=\"f1\" className=\"text-caption font-medium text-muted\">Purpose</label>\n          <input id=\"f1\" data-testid=\"field-1\" defaultValue=\"Backfill\" className=\"h-10 px-3 rounded-md text-sm bg-white text-slate-900 border border-slate-500\" />\n          <label htmlFor=\"f2\" className=\"text-caption font-medium text-muted\">Duration</label>\n          <input id=\"f2\" data-testid=\"field-2\" defaultValue=\"1h\" className=\"h-10 px-3 rounded-md text-sm bg-white text-slate-900 border border-slate-500\" />\n        </form>\n        <div className=\"flex items-end gap-small\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-primary hover:bg-action-primary-hover text-on-action\">Issue</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-secondary hover:bg-action-secondary-hover text-primary border border-strong\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Clear</button>\n        </div>\n        <div className=\"flex flex-col gap-small\">\n          <div data-testid=\"new-0\" className=\"flex gap-2\"><span>One</span><span>Two</span></div>\n          <div data-testid=\"new-1\" className=\"px-[16px]\">Box</div>\n          <div data-testid=\"new-2\" style={{ \"--pad\": \"8px\", paddingTop: \"var(--pad)\" } as React.CSSProperties}>Box</div>\n          <div data-testid=\"ok-0\" className=\"flex gap-small p-0 m-auto w-1/2 bg-transparent\"><span>One</span></div>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+ },
+ "plants": [
+  {
+   "screen": "issue",
+   "testid": "new-0",
+   "prop": "gap",
+   "kind": "literal",
+   "note": "gap-2"
+  },
+  {
+   "screen": "issue",
+   "testid": "new-1",
+   "prop": "padding-inline",
+   "kind": "literal",
+   "note": "px-[16px]"
+  },
+  {
+   "screen": "issue",
+   "testid": "new-2",
+   "prop": "padding-block",
+   "kind": "literal",
+   "note": "alias to literal"
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "h-050",
+  "repo": "secrets-broker",
+  "title": "Duration presets when issuing a lease",
+  "body": "Replaces guessing with four presets, the free field stays.",
+  "files": {
+    "src/screens/issue.tsx": "export default function Issue() {\n  return (\n    <main className=\"bg-surface-page p-section flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-title font-bold text-primary\">Issue a lease</h1>\n      <section data-testid=\"form\" className=\"p-6 rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-4\">\n        <h2 className=\"text-heading font-medium text-primary\">Lease settings</h2>\n        <form className=\"flex flex-col gap-small\">\n          <label htmlFor=\"f0\" className=\"text-caption font-medium text-muted\">Secret</label>\n          <input id=\"f0\" data-testid=\"field-0\" defaultValue=\"db/reports\" className=\"h-10 px-3 rounded-md text-sm bg-white text-slate-900 border border-slate-500\" />\n          <label htmlFor=\"f1\" className=\"text-caption font-medium text-muted\">Purpose</label>\n          <input id=\"f1\" data-testid=\"field-1\" defaultValue=\"Backfill\" className=\"h-10 px-3 rounded-md text-sm bg-white text-slate-900 border border-slate-500\" />\n          <label htmlFor=\"f2\" className=\"text-caption font-medium text-muted\">Duration</label>\n          <input id=\"f2\" data-testid=\"field-2\" defaultValue=\"1h\" className=\"h-10 px-3 rounded-md text-sm bg-white text-slate-900 border border-slate-500\" />\n          <label htmlFor=\"preset\" className=\"text-caption font-medium text-muted\">Preset</label>\n          <select id=\"preset\" data-testid=\"duration-preset\" defaultValue=\"1h\" className=\"px-control py-small rounded-control text-body bg-surface-sunken text-primary border border-strong\">\n            <option>15m</option>\n            <option>1h</option>\n            <option>8h</option>\n            <option>24h</option>\n          </select>\n        </form>\n        <div className=\"flex items-end gap-small\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-primary hover:bg-action-primary-hover text-on-action\">Issue</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-secondary hover:bg-action-secondary-hover text-primary border border-strong\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Clear</button>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+  },
+  "plants": [
+    {
+      "screen": "issue",
+      "testid": "duration-preset",
+      "prop": "height",
+      "kind": "missing",
+      "note": "padding instead of control.height"
+    },
+    {
+      "screen": "issue",
+      "testid": "duration-preset",
+      "prop": "background-color",
+      "kind": "wrong-token",
+      "note": "surface.sunken on a control"
+    }
+  ]
+}

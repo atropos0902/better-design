@@ -1,0 +1,96 @@
+{
+  "$description": "Northgate design system. Comfortable density, light mode.",
+  "palette": {
+    "$type": "color",
+    "white": { "$value": { "colorSpace": "srgb", "components": [1, 1, 1], "hex": "#ffffff" } },
+    "grey": {
+      "50": { "$value": { "colorSpace": "srgb", "components": [0.969, 0.973, 0.98], "hex": "#f7f8fa" } },
+      "100": { "$value": { "colorSpace": "srgb", "components": [0.925, 0.933, 0.949], "hex": "#eceef2" } },
+      "300": { "$value": { "colorSpace": "srgb", "components": [0.773, 0.796, 0.835], "hex": "#c5cbd5" } },
+      "500": { "$value": { "colorSpace": "srgb", "components": [0.463, 0.502, 0.569], "hex": "#768091" } },
+      "600": { "$value": { "colorSpace": "srgb", "components": [0.318, 0.357, 0.42], "hex": "#515b6b" } },
+      "900": { "$value": { "colorSpace": "srgb", "components": [0.094, 0.114, 0.145], "hex": "#181d25" } }
+    },
+    "blue": {
+      "600": { "$value": { "colorSpace": "srgb", "components": [0.118, 0.329, 0.718], "hex": "#1e54b7" } },
+      "700": { "$value": { "colorSpace": "srgb", "components": [0.086, 0.255, 0.58], "hex": "#164194" } }
+    },
+    "red": {
+      "600": { "$value": { "colorSpace": "srgb", "components": [0.706, 0.137, 0.153], "hex": "#b42327" } },
+      "700": { "$value": { "colorSpace": "srgb", "components": [0.573, 0.098, 0.114], "hex": "#92191d" } }
+    },
+    "green": { "700": { "$value": { "colorSpace": "srgb", "components": [0.063, 0.392, 0.231], "hex": "#10643b" } } },
+    "amber": { "800": { "$value": { "colorSpace": "srgb", "components": [0.471, 0.29, 0.027], "hex": "#784a07" } } }
+  },
+  "surface": {
+    "$type": "color",
+    "page": { "$value": "{palette.grey.50}" },
+    "raised": { "$value": "{palette.white}" },
+    "sunken": { "$value": "{palette.grey.100}" }
+  },
+  "text": {
+    "$type": "color",
+    "primary": { "$value": "{palette.grey.900}" },
+    "muted": { "$value": "{palette.grey.600}" },
+    "on-action": { "$value": "{palette.white}" },
+    "link": { "$value": "{palette.blue.600}" }
+  },
+  "border": {
+    "$type": "color",
+    "default": { "$value": "{palette.grey.300}" },
+    "strong": { "$value": "{palette.grey.500}" }
+  },
+  "action": {
+    "$type": "color",
+    "primary": { "$value": "{palette.blue.600}" },
+    "primary-hover": { "$value": "{palette.blue.700}" },
+    "danger": { "$value": "{palette.red.600}" },
+    "danger-hover": { "$value": "{palette.red.700}" },
+    "secondary": { "$value": "{palette.white}" },
+    "secondary-hover": { "$value": "{palette.grey.100}" }
+  },
+  "status": {
+    "$type": "color",
+    "ok": { "$value": "{palette.green.700}" },
+    "warn": { "$value": "{palette.amber.800}" },
+    "critical": { "$value": "{palette.red.600}" }
+  },
+  "control": {
+    "$type": "dimension",
+    "height": { "$value": { "value": 40, "unit": "px" }, "$description": "Height of every button, input and select. 32px in compact." },
+    "padding": { "$value": { "value": 16, "unit": "px" } }
+  },
+  "row": { "$type": "dimension", "height": { "$value": { "value": 48, "unit": "px" } } },
+  "space": {
+    "$type": "dimension",
+    "tight": { "$value": { "value": 4, "unit": "px" } },
+    "small": { "$value": { "value": 8, "unit": "px" } },
+    "medium": { "$value": { "value": 16, "unit": "px" } },
+    "large": { "$value": { "value": 24, "unit": "px" } },
+    "section": { "$value": { "value": 32, "unit": "px" } }
+  },
+  "card": { "$type": "dimension", "padding": { "$value": { "value": 24, "unit": "px" } } },
+  "radius": {
+    "$type": "dimension",
+    "control": { "$value": { "value": 6, "unit": "px" } },
+    "card": { "$value": { "value": 10, "unit": "px" } }
+  },
+  "type": {
+    "$type": "dimension",
+    "caption": { "$value": { "value": 12, "unit": "px" } },
+    "body": { "$value": { "value": 14, "unit": "px" } },
+    "heading": { "$value": { "value": 18, "unit": "px" } },
+    "title": { "$value": { "value": 24, "unit": "px" } }
+  },
+  "weight": {
+    "$type": "fontWeight",
+    "regular": { "$value": 400 },
+    "medium": { "$value": 500 },
+    "bold": { "$value": 600 }
+  },
+  "elevation": {
+    "$type": "shadow",
+    "raised": { "$value": { "color": { "colorSpace": "srgb", "components": [0, 0, 0], "alpha": 0.12, "hex": "#000000" }, "offsetX": { "value": 0, "unit": "px" }, "offsetY": { "value": 1, "unit": "px" }, "blur": { "value": 3, "unit": "px" }, "spread": { "value": 0, "unit": "px" } } },
+    "overlay": { "$value": { "color": { "colorSpace": "srgb", "components": [0, 0, 0], "alpha": 0.2, "hex": "#000000" }, "offsetX": { "value": 0, "unit": "px" }, "offsetY": { "value": 8, "unit": "px" }, "blur": { "value": 24, "unit": "px" }, "spread": { "value": 0, "unit": "px" } } }
+  }
+}

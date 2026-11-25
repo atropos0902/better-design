@@ -1,0 +1,18 @@
+{
+  "repo": "northgate/scan-scheduler",
+  "bundle": ".conform/bundle.json",
+  "keys": ".conform/keys.json",
+  "styling": "tailwind",
+  "themeCss": ".conform/theme.css",
+  "css": [],
+  "screens": [
+    {
+      "id": "jobs",
+      "module": "src/screens/jobs.tsx"
+    },
+    {
+      "id": "job",
+      "module": "src/screens/job.tsx"
+    }
+  ]
+}

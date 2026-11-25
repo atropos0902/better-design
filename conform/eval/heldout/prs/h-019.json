@@ -1,0 +1,25 @@
+{
+  "id": "h-019",
+  "repo": "firewall-rules",
+  "title": "Approver note on change requests",
+  "body": "Security wants a free text note recorded with every decision.",
+  "files": {
+    "src/screens/change.tsx": "export default function Change() {\n  return (\n    <main className=\"bg-surface-page p-section flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-2xl font-bold text-slate-900\">Change request</h1>\n      <section data-testid=\"detail\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium\">\n        <h2 className=\"text-heading font-medium text-primary\">allow-dns</h2>\n        <p className=\"text-sm text-muted\">Rule: allow-dns</p>\n        <p className=\"text-sm text-muted\">Requester: Net</p>\n        <p className=\"text-sm text-muted\">Window: Sunday</p>\n        <div className=\"flex flex-col gap-tight\">\n          <label htmlFor=\"note\" className=\"text-caption font-medium text-muted\">Approver note</label>\n          <textarea id=\"note\" data-testid=\"approver-note\" defaultValue=\"Checked against the DNS allow list.\" className=\"h-24 p-small rounded-control text-body bg-surface-raised text-primary border border-strong\" />\n        </div>\n        <div className=\"flex items-end gap-small\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-10 px-4 rounded-md text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white\">Approve</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-10 px-4 rounded-md text-sm font-medium bg-white text-slate-900 border border-slate-500\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Reject</button>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+  },
+  "plants": [
+    {
+      "screen": "change",
+      "testid": "approver-note",
+      "prop": "height",
+      "kind": "literal",
+      "note": "h-24"
+    },
+    {
+      "screen": "change",
+      "testid": "approver-note",
+      "prop": "padding-inline",
+      "kind": "wrong-token",
+      "note": "p-small sets space.small inline, a control takes control.padding"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@conform/service",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@conform/core": "0.1.0",
+    "drizzle-orm": "0.45.2",
+    "hono": "4.12.16",
+    "jose": "6.2.3",
+    "postgres": "3.4.9",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "0.15.2",
+    "@cloudflare/workers-types": "4.20260504.1",
+    "wrangler": "4.87.0"
+  },
+  "scripts": {
+    "build": "wrangler deploy --dry-run --outdir dist",
+    "test": "vitest run",
+    "dev": "wrangler dev"
+  }
+}

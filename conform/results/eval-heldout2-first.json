@@ -1,0 +1,138 @@
+{
+  "half": "heldout2",
+  "pullRequests": {
+    "planted": 0,
+    "caught": 0,
+    "clean": 0,
+    "cleanBlocked": 0,
+    "missed": [],
+    "extra": [],
+    "errors": []
+  },
+  "traces": {
+    "total": 150,
+    "right": 140,
+    "unresolved": 3,
+    "wrong": 7,
+    "notRight": [
+      {
+        "id": "u-012",
+        "expect": {
+          "kind": "literal"
+        },
+        "got": {
+          "kind": "token",
+          "token": "radius.control",
+          "factor": 1
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "u-013",
+        "expect": {
+          "kind": "token",
+          "token": "space.section"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "clamp() mixes values"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "u-027",
+        "expect": {
+          "kind": "neutral"
+        },
+        "got": {
+          "kind": "token",
+          "token": "space.medium",
+          "factor": 1
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "u-029",
+        "expect": {
+          "kind": "token",
+          "token": "type.title"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "clamp() mixes values"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "u-046",
+        "expect": {
+          "kind": "token",
+          "token": "radius.card"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "min() mixes values"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "u-048",
+        "expect": {
+          "kind": "token",
+          "token": "radius.control"
+        },
+        "got": {
+          "kind": "neutral"
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "u-054",
+        "expect": {
+          "kind": "literal"
+        },
+        "got": {
+          "kind": "token",
+          "token": "space.small",
+          "factor": 1
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "u-067",
+        "expect": {
+          "kind": "token",
+          "token": "space.medium"
+        },
+        "got": {
+          "kind": "neutral"
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "u-136",
+        "expect": {
+          "kind": "neutral"
+        },
+        "got": {
+          "kind": "token",
+          "token": "space.medium",
+          "factor": 1
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "u-140",
+        "expect": {
+          "kind": "neutral"
+        },
+        "got": {
+          "kind": "token",
+          "token": "type.heading",
+          "factor": 1
+        },
+        "outcome": "wrong"
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "h-020",
+  "repo": "access-review",
+  "title": "Show earlier comments on a grant",
+  "body": "Reviewers want context before they decide.",
+  "files": {
+    "src/screens/decide.tsx": "export default function Decide() {\n  return (\n    <main className=\"bg-surface-page p-section flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-title font-bold text-primary\">Review a grant</h1>\n      <section data-testid=\"detail\" className=\"p-6 rounded-lg bg-white border border-slate-200 shadow flex flex-col gap-4\">\n        <h2 className=\"text-lg font-bold text-slate-900\">prod-read</h2>\n        <p className=\"text-body text-muted\">Grant: prod-read</p>\n        <p className=\"text-body text-muted\">Reason: On-call</p>\n        <p className=\"text-body text-muted\">Approver: Lead</p>\n        <div className=\"flex items-end gap-[10px]\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-10 px-control rounded-control text-body font-medium bg-action-primary hover:bg-action-primary-hover text-on-action\">Keep access</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-9 px-control rounded-control text-body font-medium bg-action-secondary text-primary border border-strong\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Revoke access</button>\n        </div>\n      </section>\n      <section data-testid=\"comments\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium\">\n        <h2 className=\"text-heading font-bold text-primary\">Comments</h2>\n        <ul className=\"flex flex-col gap-small\">\n          <li data-testid=\"comment-1\" className=\"text-[13px] text-primary\">M. Okafor: still needed for the on-call rotation.</li>\n          <li data-testid=\"comment-2\" className=\"text-[13px] text-primary\">J. Lind: confirm with the lead before March.</li>\n        </ul>\n        <a href=\"#history\" data-testid=\"comment-history\" className=\"self-start px-medium py-small rounded-control text-body font-medium bg-action-primary text-on-action\">Full history</a>\n      </section>\n    </main>\n  );\n}\n"
+  },
+  "plants": [
+    {
+      "screen": "decide",
+      "testid": "comment-1",
+      "prop": "font-size",
+      "kind": "literal",
+      "note": "text-[13px]"
+    },
+    {
+      "screen": "decide",
+      "testid": "comment-2",
+      "prop": "font-size",
+      "kind": "literal",
+      "note": "text-[13px]"
+    },
+    {
+      "screen": "decide",
+      "testid": "comment-history",
+      "prop": "background-color",
+      "kind": "wrong-token",
+      "note": "a link styled as a button, action.primary is only for controls"
+    },
+    {
+      "screen": "decide",
+      "testid": "comment-history",
+      "prop": "color",
+      "kind": "wrong-token",
+      "note": "links take text.link"
+    }
+  ]
+}

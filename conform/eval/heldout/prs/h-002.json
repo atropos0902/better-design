@@ -1,0 +1,32 @@
+{
+  "id": "h-002",
+  "repo": "incident-log",
+  "title": "Preview the public status page",
+  "body": "Shows how the update will look on the status page before it is posted.",
+  "files": {
+    "src/screens/update.tsx": "const shot = \"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='120'/%3E\";\n\nexport default function Update() {\n  return (\n    <main className=\"bg-surface-page p-8 flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-2xl font-bold text-slate-900\">Post an update</h1>\n      <section data-testid=\"form\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium\">\n        <h2 className=\"text-heading font-bold text-primary\">Update settings</h2>\n        <form className=\"flex flex-col gap-2\">\n          <label htmlFor=\"f0\" className=\"text-xs font-medium text-slate-600\">Headline</label>\n          <input id=\"f0\" data-testid=\"field-0\" defaultValue=\"Mitigated\" className=\"h-control px-control rounded-control text-body bg-surface-raised text-primary border border-strong\" />\n          <label htmlFor=\"f1\" className=\"text-xs font-medium text-slate-600\">Impact</label>\n          <input id=\"f1\" data-testid=\"field-1\" defaultValue=\"None\" className=\"h-control px-control rounded-control text-body bg-surface-raised text-primary border border-strong\" />\n          <label htmlFor=\"f2\" className=\"text-xs font-medium text-slate-600\">Next step</label>\n          <input id=\"f2\" data-testid=\"field-2\" defaultValue=\"Review\" className=\"h-control px-control rounded-control text-body bg-surface-raised text-primary border border-strong\" />\n        </form>\n        <div className=\"flex items-end gap-2\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-10 px-4 rounded-md text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white\">Post update</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-10 px-4 rounded-md text-sm font-medium bg-white text-slate-900 border border-slate-500\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Discard</button>\n        </div>\n      </section>\n      <section data-testid=\"preview-card\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium\">\n        <h2 className=\"text-heading font-bold text-primary\">Preview</h2>\n        <div data-testid=\"preview-frame\" className=\"p-small rounded-control bg-action-secondary\">\n          <img src={shot} data-testid=\"preview\" width={320} height={120} className=\"w-full max-w-sm\" />\n        </div>\n        <p data-testid=\"preview-caption\" className=\"text-[12px] text-muted\">Rendered from the last saved draft.</p>\n      </section>\n    </main>\n  );\n}\n"
+  },
+  "plants": [
+    {
+      "screen": "update",
+      "testid": "preview-frame",
+      "prop": "background-color",
+      "kind": "wrong-token",
+      "note": "action.secondary as the fill of a plain container"
+    },
+    {
+      "screen": "update",
+      "testid": "preview",
+      "prop": "image-alt",
+      "kind": "accessibility",
+      "note": "img without alt"
+    },
+    {
+      "screen": "update",
+      "testid": "preview-caption",
+      "prop": "font-size",
+      "kind": "literal",
+      "note": "text-[12px]"
+    }
+  ]
+}

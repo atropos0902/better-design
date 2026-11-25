@@ -1,0 +1,380 @@
+{
+  "half": "heldout",
+  "pullRequests": {
+    "planted": 75,
+    "caught": 72,
+    "clean": 20,
+    "cleanBlocked": 0,
+    "missed": [
+      {
+        "pr": "h-014",
+        "screen": "alert",
+        "testid": "timeline",
+        "prop": "--ng-space-small",
+        "kind": "redefined",
+        "note": "a class in the new stylesheet sets the design system variable"
+      },
+      {
+        "pr": "h-014",
+        "screen": "alert",
+        "testid": "entry-latest",
+        "prop": "padding-inline",
+        "kind": "literal",
+        "note": "12px in the stylesheet"
+      },
+      {
+        "pr": "h-020",
+        "screen": "decide",
+        "testid": "comment-2",
+        "prop": "font-size",
+        "kind": "literal",
+        "note": "text-[13px]"
+      }
+    ],
+    "extra": [],
+    "errors": []
+  },
+  "traces": {
+    "total": 150,
+    "right": 121,
+    "unresolved": 16,
+    "wrong": 13,
+    "notRight": [
+      {
+        "id": "t-030",
+        "expect": {
+          "kind": "token",
+          "token": "space.medium"
+        },
+        "got": {
+          "kind": "neutral"
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "t-031",
+        "expect": {
+          "kind": "token",
+          "token": "card.padding"
+        },
+        "got": {
+          "kind": "neutral"
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "t-033",
+        "expect": {
+          "kind": "token",
+          "token": "space.large"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "value mixes tokens and literals"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "t-034",
+        "expect": {
+          "kind": "token",
+          "token": "space.small"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "value mixes tokens and literals"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "t-036",
+        "expect": {
+          "kind": "token",
+          "token": "border.strong"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "value mixes tokens and literals"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "t-047",
+        "expect": {
+          "kind": "token",
+          "token": "space.small"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "variable cycle"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "t-050",
+        "expect": {
+          "kind": "literal"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "variable cycle"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "t-057",
+        "expect": {
+          "kind": "token",
+          "token": "text.muted"
+        },
+        "got": {
+          "kind": "literal",
+          "value": "#111"
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "t-072",
+        "expect": {
+          "kind": "token",
+          "token": "type.body"
+        },
+        "got": {
+          "kind": "neutral"
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "t-073",
+        "expect": {
+          "kind": "token",
+          "token": "text.primary"
+        },
+        "got": {
+          "kind": "neutral"
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "t-101",
+        "expect": {
+          "kind": "token",
+          "token": "space.large"
+        },
+        "got": {
+          "kind": "neutral"
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "t-107",
+        "expect": {
+          "kind": "token",
+          "token": "control.height"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "calc() mixes values"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "t-110",
+        "expect": {
+          "kind": "token",
+          "token": "radius.control"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "calc() mixes values"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "t-112",
+        "expect": {
+          "kind": "token",
+          "token": "card.padding"
+        },
+        "got": {
+          "kind": "literal",
+          "value": "2px"
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "t-113",
+        "expect": {
+          "kind": "literal"
+        },
+        "got": {
+          "kind": "token",
+          "token": "space.medium",
+          "factor": 1
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "t-114",
+        "expect": {
+          "kind": "token",
+          "token": "space.small"
+        },
+        "got": {
+          "kind": "literal",
+          "value": "20px"
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "t-116",
+        "expect": {
+          "kind": "token",
+          "token": "space.tight"
+        },
+        "got": {
+          "kind": "literal",
+          "value": "30px"
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "t-117",
+        "expect": {
+          "kind": "token",
+          "token": "space.large"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "changing space.large moved nothing"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "t-120",
+        "expect": {
+          "kind": "token",
+          "token": "border.strong"
+        },
+        "got": {
+          "kind": "literal",
+          "value": "#999"
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "t-122",
+        "expect": {
+          "kind": "token",
+          "token": "status.warn"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "border-color shorthand can't be split"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "t-124",
+        "expect": {
+          "kind": "literal"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "border-radius shorthand can't be split"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "t-126",
+        "expect": {
+          "kind": "token",
+          "token": "type.caption"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "font shorthand can't be split"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "t-127",
+        "expect": {
+          "kind": "literal"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "font shorthand can't be split"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "t-130",
+        "expect": {
+          "kind": "token",
+          "token": "space.medium"
+        },
+        "got": {
+          "kind": "neutral"
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "t-131",
+        "expect": {
+          "kind": "token",
+          "token": "text.link"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "light-dark() arms differ"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "t-132",
+        "expect": {
+          "kind": "literal"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "light-dark() arms differ"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "t-133",
+        "expect": {
+          "kind": "token",
+          "token": "border.strong"
+        },
+        "got": {
+          "kind": "neutral"
+        },
+        "outcome": "wrong"
+      },
+      {
+        "id": "t-145",
+        "expect": {
+          "kind": "literal"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "light-dark() arms differ"
+        },
+        "outcome": "unresolved"
+      },
+      {
+        "id": "t-150",
+        "expect": {
+          "kind": "neutral"
+        },
+        "got": {
+          "kind": "unresolved",
+          "reason": "changing elevation.raised moved nothing"
+        },
+        "outcome": "unresolved"
+      }
+    ]
+  }
+}

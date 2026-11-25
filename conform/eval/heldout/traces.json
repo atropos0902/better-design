@@ -1,0 +1,1442 @@
+[
+ {
+  "id": "t-001",
+  "css": ".notice { padding-left: var(--ng-space-large); }",
+  "html": "<div class=\"notice\" id=\"target\">Maintenance tonight</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.large"
+  }
+ },
+ {
+  "id": "t-002",
+  "css": ".btn { height: var(--ng-control-height); }",
+  "html": "<button type=\"button\" class=\"btn\" id=\"target\">Save</button>",
+  "prop": "height",
+  "expect": {
+   "kind": "token",
+   "token": "control.height"
+  }
+ },
+ {
+  "id": "t-003",
+  "css": ".notice { padding-left: 24px; }",
+  "html": "<div class=\"notice\" id=\"target\">Maintenance tonight</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-004",
+  "css": ".well { background-color: var(--ng-surface-sunken); color: #222; }",
+  "html": "<div class=\"well\" id=\"target\">log output</div>",
+  "prop": "background-color",
+  "expect": {
+   "kind": "token",
+   "token": "surface.sunken"
+  }
+ },
+ {
+  "id": "t-005",
+  "css": ".btn { padding-inline: var(--ng-control-padding); }",
+  "html": "<button type=\"button\" class=\"btn\" id=\"target\">Open</button>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "control.padding"
+  }
+ },
+ {
+  "id": "t-006",
+  "css": ".ref { color: var(--ng-text-link); background: var(--ng-action-secondary); }",
+  "html": "<a href=\"#x\" class=\"ref\" id=\"target\">Runbook</a>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.link"
+  }
+ },
+ {
+  "id": "t-007",
+  "css": ".stack { display: grid; gap: var(--ng-space-medium); }",
+  "html": "<div class=\"stack\" id=\"target\"><p>a</p><p>b</p></div>",
+  "prop": "row-gap",
+  "expect": {
+   "kind": "token",
+   "token": "space.medium"
+  }
+ },
+ {
+  "id": "t-008",
+  "css": ".btn { height: auto; }",
+  "html": "<button type=\"button\" class=\"btn\" id=\"target\">Save</button>",
+  "prop": "height",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-009",
+  "css": ".menu { box-shadow: var(--ng-elevation-overlay); }",
+  "html": "<div class=\"menu\" id=\"target\">menu</div>",
+  "prop": "box-shadow",
+  "expect": {
+   "kind": "token",
+   "token": "elevation.overlay"
+  }
+ },
+ {
+  "id": "t-010",
+  "css": ".menu { box-shadow: 0 8px 24px rgb(0 0 0 / 0.2); }",
+  "html": "<div class=\"menu\" id=\"target\">menu</div>",
+  "prop": "box-shadow",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-011",
+  "css": ".total { font-weight: var(--ng-weight-bold); font-size: 14px; }",
+  "html": "<p class=\"total\" id=\"target\">412</p>",
+  "prop": "font-weight",
+  "expect": {
+   "kind": "token",
+   "token": "weight.bold"
+  }
+ },
+ {
+  "id": "t-012",
+  "css": ".total { font-weight: 600; font-size: var(--ng-type-body); }",
+  "html": "<p class=\"total\" id=\"target\">412</p>",
+  "prop": "font-weight",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-013",
+  "css": ".danger { color: #b42327; }",
+  "html": "<p class=\"danger\" id=\"target\">Revoked</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-014",
+  "css": ".tile { box-shadow: none; }",
+  "html": "<article class=\"tile\" id=\"target\">tile</article>",
+  "prop": "box-shadow",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-015",
+  "css": ".a { --inset: var(--ng-space-small); padding-left: var(--inset); }",
+  "html": "<div class=\"a\" id=\"target\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "t-016",
+  "css": ":root { --tone-warn: var(--ng-status-warn); --banner-ink: var(--tone-warn); } .banner { color: var(--banner-ink); }",
+  "html": "<p class=\"banner\" id=\"target\">Expires soon</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.warn"
+  }
+ },
+ {
+  "id": "t-017",
+  "css": ":root { --bg-1: var(--ng-surface-raised); } .app { --bg-2: var(--bg-1); } .panel { --bg-3: var(--bg-2); background-color: var(--bg-3); }",
+  "html": "<div class=\"app\"><div class=\"panel\" id=\"target\">panel</div></div>",
+  "prop": "background-color",
+  "expect": {
+   "kind": "token",
+   "token": "surface.raised"
+  }
+ },
+ {
+  "id": "t-018",
+  "css": ":root { --fs-a: var(--ng-type-heading); --fs-b: var(--fs-a); --fs-c: var(--fs-b); --fs-d: var(--fs-c); } .big { font-size: var(--fs-d); }",
+  "html": "<p class=\"big\" id=\"target\">Wave 2</p>",
+  "prop": "font-size",
+  "expect": {
+   "kind": "token",
+   "token": "type.heading"
+  }
+ },
+ {
+  "id": "t-019",
+  "css": ":root { --r-a: 6px; --r-b: var(--r-a); --r-c: var(--r-b); } .chip { border-radius: var(--r-c); }",
+  "html": "<span class=\"chip\" id=\"target\">edge</span>",
+  "prop": "border-radius",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-020",
+  "css": ".shell { --stack: var(--ng-space-large); } .inner { --stack: var(--ng-space-tight); } .list { display: flex; flex-direction: column; gap: var(--stack); }",
+  "html": "<div class=\"shell\"><div class=\"inner\"><div class=\"list\" id=\"target\"><i>a</i><i>b</i></div></div></div>",
+  "prop": "row-gap",
+  "expect": {
+   "kind": "token",
+   "token": "space.tight"
+  }
+ },
+ {
+  "id": "t-021",
+  "css": ".shell { --stack: var(--ng-space-large); } .inner { --stack: 4px; } .list { display: grid; row-gap: var(--stack); }",
+  "html": "<div class=\"shell\"><div class=\"inner\">sibling</div><div class=\"list\" id=\"target\"><i>a</i><i>b</i></div></div>",
+  "prop": "row-gap",
+  "expect": {
+   "kind": "token",
+   "token": "space.large"
+  }
+ },
+ {
+  "id": "t-022",
+  "css": ".shell { --pad: var(--ng-space-medium); } .tight { --pad: 10px; } .cell { padding-left: var(--pad); }",
+  "html": "<div class=\"shell\"><div class=\"tight\"><p class=\"cell\" id=\"target\">x</p></div></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-023",
+  "css": ":root { --base: var(--ng-space-small); --derived: var(--base); } .wrap { --base: 10px; } .cell { padding-left: var(--derived); }",
+  "html": "<div class=\"wrap\"><p class=\"cell\" id=\"target\">x</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "t-024",
+  "css": ":root { --base: 10px; } .wrap { --base: var(--ng-space-section); } .cell { --derived: var(--base); padding-left: var(--derived); }",
+  "html": "<div class=\"wrap\"><p class=\"cell\" id=\"target\">x</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.section"
+  }
+ },
+ {
+  "id": "t-025",
+  "css": ":root { --base: 9px; --derived: var(--base); } .wrap { --base: var(--ng-space-small); } .cell { padding-left: var(--derived); }",
+  "html": "<div class=\"wrap\"><p class=\"cell\" id=\"target\">x</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-026",
+  "css": ".meta { color: var(--ink); } .card { --ink: var(--ng-text-primary); }",
+  "html": "<div class=\"card\" style=\"--ink: var(--ng-text-muted)\"><p class=\"meta\" id=\"target\">updated 2m ago</p></div>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.muted"
+  }
+ },
+ {
+  "id": "t-027",
+  "css": ".field { --h: var(--ng-control-height); height: var(--h); }",
+  "html": "<input class=\"field\" id=\"target\" aria-label=\"name\" style=\"--h: 36px\">",
+  "prop": "height",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-028",
+  "css": ".field { --h: var(--ng-control-height) !important; height: var(--h); }",
+  "html": "<input class=\"field\" id=\"target\" aria-label=\"name\" style=\"--h: 36px\">",
+  "prop": "height",
+  "expect": {
+   "kind": "token",
+   "token": "control.height"
+  }
+ },
+ {
+  "id": "t-029",
+  "css": ".x { --Size: 20px; --size: var(--ng-type-body); font-size: var(--size); }",
+  "html": "<p class=\"x\" id=\"target\">case matters</p>",
+  "prop": "font-size",
+  "expect": {
+   "kind": "token",
+   "token": "type.body"
+  }
+ },
+ {
+  "id": "t-030",
+  "css": ".outer { --pad: var(--ng-space-medium); } .mid { --pad: inherit; } .in { padding-left: var(--pad); }",
+  "html": "<div class=\"outer\"><div class=\"mid\"><p class=\"in\" id=\"target\">x</p></div></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.medium"
+  }
+ },
+ {
+  "id": "t-031",
+  "css": ".outer { --pad: var(--ng-card-padding); } .in { --pad: 3px; } .in.reset { --pad: unset; padding-left: var(--pad); }",
+  "html": "<div class=\"outer\"><p class=\"in reset\" id=\"target\">x</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "card.padding"
+  }
+ },
+ {
+  "id": "t-032",
+  "css": ".outer { --pad: 30px; } .in { --pad: initial; padding-top: var(--pad, var(--ng-space-tight)); }",
+  "html": "<div class=\"outer\"><p class=\"in\" id=\"target\">x</p></div>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "space.tight"
+  }
+ },
+ {
+  "id": "t-033",
+  "css": ":root { --card-pad: var(--ng-space-small) var(--ng-space-large); } .c { padding: var(--card-pad); }",
+  "html": "<div class=\"c\" id=\"target\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.large"
+  }
+ },
+ {
+  "id": "t-034",
+  "css": ":root { --card-pad: var(--ng-space-small) var(--ng-space-large); } .c { padding: var(--card-pad); }",
+  "html": "<div class=\"c\" id=\"target\">x</div>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "t-035",
+  "css": ".theme { --lift: var(--ng-elevation-raised); } .tile { box-shadow: var(--lift); }",
+  "html": "<div class=\"theme\"><div class=\"tile\" id=\"target\">x</div></div>",
+  "prop": "box-shadow",
+  "expect": {
+   "kind": "token",
+   "token": "elevation.raised"
+  }
+ },
+ {
+  "id": "t-036",
+  "css": ":root { --line: 1px solid var(--ng-border-strong); } .box { border: var(--line); }",
+  "html": "<div class=\"box\" id=\"target\">x</div>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "border.strong"
+  }
+ },
+ {
+  "id": "t-037",
+  "css": ":root { --p: 0; } .flush { padding-left: var(--p); }",
+  "html": "<div class=\"flush\" id=\"target\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-038",
+  "css": ".ghost { --fill: transparent; background-color: var(--fill); }",
+  "html": "<button type=\"button\" class=\"ghost\" id=\"target\">More</button>",
+  "prop": "background-color",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-039",
+  "css": ":root { --ink: rgb(24 29 37); } .doc { color: var(--ink); }",
+  "html": "<p class=\"doc\" id=\"target\">x</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-040",
+  "css": ".f { padding-left: var(--ng-space-small, 12px); }",
+  "html": "<p class=\"f\" id=\"target\">x</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "t-041",
+  "css": ".f { padding-left: var(--not-set-anywhere, var(--ng-space-medium)); }",
+  "html": "<p class=\"f\" id=\"target\">x</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.medium"
+  }
+ },
+ {
+  "id": "t-042",
+  "css": ".f { color: var(--one, var(--two, var(--ng-text-primary))); }",
+  "html": "<p class=\"f\" id=\"target\">x</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.primary"
+  }
+ },
+ {
+  "id": "t-043",
+  "css": ".f { font-size: var(--local-size, 14px); }",
+  "html": "<p class=\"f\" id=\"target\">x</p>",
+  "prop": "font-size",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-044",
+  "css": ".f { --r: var(--ng-radius-control); border-radius: var(--r, 12px); }",
+  "html": "<p class=\"f\" id=\"target\">x</p>",
+  "prop": "border-radius",
+  "expect": {
+   "kind": "token",
+   "token": "radius.control"
+  }
+ },
+ {
+  "id": "t-045",
+  "css": ".f { --h: 40px; height: var(--h, var(--ng-control-height)); }",
+  "html": "<button type=\"button\" class=\"f\" id=\"target\">x</button>",
+  "prop": "height",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-046",
+  "css": ".left { --fill: #eee; } .right { background-color: var(--fill, var(--ng-surface-page)); }",
+  "html": "<div><div class=\"left\">a</div><div class=\"right\" id=\"target\">b</div></div>",
+  "prop": "background-color",
+  "expect": {
+   "kind": "token",
+   "token": "surface.page"
+  }
+ },
+ {
+  "id": "t-047",
+  "css": ".loop { --a: var(--b); --b: var(--a); padding-left: var(--a, var(--ng-space-small)); }",
+  "html": "<p class=\"loop\" id=\"target\">x</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "t-048",
+  "css": ".f { padding-left: var(--nothing, 0); }",
+  "html": "<p class=\"f\" id=\"target\">x</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-049",
+  "css": ".f { box-shadow: var(--lift, none); }",
+  "html": "<p class=\"f\" id=\"target\">x</p>",
+  "prop": "box-shadow",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-050",
+  "css": ".loop { --a: var(--b); --b: var(--a); padding-left: var(--a, 8px); }",
+  "html": "<p class=\"loop\" id=\"target\">x</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-051",
+  "css": ".panel.active { background-color: var(--ng-surface-raised); } .panel { background-color: #fafafa; }",
+  "html": "<div class=\"panel active\" id=\"target\">x</div>",
+  "prop": "background-color",
+  "expect": {
+   "kind": "token",
+   "token": "surface.raised"
+  }
+ },
+ {
+  "id": "t-052",
+  "css": ".state { color: var(--ng-status-critical); } .ok { color: var(--ng-status-ok); }",
+  "html": "<span class=\"ok state\" id=\"target\">Healthy</span>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.ok"
+  }
+ },
+ {
+  "id": "t-053",
+  "css": "#target { padding-left: 14px; } .box.box.box { padding-left: var(--ng-space-medium); }",
+  "html": "<div class=\"box\" id=\"target\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-054",
+  "css": "@layer utilities { .t { font-size: var(--ng-type-title); } } @layer components { .t { font-size: 22px; } }",
+  "html": "<p class=\"t\" id=\"target\">x</p>",
+  "prop": "font-size",
+  "expect": {
+   "kind": "token",
+   "token": "type.title"
+  }
+ },
+ {
+  "id": "t-055",
+  "css": ".small { font-size: var(--ng-type-caption); } @layer utilities { p#target.small { font-size: 11px; } }",
+  "html": "<p class=\"small\" id=\"target\">x</p>",
+  "prop": "font-size",
+  "expect": {
+   "kind": "token",
+   "token": "type.caption"
+  }
+ },
+ {
+  "id": "t-056",
+  "css": ".p { padding-left: 18px; } @layer utilities { #target { padding-left: var(--ng-space-medium); } }",
+  "html": "<p class=\"p\" id=\"target\">x</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-057",
+  "css": "@layer base { .m { color: var(--ng-text-muted) !important; } } @layer utilities { .m { color: #333 !important; } } .m { color: #111 !important; }",
+  "html": "<p class=\"m\" id=\"target\">x</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.muted"
+  }
+ },
+ {
+  "id": "t-058",
+  "css": ".b { height: var(--ng-control-height) !important; }",
+  "html": "<button type=\"button\" class=\"b\" id=\"target\" style=\"height: 36px\">x</button>",
+  "prop": "height",
+  "expect": {
+   "kind": "token",
+   "token": "control.height"
+  }
+ },
+ {
+  "id": "t-059",
+  "css": "#target { border-radius: 12px; }",
+  "html": "<div id=\"target\" style=\"border-radius: var(--ng-radius-control)\">x</div>",
+  "prop": "border-radius",
+  "expect": {
+   "kind": "token",
+   "token": "radius.control"
+  }
+ },
+ {
+  "id": "t-060",
+  "css": ".b { padding-left: var(--ng-space-small) !important; }",
+  "html": "<div class=\"b\" id=\"target\" style=\"padding-left: 11px !important\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-061",
+  "css": ":where(#target, .nav a) { color: #00f; } .go { color: var(--ng-text-link); }",
+  "html": "<nav class=\"nav\"><a href=\"#a\" class=\"go\" id=\"target\">Go</a></nav>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.link"
+  }
+ },
+ {
+  "id": "t-062",
+  "css": ":is(#none, .row) { background-color: var(--ng-surface-sunken); } .table .row.odd { background-color: #f4f4f4; }",
+  "html": "<div class=\"table\"><div class=\"row odd\" id=\"target\">x</div></div>",
+  "prop": "background-color",
+  "expect": {
+   "kind": "token",
+   "token": "surface.sunken"
+  }
+ },
+ {
+  "id": "t-063",
+  "css": ".k:not(#zzz) { font-weight: var(--ng-weight-medium); } .k.k.k { font-weight: 700; }",
+  "html": "<p class=\"k\" id=\"target\">x</p>",
+  "prop": "font-weight",
+  "expect": {
+   "kind": "token",
+   "token": "weight.medium"
+  }
+ },
+ {
+  "id": "t-064",
+  "css": ".card { padding-top: 4px; & .head { padding-top: 6px; } &.wide .head { padding-top: var(--ng-space-large); } }",
+  "html": "<div class=\"card wide\"><div class=\"head\" id=\"target\">x</div></div>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "space.large"
+  }
+ },
+ {
+  "id": "t-065",
+  "css": ".badge { color: #555; &[data-state=\"bad\"] { color: var(--ng-status-critical); } }",
+  "html": "<span class=\"badge\" data-state=\"bad\" id=\"target\">Failing</span>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "status.critical"
+  }
+ },
+ {
+  "id": "t-066",
+  "css": ".badge { color: var(--ng-status-ok); &[data-state=\"bad\"] { color: #aa1133; } }",
+  "html": "<span class=\"badge\" data-state=\"bad\" id=\"target\">Failing</span>",
+  "prop": "color",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-067",
+  "css": "#nope, .tree { & > .leaf { padding-left: var(--ng-space-tight); } } .tree .leaf.leaf { padding-left: 20px; }",
+  "html": "<div class=\"tree\"><div class=\"leaf\" id=\"target\">x</div></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.tight"
+  }
+ },
+ {
+  "id": "t-068",
+  "css": "@layer utilities { .z { background-color: #fff; } } @layer app { .z { background-color: var(--ng-surface-page); } }",
+  "html": "<div class=\"z\" id=\"target\">x</div>",
+  "prop": "background-color",
+  "expect": {
+   "kind": "token",
+   "token": "surface.page"
+  }
+ },
+ {
+  "id": "t-069",
+  "css": "@layer components { @layer inner { .g { display: grid; gap: 30px; } } .g { display: grid; gap: var(--ng-space-small); } @layer inner { .g.g { gap: 31px; } } }",
+  "html": "<div class=\"g\" id=\"target\"><i>a</i><i>b</i></div>",
+  "prop": "row-gap",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "t-070",
+  "css": ".media:has(> img) { padding-left: var(--ng-card-padding); } .media { padding-left: 7px; }",
+  "html": "<div class=\"media\" id=\"target\"><img alt=\"\" src=\"data:,\"></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "card.padding"
+  }
+ },
+ {
+  "id": "t-071",
+  "css": "[data-kind=\"info\"] { border: 1px solid #ccc; } .info { border: 1px solid var(--ng-border-default); }",
+  "html": "<div class=\"info\" data-kind=\"info\" id=\"target\">x</div>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "border.default"
+  }
+ },
+ {
+  "id": "t-072",
+  "css": "li { font-size: 15px; } li:nth-child(2) { font-size: var(--ng-type-body); }",
+  "html": "<ul><li>a</li><li id=\"target\">b</li><li>c</li></ul>",
+  "prop": "font-size",
+  "expect": {
+   "kind": "token",
+   "token": "type.body"
+  }
+ },
+ {
+  "id": "t-073",
+  "css": "@layer components { .c { color: var(--ng-text-primary); } } @layer utilities { .c { color: revert-layer; } }",
+  "html": "<p class=\"c\" id=\"target\">x</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.primary"
+  }
+ },
+ {
+  "id": "t-074",
+  "css": ".v { padding-left: var(--ng-space-medium); padding-left: 12px 4px; }",
+  "html": "<p class=\"v\" id=\"target\">x</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.medium"
+  }
+ },
+ {
+  "id": "t-075",
+  "css": ".v { padding-left: var(--ng-space-small); } .v, .v:::bogus { padding-left: 19px; }",
+  "html": "<p class=\"v\" id=\"target\">x</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "t-076",
+  "css": ".v { padding-left: var(--ng-space-small); } .v { padding-left: 0 !important; }",
+  "html": "<p class=\"v\" id=\"target\">x</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-077",
+  "css": ".v { height: var(--ng-row-height); }",
+  "html": "<div class=\"v\" id=\"target\" style=\"height: auto\">x</div>",
+  "prop": "height",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-078",
+  "css": ".v { background-color: var(--ng-surface-sunken); } .v.plain { background: none; }",
+  "html": "<div class=\"v plain\" id=\"target\">x</div>",
+  "prop": "background-color",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-079",
+  "css": "@layer components { .v { border-radius: var(--ng-radius-card); } } @layer utilities { .square { border-radius: 0; } }",
+  "html": "<div class=\"v square\" id=\"target\">x</div>",
+  "prop": "border-radius",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-080",
+  "css": "@layer components { .v { font-weight: var(--ng-weight-medium); } } @layer utilities { .strong { font-weight: 500; } }",
+  "html": "<p class=\"strong v\" id=\"target\">x</p>",
+  "prop": "font-weight",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-081",
+  "css": ".v { border: 1px solid var(--ng-border-default); } .v { border-color: #c5cbd5; }",
+  "html": "<div class=\"v\" id=\"target\">x</div>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-082",
+  "css": ".page { padding-left: 12px; } @media (min-width: 1024px) { .page { padding-left: var(--ng-space-section); } }",
+  "html": "<div class=\"page\" id=\"target\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.section"
+  }
+ },
+ {
+  "id": "t-083",
+  "css": ".page { padding-left: var(--ng-space-large); } @media (max-width: 800px) { .page { padding-left: 8px; } }",
+  "html": "<div class=\"page\" id=\"target\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.large"
+  }
+ },
+ {
+  "id": "t-084",
+  "css": ".page { padding-left: var(--ng-space-large); } @media (min-width: 1200px) { .page { padding-left: 28px; } }",
+  "html": "<div class=\"page\" id=\"target\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-085",
+  "css": ".pop { box-shadow: 0 0 2px #000; } @media (prefers-reduced-motion: reduce) { .pop { box-shadow: var(--ng-elevation-raised); } }",
+  "html": "<div class=\"pop\" id=\"target\">x</div>",
+  "prop": "box-shadow",
+  "expect": {
+   "kind": "token",
+   "token": "elevation.raised"
+  }
+ },
+ {
+  "id": "t-086",
+  "css": ".opt { background-color: #fff; } @media (hover: hover) { .opt { background-color: var(--ng-surface-sunken); } }",
+  "html": "<div class=\"opt\" id=\"target\">x</div>",
+  "prop": "background-color",
+  "expect": {
+   "kind": "token",
+   "token": "surface.sunken"
+  }
+ },
+ {
+  "id": "t-087",
+  "css": ".grid { display: grid; gap: 10px; } @media (width >= 1280px) { .grid { gap: var(--ng-space-medium); } }",
+  "html": "<div class=\"grid\" id=\"target\"><i>a</i><i>b</i></div>",
+  "prop": "row-gap",
+  "expect": {
+   "kind": "token",
+   "token": "space.medium"
+  }
+ },
+ {
+  "id": "t-088",
+  "css": ".print { font-size: var(--ng-type-body); } @media print { .print { font-size: 10pt; } }",
+  "html": "<p class=\"print\" id=\"target\">x</p>",
+  "prop": "font-size",
+  "expect": {
+   "kind": "token",
+   "token": "type.body"
+  }
+ },
+ {
+  "id": "t-089",
+  "css": ".r { height: var(--ng-row-height); } @media (height < 900px) { .r { height: 36px; } }",
+  "html": "<div class=\"r\" id=\"target\">x</div>",
+  "prop": "height",
+  "expect": {
+   "kind": "token",
+   "token": "row.height"
+  }
+ },
+ {
+  "id": "t-090",
+  "css": ".side { --ink: #444; color: var(--ink); } @media not (min-width: 2000px) { .side { --ink: var(--ng-text-muted); } }",
+  "html": "<p class=\"side\" id=\"target\">x</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.muted"
+  }
+ },
+ {
+  "id": "t-091",
+  "css": ".hero { padding-top: var(--ng-space-section); @media (orientation: landscape) { padding-top: 0; } }",
+  "html": "<div class=\"hero\" id=\"target\">x</div>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-092",
+  "css": ".hero { padding-left: 17px; @media (prefers-reduced-motion: no-preference) { padding-left: var(--ng-space-medium); } }",
+  "html": "<div class=\"hero\" id=\"target\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-093",
+  "css": ".tile { border-radius: 3px; } @media print, screen and (min-width: 700px) { .tile { border-radius: var(--ng-radius-card); } }",
+  "html": "<div class=\"tile\" id=\"target\">x</div>",
+  "prop": "border-radius",
+  "expect": {
+   "kind": "token",
+   "token": "radius.card"
+  }
+ },
+ {
+  "id": "t-094",
+  "css": ".g { display: grid; gap: 5px; } @supports (display: grid) { .g { gap: var(--ng-space-small); } }",
+  "html": "<div class=\"g\" id=\"target\"><i>a</i><i>b</i></div>",
+  "prop": "row-gap",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "t-095",
+  "css": ".g { font-size: var(--ng-type-caption); } @supports not (display: flex) { .g { font-size: 13px; } }",
+  "html": "<p class=\"g\" id=\"target\">x</p>",
+  "prop": "font-size",
+  "expect": {
+   "kind": "token",
+   "token": "type.caption"
+  }
+ },
+ {
+  "id": "t-096",
+  "css": ".g { padding-left: var(--ng-space-small); } @supports selector(:has(a)) { .g { padding-left: 13px; } }",
+  "html": "<p class=\"g\" id=\"target\">x</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-097",
+  "css": ".g { background-color: var(--ng-surface-raised); } @supports (background-color: frobnicate) { .g { background-color: #fff; } }",
+  "html": "<div class=\"g\" id=\"target\">x</div>",
+  "prop": "background-color",
+  "expect": {
+   "kind": "token",
+   "token": "surface.raised"
+  }
+ },
+ {
+  "id": "t-098",
+  "css": "@property --pad-a { syntax: \"<length>\"; inherits: true; initial-value: 3px; } .o { --pad-a: var(--ng-space-medium); } .i { padding-left: var(--pad-a); }",
+  "html": "<div class=\"o\"><p class=\"i\" id=\"target\">x</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.medium"
+  }
+ },
+ {
+  "id": "t-099",
+  "css": "@property --pad-b { syntax: \"<length>\"; inherits: false; initial-value: 12px; } .o { --pad-b: var(--ng-space-medium); } .i { padding-left: var(--pad-b); }",
+  "html": "<div class=\"o\"><p class=\"i\" id=\"target\">x</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-100",
+  "css": "@property --pad-c { syntax: \"<length>\"; inherits: false; initial-value: 12px; } .i { --pad-c: var(--ng-space-small); padding-left: var(--pad-c); }",
+  "html": "<p class=\"i\" id=\"target\">x</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "t-101",
+  "css": "@property --pad-d { syntax: \"<length>\"; inherits: false; initial-value: 12px; } .o { --pad-d: var(--ng-space-large); } .i { --pad-d: inherit; padding-left: var(--pad-d); }",
+  "html": "<div class=\"o\"><p class=\"i\" id=\"target\">x</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.large"
+  }
+ },
+ {
+  "id": "t-102",
+  "css": "@property --ink-a { syntax: \"<color>\"; inherits: false; initial-value: #222222; } .o { --ink-a: var(--ng-text-primary); color: var(--ink-a); } .i { color: var(--ink-a); }",
+  "html": "<div class=\"o\"><p class=\"i\" id=\"target\">x</p></div>",
+  "prop": "color",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-103",
+  "css": "@property --pad-e { syntax: \"<length>\"; inherits: false; initial-value: 0px; } .o { --pad-e: var(--ng-space-large); } .i { padding-left: var(--pad-e); }",
+  "html": "<div class=\"o\"><p class=\"i\" id=\"target\">x</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-104",
+  "css": "@property --fill-a { syntax: \"*\"; inherits: false; } .o { --fill-a: #ddd; } .i { background-color: var(--fill-a, var(--ng-surface-sunken)); }",
+  "html": "<div class=\"o\"><p class=\"i\" id=\"target\">x</p></div>",
+  "prop": "background-color",
+  "expect": {
+   "kind": "token",
+   "token": "surface.sunken"
+  }
+ },
+ {
+  "id": "t-105",
+  "css": ".c { padding-left: calc(var(--ng-space-small) * 2); }",
+  "html": "<p class=\"c\" id=\"target\">x</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "t-106",
+  "css": ".c { display: grid; row-gap: calc(var(--ng-space-section) / 4); }",
+  "html": "<div class=\"c\" id=\"target\"><i>a</i><i>b</i></div>",
+  "prop": "row-gap",
+  "expect": {
+   "kind": "token",
+   "token": "space.section"
+  }
+ },
+ {
+  "id": "t-107",
+  "css": ".c { --scale: 0.8; height: calc(var(--ng-control-height) * var(--scale)); }",
+  "html": "<button type=\"button\" class=\"c\" id=\"target\">x</button>",
+  "prop": "height",
+  "expect": {
+   "kind": "token",
+   "token": "control.height"
+  }
+ },
+ {
+  "id": "t-108",
+  "css": ".c { --step: calc(1.25 * var(--ng-type-body)); font-size: calc(var(--step) * 1.25); }",
+  "html": "<p class=\"c\" id=\"target\">x</p>",
+  "prop": "font-size",
+  "expect": {
+   "kind": "token",
+   "token": "type.body"
+  }
+ },
+ {
+  "id": "t-109",
+  "css": ".c { --spacing: 4px; padding-left: calc(var(--spacing) * 4); }",
+  "html": "<p class=\"c\" id=\"target\">x</p>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-110",
+  "css": "@property --k { syntax: \"<number>\"; inherits: true; initial-value: 1.5; } .c { border-radius: calc(var(--ng-radius-control) * var(--k)); }",
+  "html": "<p class=\"c\" id=\"target\">x</p>",
+  "prop": "border-radius",
+  "expect": {
+   "kind": "token",
+   "token": "radius.control"
+  }
+ },
+ {
+  "id": "t-111",
+  "css": ".c { height: calc(8px * 5); }",
+  "html": "<button type=\"button\" class=\"c\" id=\"target\">x</button>",
+  "prop": "height",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-112",
+  "css": ".s { padding: 1px 2px 3px var(--ng-card-padding); }",
+  "html": "<div class=\"s\" id=\"target\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "card.padding"
+  }
+ },
+ {
+  "id": "t-113",
+  "css": ".s { padding: var(--ng-space-small) var(--ng-space-medium) var(--ng-space-large) 15px; }",
+  "html": "<div class=\"s\" id=\"target\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-114",
+  "css": ".s { padding: 20px; padding-left: var(--ng-space-small); }",
+  "html": "<div class=\"s\" id=\"target\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "t-115",
+  "css": ".s { padding-left: var(--ng-space-small); padding: 20px; }",
+  "html": "<div class=\"s\" id=\"target\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-116",
+  "css": ".s { padding-inline: var(--ng-space-tight) 30px; }",
+  "html": "<div class=\"s\" id=\"target\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.tight"
+  }
+ },
+ {
+  "id": "t-117",
+  "css": ".s { direction: rtl; padding-inline-start: 5px; padding-inline-end: var(--ng-space-large); }",
+  "html": "<div class=\"s\" id=\"target\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.large"
+  }
+ },
+ {
+  "id": "t-118",
+  "css": ".s { padding-block: var(--ng-space-medium) 2px; }",
+  "html": "<div class=\"s\" id=\"target\">x</div>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "token",
+   "token": "space.medium"
+  }
+ },
+ {
+  "id": "t-119",
+  "css": ".s { block-size: var(--ng-row-height); }",
+  "html": "<div class=\"s\" id=\"target\">x</div>",
+  "prop": "height",
+  "expect": {
+   "kind": "token",
+   "token": "row.height"
+  }
+ },
+ {
+  "id": "t-120",
+  "css": ".s { border: 1px solid #999; border-block-start-color: var(--ng-border-strong); }",
+  "html": "<div class=\"s\" id=\"target\">x</div>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "border.strong"
+  }
+ },
+ {
+  "id": "t-121",
+  "css": ".s { border-radius: 2px; border-start-start-radius: var(--ng-radius-card); }",
+  "html": "<div class=\"s\" id=\"target\">x</div>",
+  "prop": "border-radius",
+  "expect": {
+   "kind": "token",
+   "token": "radius.card"
+  }
+ },
+ {
+  "id": "t-122",
+  "css": ".s { border-style: solid; border-color: var(--ng-status-warn) #111 #222 #333; }",
+  "html": "<div class=\"s\" id=\"target\">x</div>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "status.warn"
+  }
+ },
+ {
+  "id": "t-123",
+  "css": ".s { border: 1px solid var(--ng-border-default); border-top: 2px solid #8899aa; }",
+  "html": "<div class=\"s\" id=\"target\">x</div>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-124",
+  "css": ".s { border-radius: 4px var(--ng-radius-card) var(--ng-radius-card) var(--ng-radius-card); }",
+  "html": "<div class=\"s\" id=\"target\">x</div>",
+  "prop": "border-radius",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-125",
+  "css": ".s { display: flex; flex-wrap: wrap; gap: var(--ng-space-tight) 12px; }",
+  "html": "<div class=\"s\" id=\"target\"><i>a</i><i>b</i></div>",
+  "prop": "row-gap",
+  "expect": {
+   "kind": "token",
+   "token": "space.tight"
+  }
+ },
+ {
+  "id": "t-126",
+  "css": ".s { font: 500 var(--ng-type-caption)/1.4 sans-serif; }",
+  "html": "<p class=\"s\" id=\"target\">x</p>",
+  "prop": "font-size",
+  "expect": {
+   "kind": "token",
+   "token": "type.caption"
+  }
+ },
+ {
+  "id": "t-127",
+  "css": ".s { font-weight: var(--ng-weight-medium); font: 500 var(--ng-type-caption)/1.4 sans-serif; }",
+  "html": "<p class=\"s\" id=\"target\">x</p>",
+  "prop": "font-weight",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-128",
+  "css": ".s { background: no-repeat center / cover var(--ng-surface-raised); }",
+  "html": "<div class=\"s\" id=\"target\">x</div>",
+  "prop": "background-color",
+  "expect": {
+   "kind": "token",
+   "token": "surface.raised"
+  }
+ },
+ {
+  "id": "t-129",
+  "css": ".s { padding-left: 25px; padding-inline-start: var(--ng-space-small); }",
+  "html": "<div class=\"s\" id=\"target\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.small"
+  }
+ },
+ {
+  "id": "t-130",
+  "css": ".s { writing-mode: vertical-rl; padding-block-end: var(--ng-space-medium); padding-block-start: 6px; }",
+  "html": "<div class=\"s\" id=\"target\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "token",
+   "token": "space.medium"
+  }
+ },
+ {
+  "id": "t-131",
+  "css": ".ld { color-scheme: light; color: light-dark(var(--ng-text-link), #9cf); }",
+  "html": "<p class=\"ld\" id=\"target\">x</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "token",
+   "token": "text.link"
+  }
+ },
+ {
+  "id": "t-132",
+  "css": ".ld { color-scheme: dark; background-color: light-dark(var(--ng-surface-raised), #101418); }",
+  "html": "<div class=\"ld\" id=\"target\">x</div>",
+  "prop": "background-color",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-133",
+  "css": ".ld { color: var(--ng-border-strong); border: 1px solid currentcolor; }",
+  "html": "<div class=\"ld\" id=\"target\">x</div>",
+  "prop": "border-color",
+  "expect": {
+   "kind": "token",
+   "token": "border.strong"
+  }
+ },
+ {
+  "id": "t-134",
+  "css": ".n { height: 100%; }",
+  "html": "<div style=\"height: 200px\"><div class=\"n\" id=\"target\">x</div></div>",
+  "prop": "height",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-135",
+  "css": ".n { border-radius: 50%; }",
+  "html": "<span class=\"n\" id=\"target\">x</span>",
+  "prop": "border-radius",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-136",
+  "css": ".n { display: grid; gap: normal; }",
+  "html": "<div class=\"n\" id=\"target\"><i>a</i><i>b</i></div>",
+  "prop": "row-gap",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-137",
+  "css": ".n { padding: var(--ng-space-large); padding-inline: 5%; }",
+  "html": "<div class=\"n\" id=\"target\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-138",
+  "css": ".n { font-size: 100%; }",
+  "html": "<div style=\"font-size: 18px\"><p class=\"n\" id=\"target\">x</p></div>",
+  "prop": "font-size",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-139",
+  "css": ".n { height: fit-content; }",
+  "html": "<div class=\"n\" id=\"target\">x</div>",
+  "prop": "height",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-140",
+  "css": ".n { padding: 0 var(--ng-space-medium); }",
+  "html": "<div class=\"n\" id=\"target\">x</div>",
+  "prop": "padding-top",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-141",
+  "css": ".n { padding: initial; }",
+  "html": "<div class=\"n\" id=\"target\">x</div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-142",
+  "css": ".n { background-color: transparent; color: var(--ng-text-primary); }",
+  "html": "<button type=\"button\" class=\"n\" id=\"target\">x</button>",
+  "prop": "background-color",
+  "expect": {
+   "kind": "neutral"
+  }
+ },
+ {
+  "id": "t-143",
+  "css": ".meta { color: var(--ng-text-muted); }",
+  "html": "<p class=\"meta\" id=\"target\" style=\"color: #515b6b\">updated 2m ago</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-144",
+  "css": ".cap { font-size: var(--ng-type-body); } .table .cap { font-size: 0.875rem; }",
+  "html": "<div class=\"table\"><span class=\"cap\" id=\"target\">x</span></div>",
+  "prop": "font-size",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-145",
+  "css": ".ld { color-scheme: light; color: light-dark(#181d25, var(--ng-text-primary)); }",
+  "html": "<p class=\"ld\" id=\"target\">x</p>",
+  "prop": "color",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-146",
+  "css": ".host { container-type: inline-size; width: 400px; } .c { padding-left: var(--ng-space-medium); } @container (min-width: 300px) { .c { padding-left: 22px; } }",
+  "html": "<div class=\"host\"><p class=\"c\" id=\"target\">x</p></div>",
+  "prop": "padding-left",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-147",
+  "css": ":root { --gutter: var(--ng-space-medium); } @media (min-width: 600px) { :root { --gutter: 20px; } } .g { display: grid; gap: var(--gutter); }",
+  "html": "<div class=\"g\" id=\"target\"><i>a</i><i>b</i></div>",
+  "prop": "row-gap",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-148",
+  "css": ".o { --r: var(--ng-radius-control); } .i { --r: initial; border-radius: var(--r, 0.375rem); }",
+  "html": "<div class=\"o\"><p class=\"i\" id=\"target\">x</p></div>",
+  "prop": "border-radius",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-149",
+  "css": ".card.card { background: #fff; } .list .card:where(.on, #a) { background: var(--ng-surface-raised); } .list { --x: var(--ng-surface-raised); }",
+  "html": "<div class=\"list\"><div class=\"card\" id=\"target\">x</div></div>",
+  "prop": "background-color",
+  "expect": {
+   "kind": "literal"
+  }
+ },
+ {
+  "id": "t-150",
+  "css": "@layer components { .lifted { box-shadow: var(--ng-elevation-raised) !important; } } @layer base { .flat { box-shadow: none !important; } }",
+  "html": "<div class=\"lifted flat\" id=\"target\">x</div>",
+  "prop": "box-shadow",
+  "expect": {
+   "kind": "neutral"
+  }
+ }
+]

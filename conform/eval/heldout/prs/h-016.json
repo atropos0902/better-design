@@ -1,0 +1,25 @@
+{
+  "id": "h-016",
+  "repo": "audit-search",
+  "title": "Redaction option and warning on export",
+  "body": "Legal asked for a visible warning when the export contains personal data.",
+  "files": {
+    "src/screens/export.tsx": "export default function Export() {\n  return (\n    <main className=\"bg-surface-page p-8 flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-[24px] font-bold text-primary\">Export events</h1>\n      <section data-testid=\"form\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium\">\n        <h2 className=\"text-heading font-medium text-primary\">Export settings</h2>\n        <form className=\"flex flex-col gap-2\">\n          <label htmlFor=\"f0\" className=\"text-caption font-medium text-muted\">Range</label>\n          <input id=\"f0\" data-testid=\"field-0\" defaultValue=\"7 days\" className=\"h-control px-control rounded-control text-body bg-surface-raised text-primary border border-strong\" />\n          <label htmlFor=\"f1\" className=\"text-caption font-medium text-muted\">Format</label>\n          <input id=\"f1\" data-testid=\"field-1\" defaultValue=\"CSV\" className=\"h-control px-control rounded-control text-body bg-surface-raised text-primary border border-strong\" />\n          <label htmlFor=\"f2\" className=\"text-caption font-medium text-muted\">Reason</label>\n          <input id=\"f2\" data-testid=\"field-2\" defaultValue=\"Legal\" className=\"h-control px-control rounded-control text-body bg-surface-raised text-primary border border-strong\" />\n        </form>\n        <div data-testid=\"warn-note\" className=\"p-small rounded-control border border-red-600 bg-surface-sunken\">\n          <p className=\"text-body text-critical\">This export contains personal data.</p>\n        </div>\n        <label htmlFor=\"redact\" data-testid=\"redact-label\" className=\"flex items-center gap-small text-body font-medium text-primary\">\n          <input id=\"redact\" type=\"checkbox\" defaultChecked />\n          Redact user names\n        </label>\n        <div className=\"flex items-end gap-2\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-primary hover:bg-action-primary-hover text-on-action\">Start export</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-secondary hover:bg-action-secondary-hover text-primary border border-strong\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-red-600 text-on-action\">Cancel</button>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+  },
+  "plants": [
+    {
+      "screen": "export",
+      "testid": "warn-note",
+      "prop": "border-color",
+      "kind": "literal",
+      "note": "border-red-600"
+    },
+    {
+      "screen": "export",
+      "testid": "redact-label",
+      "prop": "font-size",
+      "kind": "wrong-token",
+      "note": "labels take type.caption"
+    }
+  ]
+}

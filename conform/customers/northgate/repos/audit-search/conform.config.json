@@ -1,0 +1,18 @@
+{
+  "repo": "northgate/audit-search",
+  "bundle": ".conform/bundle.json",
+  "keys": ".conform/keys.json",
+  "styling": "tailwind",
+  "themeCss": ".conform/theme.css",
+  "css": [],
+  "screens": [
+    {
+      "id": "search",
+      "module": "src/screens/search.tsx"
+    },
+    {
+      "id": "export",
+      "module": "src/screens/export.tsx"
+    }
+  ]
+}

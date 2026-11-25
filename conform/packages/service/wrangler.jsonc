@@ -1,0 +1,15 @@
+{
+  "name": "conform",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-04-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  "vars": {
+    "PUBLIC_URL": "http://localhost:8787",
+    "GITHUB_API_URL": "https://api.github.com",
+    "RUNNER_OIDC_ISSUER": "https://token.actions.githubusercontent.com",
+    "RUNNER_OIDC_AUDIENCE": "conform"
+  }
+  // Hosted only: add "hyperdrive": [{ "binding": "HYPERDRIVE", "id": "<your id>" }].
+  // Secrets: GITHUB_APP_ID, GITHUB_APP_KEY, GITHUB_WEBHOOK_SECRET.
+}

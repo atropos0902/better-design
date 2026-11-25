@@ -1,0 +1,47 @@
+{
+  "half": "dev",
+  "pullRequests": {
+    "planted": 75,
+    "caught": 75,
+    "clean": 20,
+    "cleanBlocked": 0,
+    "missed": [],
+    "extra": [
+      {
+        "pr": "d-007",
+        "clean": false,
+        "rule": "accessibility",
+        "path": "main>card#list>p#new-0",
+        "prop": "color-contrast",
+        "state": "rest",
+        "detail": "color-contrast"
+      },
+      {
+        "pr": "d-017",
+        "clean": false,
+        "rule": "accessibility",
+        "path": "main>card#list>p#new-0",
+        "prop": "color-contrast",
+        "state": "rest",
+        "detail": "color-contrast"
+      },
+      {
+        "pr": "d-027",
+        "clean": false,
+        "rule": "accessibility",
+        "path": "main>card#form>p#new-0",
+        "prop": "color-contrast",
+        "state": "rest",
+        "detail": "color-contrast"
+      }
+    ],
+    "errors": []
+  },
+  "traces": {
+    "total": 150,
+    "right": 150,
+    "unresolved": 0,
+    "wrong": 0,
+    "notRight": []
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "h-006",
+  "repo": "key-vault",
+  "title": "Ask for confirmation before rotating",
+  "body": "Adds a confirm step below the form. The sizes live in two variables on the footer so they stay in step.",
+  "files": {
+    "src/screens/rotate.tsx": "import type { CSSProperties } from \"react\";\n\nconst footer = { \"--confirm-h\": \"40px\", \"--confirm-pad\": \"var(--ng-card-padding)\" } as CSSProperties;\n\nexport default function Rotate() {\n  return (\n    <main className=\"bg-surface-page p-section flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-title font-bold text-primary\">Rotate a key</h1>\n      <section data-testid=\"form\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium\">\n        <h2 className=\"text-heading font-bold text-primary\">Key settings</h2>\n        <form className=\"flex flex-col gap-2\">\n          <label htmlFor=\"f0\" className=\"text-caption font-medium text-muted\">Key</label>\n          <input id=\"f0\" data-testid=\"field-0\" defaultValue=\"sign-2\" className=\"h-control px-control rounded-control text-body bg-surface-raised text-primary border border-strong\" />\n          <label htmlFor=\"f1\" className=\"text-caption font-medium text-muted\">Version</label>\n          <input id=\"f1\" data-testid=\"field-1\" defaultValue=\"4\" className=\"h-control px-control rounded-control text-body bg-surface-raised text-primary border border-strong\" />\n          <label htmlFor=\"f2\" className=\"text-caption font-medium text-muted\">Reason</label>\n          <input id=\"f2\" data-testid=\"field-2\" defaultValue=\"Schedule\" className=\"h-control px-control rounded-control text-body bg-surface-raised text-primary border border-strong\" />\n        </form>\n        <div className=\"flex items-end gap-2\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-primary hover:bg-action-primary-hover text-on-action\">Rotate key</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-10 px-4 rounded-md text-sm font-medium bg-white text-slate-900 border border-slate-500\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-red-600 text-on-action\">Cancel</button>\n        </div>\n      </section>\n      <section data-testid=\"confirm\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium\">\n        <h2 className=\"text-heading font-bold text-primary\">Confirm rotation</h2>\n        <p className=\"text-body text-muted\">Version 4 stops signing as soon as version 5 is active.</p>\n        <div style={footer} className=\"flex gap-small\">\n          <button type=\"button\" data-testid=\"confirm-rotate\" className=\"h-(--confirm-h) px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Rotate now</button>\n          <button type=\"button\" data-testid=\"confirm-cancel\" className=\"h-control px-[var(--confirm-pad)] rounded-control text-body font-medium bg-action-secondary hover:bg-action-secondary-hover text-primary border border-strong\">Back</button>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+  },
+  "plants": [
+    {
+      "screen": "rotate",
+      "testid": "confirm-rotate",
+      "prop": "height",
+      "kind": "literal",
+      "note": "alias variable holds 40px"
+    },
+    {
+      "screen": "rotate",
+      "testid": "confirm-cancel",
+      "prop": "padding-inline",
+      "kind": "wrong-token",
+      "note": "alias variable points at card.padding"
+    }
+  ]
+}

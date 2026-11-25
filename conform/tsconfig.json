@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "target": "ES2024", "module": "nodenext", "moduleResolution": "nodenext", "lib": ["ES2024", "DOM", "DOM.Iterable"],
+    "strict": true, "noUncheckedIndexedAccess": true, "noEmit": true, "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true, "verbatimModuleSyntax": true, "skipLibCheck": true, "jsx": "react-jsx", "types": ["node"]
+  },
+  "include": ["packages/core", "packages/checker", "packages/mcp/src", "packages/experiment/src", "eval/*.ts", "customers/*/*.ts"]
+}

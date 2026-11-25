@@ -1,0 +1,10 @@
+{
+ "id": "d-036",
+ "repo": "rollout-gate",
+ "title": "Change Gate detail",
+ "body": "",
+ "files": {
+  "src/screens/gate.tsx": "export default function Gate() {\n  return (\n    <main className=\"bg-surface-page p-8 flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-[24px] font-bold text-primary\">Gate detail</h1>\n      <section data-testid=\"detail\" className=\"p-6 rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-4\">\n        <h2 className=\"text-heading font-bold text-primary\">feed-api</h2>\n        <p className=\"text-sm text-slate-500\">Service: feed-api</p>\n        <p className=\"text-sm text-slate-500\">Error rate: 0.4%</p>\n        <p className=\"text-sm text-slate-500\">Owner: Feed</p>\n        <div className=\"flex items-end gap-small\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-primary hover:bg-action-primary-hover text-on-action\">Promote</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-10 px-4 rounded-md text-sm font-medium bg-white text-slate-900 border border-slate-500\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Roll back</button>\n        </div>\n        <div className=\"flex flex-col gap-small\">\n          <div data-testid=\"ok-0\" className=\"flex gap-small p-0 m-auto w-1/2 bg-transparent\"><span>One</span></div>\n          <div data-testid=\"ok-1\" className=\"bg-[var(--ng-surface-sunken)] p-small rounded-control\">Box</div>\n          <div data-testid=\"ok-2\" style={{ \"--pad\": \"var(--ng-space-small)\", padding: \"var(--pad)\" } as React.CSSProperties}>Box</div>\n          <span data-testid=\"ok-3\" data-status=\"warn\" className=\"text-caption font-medium rounded-control px-small py-tight text-warn\">Late</span>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+ },
+ "plants": []
+}

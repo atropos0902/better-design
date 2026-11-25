@@ -1,0 +1,5 @@
+.page { padding: var(--fh-semantic-pad-panel); display: flex; flex-direction: column; gap: var(--fh-semantic-gap-md); }
+.title { font-size: var(--fh-global-font-size-head); font-weight: var(--fh-global-font-weight-strong); }
+.panel { display: flex; flex-direction: column; gap: var(--fh-semantic-gap-sm); padding: 16px; border: 1px solid var(--fh-semantic-edge); border-radius: 8px; }
+.field { height: var(--fh-global-field-height); padding-inline: var(--fh-semantic-pad-field); border: 1px solid #c9c9d1; border-radius: var(--fh-global-radius-soft); }
+.button { height: var(--fh-global-field-height); padding-inline: var(--fh-semantic-pad-field); border-radius: var(--fh-global-radius-soft); background-color: var(--fh-semantic-bg-brand); color: var(--fh-semantic-fg-on-brand); }

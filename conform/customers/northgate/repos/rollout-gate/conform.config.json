@@ -1,0 +1,18 @@
+{
+  "repo": "northgate/rollout-gate",
+  "bundle": ".conform/bundle.json",
+  "keys": ".conform/keys.json",
+  "styling": "tailwind",
+  "themeCss": ".conform/theme.css",
+  "css": [],
+  "screens": [
+    {
+      "id": "gates",
+      "module": "src/screens/gates.tsx"
+    },
+    {
+      "id": "gate",
+      "module": "src/screens/gate.tsx"
+    }
+  ]
+}

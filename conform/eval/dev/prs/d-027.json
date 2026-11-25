@@ -1,0 +1,25 @@
+{
+ "id": "d-027",
+ "repo": "alert-triage",
+ "title": "Change Edit rule",
+ "body": "",
+ "files": {
+  "src/screens/rule.tsx": "export default function Rule() {\n  return (\n    <main className=\"bg-slate-100 p-8 flex flex-col gap-6 min-h-screen\">\n      <h1 className=\"text-title font-semibold text-primary\">Edit rule</h1>\n      <section data-testid=\"form\" className=\"p-6 rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-4\">\n        <h2 className=\"text-heading font-medium text-primary\">Rule settings</h2>\n        <form className=\"flex flex-col gap-[10px]\">\n          <label htmlFor=\"f0\" className=\"text-caption font-medium text-muted\">Name</label>\n          <input id=\"f0\" data-testid=\"field-0\" defaultValue=\"Failed logins\" className=\"h-10 px-control rounded-control text-body bg-surface-raised text-primary border border-strong\" />\n          <label htmlFor=\"f1\" className=\"text-caption font-medium text-muted\">Threshold</label>\n          <input id=\"f1\" data-testid=\"field-1\" defaultValue=\"20\" className=\"h-10 px-control rounded-control text-body bg-surface-raised text-primary border border-strong\" />\n          <label htmlFor=\"f2\" className=\"text-caption font-medium text-muted\">Window</label>\n          <input id=\"f2\" data-testid=\"field-2\" defaultValue=\"10m\" className=\"h-10 px-control rounded-control text-body bg-surface-raised text-primary border border-strong\" />\n        </form>\n        <div className=\"flex items-end gap-[10px]\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-10 px-4 rounded-md text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white\">Save rule</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-10 px-4 rounded-md text-sm font-medium bg-white text-slate-900 border border-slate-500\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action\">Delete rule</button>\n        </div>\n        <div className=\"flex flex-col gap-small\">\n          <p data-testid=\"new-0\" className=\"text-body text-[#515b6b]\">Note</p>\n          <p data-testid=\"new-1\" className=\"text-sm text-muted\">Note</p>\n          <p data-testid=\"ok-0\" className=\"text-body text-muted\">Nothing to do.</p>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+ },
+ "plants": [
+  {
+   "screen": "rule",
+   "testid": "new-0",
+   "prop": "color",
+   "kind": "literal",
+   "note": "hex equal to muted"
+  },
+  {
+   "screen": "rule",
+   "testid": "new-1",
+   "prop": "font-size",
+   "kind": "literal",
+   "note": "text-sm"
+  }
+ ]
+}

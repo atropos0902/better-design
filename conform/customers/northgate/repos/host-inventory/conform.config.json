@@ -1,0 +1,18 @@
+{
+  "repo": "northgate/host-inventory",
+  "bundle": ".conform/bundle.json",
+  "keys": ".conform/keys.json",
+  "styling": "tailwind",
+  "themeCss": ".conform/theme.css",
+  "css": [],
+  "screens": [
+    {
+      "id": "hosts",
+      "module": "src/screens/hosts.tsx"
+    },
+    {
+      "id": "host",
+      "module": "src/screens/host.tsx"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "repo": "northgate/secrets-broker",
+  "bundle": ".conform/bundle.json",
+  "keys": ".conform/keys.json",
+  "styling": "tailwind",
+  "themeCss": ".conform/theme.css",
+  "css": [],
+  "screens": [
+    {
+      "id": "leases",
+      "module": "src/screens/leases.tsx"
+    },
+    {
+      "id": "issue",
+      "module": "src/screens/issue.tsx"
+    }
+  ]
+}

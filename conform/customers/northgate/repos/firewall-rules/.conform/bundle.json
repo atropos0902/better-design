@@ -1,0 +1,759 @@
+{
+ "bundle": {
+  "id": "northgate",
+  "version": "1.0.1",
+  "themes": [
+   "comfortable-light",
+   "comfortable-dark",
+   "compact-light",
+   "compact-dark"
+  ],
+  "tokens": [
+   {
+    "name": "surface.page",
+    "type": "color",
+    "cssVar": "--ng-surface-page",
+    "values": {
+     "comfortable-light": "#f7f8fa",
+     "comfortable-dark": "#0f1217",
+     "compact-light": "#f7f8fa",
+     "compact-dark": "#0f1217"
+    }
+   },
+   {
+    "name": "surface.raised",
+    "type": "color",
+    "cssVar": "--ng-surface-raised",
+    "values": {
+     "comfortable-light": "#ffffff",
+     "comfortable-dark": "#171b22",
+     "compact-light": "#ffffff",
+     "compact-dark": "#171b22"
+    }
+   },
+   {
+    "name": "surface.sunken",
+    "type": "color",
+    "cssVar": "--ng-surface-sunken",
+    "values": {
+     "comfortable-light": "#eceef2",
+     "comfortable-dark": "#232933",
+     "compact-light": "#eceef2",
+     "compact-dark": "#232933"
+    }
+   },
+   {
+    "name": "text.primary",
+    "type": "color",
+    "cssVar": "--ng-text-primary",
+    "values": {
+     "comfortable-light": "#181d25",
+     "comfortable-dark": "#eceef2",
+     "compact-light": "#181d25",
+     "compact-dark": "#eceef2"
+    }
+   },
+   {
+    "name": "text.muted",
+    "type": "color",
+    "cssVar": "--ng-text-muted",
+    "values": {
+     "comfortable-light": "#515b6b",
+     "comfortable-dark": "#c5cbd5",
+     "compact-light": "#515b6b",
+     "compact-dark": "#c5cbd5"
+    }
+   },
+   {
+    "name": "text.on-action",
+    "type": "color",
+    "cssVar": "--ng-text-on-action",
+    "values": {
+     "comfortable-light": "#ffffff",
+     "comfortable-dark": "#ffffff",
+     "compact-light": "#ffffff",
+     "compact-dark": "#ffffff"
+    }
+   },
+   {
+    "name": "text.link",
+    "type": "color",
+    "cssVar": "--ng-text-link",
+    "values": {
+     "comfortable-light": "#1e54b7",
+     "comfortable-dark": "#8eb7ff",
+     "compact-light": "#1e54b7",
+     "compact-dark": "#8eb7ff"
+    }
+   },
+   {
+    "name": "border.default",
+    "type": "color",
+    "cssVar": "--ng-border-default",
+    "values": {
+     "comfortable-light": "#c5cbd5",
+     "comfortable-dark": "#515b6b",
+     "compact-light": "#c5cbd5",
+     "compact-dark": "#515b6b"
+    }
+   },
+   {
+    "name": "border.strong",
+    "type": "color",
+    "cssVar": "--ng-border-strong",
+    "values": {
+     "comfortable-light": "#768091",
+     "comfortable-dark": "#768091",
+     "compact-light": "#768091",
+     "compact-dark": "#768091"
+    }
+   },
+   {
+    "name": "action.primary",
+    "type": "color",
+    "cssVar": "--ng-action-primary",
+    "values": {
+     "comfortable-light": "#1e54b7",
+     "comfortable-dark": "#1e54b7",
+     "compact-light": "#1e54b7",
+     "compact-dark": "#1e54b7"
+    }
+   },
+   {
+    "name": "action.primary-hover",
+    "type": "color",
+    "cssVar": "--ng-action-primary-hover",
+    "values": {
+     "comfortable-light": "#164194",
+     "comfortable-dark": "#164194",
+     "compact-light": "#164194",
+     "compact-dark": "#164194"
+    }
+   },
+   {
+    "name": "action.danger",
+    "type": "color",
+    "cssVar": "--ng-action-danger",
+    "values": {
+     "comfortable-light": "#b42327",
+     "comfortable-dark": "#b42327",
+     "compact-light": "#b42327",
+     "compact-dark": "#b42327"
+    }
+   },
+   {
+    "name": "action.danger-hover",
+    "type": "color",
+    "cssVar": "--ng-action-danger-hover",
+    "values": {
+     "comfortable-light": "#92191d",
+     "comfortable-dark": "#92191d",
+     "compact-light": "#92191d",
+     "compact-dark": "#92191d"
+    }
+   },
+   {
+    "name": "action.secondary",
+    "type": "color",
+    "cssVar": "--ng-action-secondary",
+    "values": {
+     "comfortable-light": "#ffffff",
+     "comfortable-dark": "#232933",
+     "compact-light": "#ffffff",
+     "compact-dark": "#232933"
+    }
+   },
+   {
+    "name": "action.secondary-hover",
+    "type": "color",
+    "cssVar": "--ng-action-secondary-hover",
+    "values": {
+     "comfortable-light": "#eceef2",
+     "comfortable-dark": "#515b6b",
+     "compact-light": "#eceef2",
+     "compact-dark": "#515b6b"
+    }
+   },
+   {
+    "name": "status.ok",
+    "type": "color",
+    "cssVar": "--ng-status-ok",
+    "values": {
+     "comfortable-light": "#10643b",
+     "comfortable-dark": "#72d5a0",
+     "compact-light": "#10643b",
+     "compact-dark": "#72d5a0"
+    }
+   },
+   {
+    "name": "status.warn",
+    "type": "color",
+    "cssVar": "--ng-status-warn",
+    "values": {
+     "comfortable-light": "#784a07",
+     "comfortable-dark": "#edc572",
+     "compact-light": "#784a07",
+     "compact-dark": "#edc572"
+    }
+   },
+   {
+    "name": "status.critical",
+    "type": "color",
+    "cssVar": "--ng-status-critical",
+    "values": {
+     "comfortable-light": "#b42327",
+     "comfortable-dark": "#ffa7a9",
+     "compact-light": "#b42327",
+     "compact-dark": "#ffa7a9"
+    }
+   },
+   {
+    "name": "control.height",
+    "type": "dimension",
+    "cssVar": "--ng-control-height",
+    "values": {
+     "comfortable-light": "40px",
+     "comfortable-dark": "40px",
+     "compact-light": "32px",
+     "compact-dark": "32px"
+    },
+    "description": "Height of every button, input and select. 32px in compact."
+   },
+   {
+    "name": "control.padding",
+    "type": "dimension",
+    "cssVar": "--ng-control-padding",
+    "values": {
+     "comfortable-light": "16px",
+     "comfortable-dark": "16px",
+     "compact-light": "12px",
+     "compact-dark": "12px"
+    }
+   },
+   {
+    "name": "row.height",
+    "type": "dimension",
+    "cssVar": "--ng-row-height",
+    "values": {
+     "comfortable-light": "48px",
+     "comfortable-dark": "48px",
+     "compact-light": "32px",
+     "compact-dark": "32px"
+    }
+   },
+   {
+    "name": "space.tight",
+    "type": "dimension",
+    "cssVar": "--ng-space-tight",
+    "values": {
+     "comfortable-light": "4px",
+     "comfortable-dark": "4px",
+     "compact-light": "4px",
+     "compact-dark": "4px"
+    }
+   },
+   {
+    "name": "space.small",
+    "type": "dimension",
+    "cssVar": "--ng-space-small",
+    "values": {
+     "comfortable-light": "8px",
+     "comfortable-dark": "8px",
+     "compact-light": "8px",
+     "compact-dark": "8px"
+    }
+   },
+   {
+    "name": "space.medium",
+    "type": "dimension",
+    "cssVar": "--ng-space-medium",
+    "values": {
+     "comfortable-light": "16px",
+     "comfortable-dark": "16px",
+     "compact-light": "12px",
+     "compact-dark": "12px"
+    }
+   },
+   {
+    "name": "space.large",
+    "type": "dimension",
+    "cssVar": "--ng-space-large",
+    "values": {
+     "comfortable-light": "24px",
+     "comfortable-dark": "24px",
+     "compact-light": "16px",
+     "compact-dark": "16px"
+    }
+   },
+   {
+    "name": "space.section",
+    "type": "dimension",
+    "cssVar": "--ng-space-section",
+    "values": {
+     "comfortable-light": "32px",
+     "comfortable-dark": "32px",
+     "compact-light": "24px",
+     "compact-dark": "24px"
+    }
+   },
+   {
+    "name": "card.padding",
+    "type": "dimension",
+    "cssVar": "--ng-card-padding",
+    "values": {
+     "comfortable-light": "24px",
+     "comfortable-dark": "24px",
+     "compact-light": "16px",
+     "compact-dark": "16px"
+    }
+   },
+   {
+    "name": "radius.control",
+    "type": "dimension",
+    "cssVar": "--ng-radius-control",
+    "values": {
+     "comfortable-light": "6px",
+     "comfortable-dark": "6px",
+     "compact-light": "6px",
+     "compact-dark": "6px"
+    }
+   },
+   {
+    "name": "radius.card",
+    "type": "dimension",
+    "cssVar": "--ng-radius-card",
+    "values": {
+     "comfortable-light": "10px",
+     "comfortable-dark": "10px",
+     "compact-light": "10px",
+     "compact-dark": "10px"
+    }
+   },
+   {
+    "name": "type.caption",
+    "type": "dimension",
+    "cssVar": "--ng-type-caption",
+    "values": {
+     "comfortable-light": "12px",
+     "comfortable-dark": "12px",
+     "compact-light": "12px",
+     "compact-dark": "12px"
+    }
+   },
+   {
+    "name": "type.body",
+    "type": "dimension",
+    "cssVar": "--ng-type-body",
+    "values": {
+     "comfortable-light": "14px",
+     "comfortable-dark": "14px",
+     "compact-light": "13px",
+     "compact-dark": "13px"
+    }
+   },
+   {
+    "name": "type.heading",
+    "type": "dimension",
+    "cssVar": "--ng-type-heading",
+    "values": {
+     "comfortable-light": "18px",
+     "comfortable-dark": "18px",
+     "compact-light": "16px",
+     "compact-dark": "16px"
+    }
+   },
+   {
+    "name": "type.title",
+    "type": "dimension",
+    "cssVar": "--ng-type-title",
+    "values": {
+     "comfortable-light": "24px",
+     "comfortable-dark": "24px",
+     "compact-light": "20px",
+     "compact-dark": "20px"
+    }
+   },
+   {
+    "name": "weight.regular",
+    "type": "fontWeight",
+    "cssVar": "--ng-weight-regular",
+    "values": {
+     "comfortable-light": "400",
+     "comfortable-dark": "400",
+     "compact-light": "400",
+     "compact-dark": "400"
+    }
+   },
+   {
+    "name": "weight.medium",
+    "type": "fontWeight",
+    "cssVar": "--ng-weight-medium",
+    "values": {
+     "comfortable-light": "500",
+     "comfortable-dark": "500",
+     "compact-light": "500",
+     "compact-dark": "500"
+    }
+   },
+   {
+    "name": "weight.bold",
+    "type": "fontWeight",
+    "cssVar": "--ng-weight-bold",
+    "values": {
+     "comfortable-light": "600",
+     "comfortable-dark": "600",
+     "compact-light": "600",
+     "compact-dark": "600"
+    }
+   },
+   {
+    "name": "elevation.raised",
+    "type": "shadow",
+    "cssVar": "--ng-elevation-raised",
+    "values": {
+     "comfortable-light": "0px 1px 3px 0px #0000001f",
+     "comfortable-dark": "0px 1px 3px 0px #0000001f",
+     "compact-light": "0px 1px 3px 0px #0000001f",
+     "compact-dark": "0px 1px 3px 0px #0000001f"
+    }
+   },
+   {
+    "name": "elevation.overlay",
+    "type": "shadow",
+    "cssVar": "--ng-elevation-overlay",
+    "values": {
+     "comfortable-light": "0px 8px 24px 0px #00000033",
+     "comfortable-dark": "0px 8px 24px 0px #00000033",
+     "compact-light": "0px 8px 24px 0px #00000033",
+     "compact-dark": "0px 8px 24px 0px #00000033"
+    }
+   }
+  ],
+  "contract": {
+   "root": {
+    "color": "text.primary",
+    "background-color": "surface.page",
+    "font-size": "type.body"
+   },
+   "parts": [
+    {
+     "part": "control",
+     "selector": "button, [role=button], select, textarea, input:not([type=checkbox]):not([type=radio])",
+     "required": [
+      "height"
+     ],
+     "props": {
+      "height": [
+       "control.height"
+      ],
+      "padding-inline": [
+       "control.padding"
+      ],
+      "border-radius": [
+       "radius.control"
+      ],
+      "font-size": [
+       "type.body"
+      ],
+      "font-weight": [
+       "weight.regular",
+       "weight.medium"
+      ],
+      "background-color": [
+       "action.*",
+       "surface.raised"
+      ],
+      "color": [
+       "text.primary",
+       "text.on-action",
+       "status.critical"
+      ],
+      "border-color": [
+       "border.*",
+       "status.critical"
+      ]
+     }
+    },
+    {
+     "part": "row",
+     "selector": "tbody tr",
+     "props": {
+      "height": [
+       "row.height"
+      ],
+      "border-color": [
+       "border.default"
+      ],
+      "background-color": [
+       "surface.*"
+      ]
+     }
+    },
+    {
+     "part": "header-cell",
+     "selector": "th",
+     "props": {
+      "color": [
+       "text.muted"
+      ],
+      "font-size": [
+       "type.caption"
+      ],
+      "font-weight": [
+       "weight.medium"
+      ],
+      "padding-inline": [
+       "space.small",
+       "space.medium"
+      ]
+     }
+    },
+    {
+     "part": "cell",
+     "selector": "td",
+     "props": {
+      "font-size": [
+       "type.body"
+      ],
+      "padding-inline": [
+       "space.small",
+       "space.medium"
+      ],
+      "color": [
+       "text.*",
+       "status.*"
+      ]
+     }
+    },
+    {
+     "part": "page-title",
+     "selector": "h1",
+     "props": {
+      "font-size": [
+       "type.title"
+      ],
+      "font-weight": [
+       "weight.bold"
+      ],
+      "color": [
+       "text.primary"
+      ]
+     }
+    },
+    {
+     "part": "section-title",
+     "selector": "h2, h3",
+     "props": {
+      "font-size": [
+       "type.heading"
+      ],
+      "font-weight": [
+       "weight.bold"
+      ],
+      "color": [
+       "text.primary"
+      ]
+     }
+    },
+    {
+     "part": "card",
+     "selector": "section, article",
+     "props": {
+      "padding-inline": [
+       "card.padding"
+      ],
+      "padding-block": [
+       "card.padding"
+      ],
+      "border-radius": [
+       "radius.card"
+      ],
+      "background-color": [
+       "surface.raised"
+      ],
+      "border-color": [
+       "border.default"
+      ],
+      "box-shadow": [
+       "elevation.raised"
+      ],
+      "gap": [
+       "space.*"
+      ]
+     }
+    },
+    {
+     "part": "dialog",
+     "selector": "dialog, [role=dialog]",
+     "props": {
+      "padding-inline": [
+       "card.padding"
+      ],
+      "padding-block": [
+       "card.padding"
+      ],
+      "border-radius": [
+       "radius.card"
+      ],
+      "background-color": [
+       "surface.raised"
+      ],
+      "box-shadow": [
+       "elevation.overlay"
+      ],
+      "gap": [
+       "space.*"
+      ]
+     }
+    },
+    {
+     "part": "status",
+     "selector": "[role=status], [data-status]",
+     "props": {
+      "color": [
+       "status.*"
+      ],
+      "font-size": [
+       "type.caption"
+      ],
+      "font-weight": [
+       "weight.medium"
+      ],
+      "border-color": [
+       "status.*"
+      ],
+      "border-radius": [
+       "radius.control"
+      ],
+      "padding-inline": [
+       "space.small"
+      ],
+      "padding-block": [
+       "space.tight"
+      ]
+     }
+    },
+    {
+     "part": "link",
+     "selector": "a",
+     "props": {
+      "color": [
+       "text.link"
+      ],
+      "font-size": [
+       "type.*"
+      ]
+     }
+    },
+    {
+     "part": "label",
+     "selector": "label",
+     "props": {
+      "font-size": [
+       "type.caption"
+      ],
+      "font-weight": [
+       "weight.medium"
+      ],
+      "color": [
+       "text.*"
+      ]
+     }
+    }
+   ],
+   "any": {
+    "color": [
+     "text.*",
+     "status.*"
+    ],
+    "background-color": [
+     "surface.*"
+    ],
+    "border-color": [
+     "border.*"
+    ],
+    "border-radius": [
+     "radius.*"
+    ],
+    "font-size": [
+     "type.*"
+    ],
+    "font-weight": [
+     "weight.*"
+    ],
+    "gap": [
+     "space.*"
+    ],
+    "padding-inline": [
+     "space.*",
+     "card.padding"
+    ],
+    "padding-block": [
+     "space.*",
+     "card.padding"
+    ],
+    "margin-inline": [
+     "space.*"
+    ],
+    "margin-block": [
+     "space.*"
+    ],
+    "box-shadow": [
+     "elevation.*"
+    ]
+   }
+  },
+  "components": [
+   {
+    "name": "Button",
+    "part": "control",
+    "summary": "An action. Primary for the one main action on a screen.",
+    "usage": "h-control px-control rounded-control text-body font-medium bg-action-primary hover:bg-action-primary-hover text-on-action"
+   },
+   {
+    "name": "Secondary button",
+    "part": "control",
+    "summary": "Every action that isn't the main one.",
+    "usage": "h-control px-control rounded-control text-body font-medium bg-action-secondary hover:bg-action-secondary-hover text-primary border border-strong"
+   },
+   {
+    "name": "Danger button",
+    "part": "control",
+    "summary": "Revoke, delete, disable. Never for a main action that can be undone.",
+    "usage": "h-control px-control rounded-control text-body font-medium bg-action-danger hover:bg-action-danger-hover text-on-action"
+   },
+   {
+    "name": "Text field",
+    "part": "control",
+    "summary": "Single-line input with a visible label.",
+    "usage": "h-control px-control rounded-control text-body bg-surface-raised text-primary border border-strong"
+   },
+   {
+    "name": "Table",
+    "part": "row",
+    "summary": "Rows take row height from density. Header cells are captions.",
+    "usage": "tbody tr: h-row border-b border-default; th: text-caption font-medium text-muted px-medium; td: text-body px-medium"
+   },
+   {
+    "name": "Card",
+    "part": "card",
+    "summary": "A titled group on the page. Use section with a heading.",
+    "usage": "p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium"
+   },
+   {
+    "name": "Dialog",
+    "part": "dialog",
+    "summary": "A decision that stops the page.",
+    "usage": "p-card rounded-card bg-surface-raised shadow-overlay"
+   },
+   {
+    "name": "Status label",
+    "part": "status",
+    "summary": "State of a record. Always has text, colour is never the only signal.",
+    "usage": "text-caption font-medium text-ok | text-warn | text-critical rounded-control px-small py-tight"
+   }
+  ]
+ },
+ "keyId": "dev-1",
+ "signature": "h+FlbhlHqzkb6YpJrFfYw9yZ+kIpFMRSkwpNIm/FTL9JG8D1HxwLpMX3ZAAltOtmE16Y+//CvIUFjDc7i+SeDw=="
+}

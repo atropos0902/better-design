@@ -1,0 +1,10 @@
+{
+ "id": "d-046",
+ "repo": "patch-status",
+ "title": "Change Rollout wave",
+ "body": "",
+ "files": {
+  "src/screens/wave.tsx": "export default function Wave() {\n  return (\n    <main className=\"bg-surface-page p-section flex flex-col gap-large min-h-screen\">\n      <h1 className=\"text-title font-bold text-primary\">Rollout wave</h1>\n      <section data-testid=\"detail\" className=\"p-card rounded-card bg-surface-raised border border-default shadow-raised flex flex-col gap-medium\">\n        <h2 className=\"text-heading font-bold text-primary\">2</h2>\n        <p className=\"text-sm text-slate-500\">Wave: 2</p>\n        <p className=\"text-sm text-slate-500\">Hosts: 120</p>\n        <p className=\"text-sm text-slate-500\">Health: Good</p>\n        <div className=\"flex items-end gap-small\">\n          <button type=\"button\" data-testid=\"main-action\" className=\"h-10 px-4 rounded-md text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white\">Advance wave</button>\n          <button type=\"button\" data-testid=\"second-action\" className=\"h-9 px-control rounded-control text-body font-medium bg-action-secondary text-primary border border-strong\">Export</button>\n          <button type=\"button\" data-testid=\"danger-action\" className=\"h-control px-control rounded-control text-body font-medium bg-red-600 text-on-action\">Roll back</button>\n        </div>\n        <div className=\"flex flex-col gap-small\">\n          <div data-testid=\"ok-0\" style={{ \"--pad\": \"var(--ng-space-small)\", padding: \"var(--pad)\" } as React.CSSProperties}>Box</div>\n          <span data-testid=\"ok-1\" data-status=\"warn\" className=\"text-caption font-medium rounded-control px-small py-tight text-warn\">Late</span>\n          <div data-testid=\"ok-2\" className=\"pl-small pr-medium border border-default max-w-prose\">Box</div>\n          <button type=\"button\" data-testid=\"ok-3\" className=\"h-control px-control rounded-control text-body font-medium bg-action-secondary hover:bg-action-secondary-hover text-primary border border-strong\">Action</button>\n        </div>\n      </section>\n    </main>\n  );\n}\n"
+ },
+ "plants": []
+}

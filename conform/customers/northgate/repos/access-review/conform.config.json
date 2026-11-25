@@ -1,0 +1,18 @@
+{
+  "repo": "northgate/access-review",
+  "bundle": ".conform/bundle.json",
+  "keys": ".conform/keys.json",
+  "styling": "tailwind",
+  "themeCss": ".conform/theme.css",
+  "css": [],
+  "screens": [
+    {
+      "id": "campaigns",
+      "module": "src/screens/campaigns.tsx"
+    },
+    {
+      "id": "decide",
+      "module": "src/screens/decide.tsx"
+    }
+  ]
+}
